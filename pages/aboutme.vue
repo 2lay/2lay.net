@@ -2,11 +2,7 @@
   <v-app class="hero">
     <v-container class="fill-height">
       <v-responsive class="align-center fill-height">
-        <v-card class="mx-auto card-style" max-width="344" title='2lay' subtitle="she/her"
-          prepend-avatar="https://github.com/2lay.png">
-          <v-card-text>Heyy! I'm 2lay, I'm a self taught developer from Sweden.
-          </v-card-text>
-        </v-card>
+       <header-me />
         <br>
         <v-card class="mx-auto card-style" max-width="344">
           <v-tabs align-tabs="center" v-model="tab" class="amg">
