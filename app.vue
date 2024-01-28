@@ -1,9 +1,6 @@
 <template>
   <v-app>
-    <!-- Render Mobile component only on mobile devices -->
     <Mobile v-if="isMobile" />
-
-    <!-- Render AppBar component only on larger screens -->
     <AppBar v-else />
   </v-app>
 </template>
@@ -14,17 +11,13 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import AppBar from './layouts/AppBar.vue';
 import Mobile from './layouts/Mobile.vue';
 
-
-
-
-const isMobile = ref<boolean>(false); // Initialize as false initially
+const isMobile = ref<boolean>(false);
 
 const updateIsMobile = (): void => {
   isMobile.value = window.innerWidth <= 1280;
 };
 
 onMounted(() => {
-  // Check if running on the client side before adding event listener
   if (process.client) {
     updateIsMobile();
     window.addEventListener('resize', updateIsMobile);
@@ -32,7 +25,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  // Check if running on the client side before removing event listener
+ 
   if (process.client) {
     window.removeEventListener('resize', updateIsMobile);
   }
@@ -55,7 +48,12 @@ onUnmounted(() => {
   top: 0;
   backdrop-filter: blur(4px);
 }
-
+.overlay-button {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+}
 .card-style {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;

@@ -38,9 +38,7 @@ export default {
       menuItems: [
         { title: 'Home', path: '/', icon: 'mdi mdi-home-city' },
         { title: 'About me', path: '/aboutme', icon: 'mdi mdi-account' },
-        // { title: 'Blog', path: '/blog', icon: 'mdi mdi-post' },
         { title: 'Contact', path: '/contact', icon: 'mdi mdi-account-box' }
-
       ]
     };
   },

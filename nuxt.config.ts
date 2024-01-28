@@ -1,5 +1,4 @@
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   
@@ -23,10 +22,7 @@ export default defineNuxtConfig({
     
   },
   sitemap: {
-    // exclude all URLs that start with /secret
-    exclude: ['/blog/**', '/blog', '/info'],
-    // include all URLs that start with /public
- 
+    // saved for future use :3 exclude: ['/blog/**', '/blog', '/info'],
   },
 
   googleFonts: {

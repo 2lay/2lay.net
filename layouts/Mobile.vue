@@ -32,14 +32,7 @@
     <router-view />
   </v-card>
 </template>
-<style scoped>
-.overlay-button {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 1000;
-}
-</style>
+
 <script>
 export default {
   data() {
@@ -49,7 +42,6 @@ export default {
       menuItems: [
         { title: 'Home', path: '/', icon: 'mdi mdi-home-city' },
         { title: 'About me', path: '/aboutme', icon: 'mdi mdi-account' },
-        // { title: 'Blog', path: '/blog', icon: 'mdi mdi-post' },
         { title: 'Contact', path: '/contact', icon: 'mdi mdi-account-box' },
       ],
     };
