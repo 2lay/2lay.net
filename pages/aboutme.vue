@@ -18,7 +18,7 @@
 
                                 <v-responsive class="align-center">
                                     Hey again! My name is Ashley and I'm a self taught developer from Sweden. I'm also
-                                    very pasionate about Linux
+                                    very passionate about Linux
                                     <i>*i use arch btw*</i>
                                     . I also love listening to music! Need to contact me?
                                     <br />
