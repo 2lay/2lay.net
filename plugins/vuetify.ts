@@ -1,9 +1,24 @@
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
+import { createVuetify } from 'vuetify';
+import * as components from 'vuetify/components';
+import '@mdi/font/css/materialdesignicons.css';
 
-import '@mdi/font/css/materialdesignicons.css'
+interface ThemeOptions {
+    dark: boolean;
+    colors: {
+        background: string;
+        surface: string;
+        primary: string;
+        'primary-darken-1': string;
+        secondary: string;
+        'secondary-darken-1': string;
+        error: string;
+        info: string;
+        success: string;
+        warning: string;
+    };
+}
 
-const twolaytheme = {
+const twolaytheme: ThemeOptions = {
     dark: true,
     colors: {
         background: '#424242',
@@ -17,7 +32,7 @@ const twolaytheme = {
         success: '#4CAF50',
         warning: '#FB8C00',
     },
-}
+};
 
 export default defineNuxtPlugin((nuxtApp) => {
     const vuetify = createVuetify({
@@ -28,7 +43,7 @@ export default defineNuxtPlugin((nuxtApp) => {
             },
         },
         components,
-    })
+    });
+    nuxtApp.vueApp.use(vuetify);
+});
 
-    nuxtApp.vueApp.use(vuetify)
-})
