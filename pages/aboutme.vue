@@ -110,9 +110,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const tab = ref(null)
+import { ref } from 'vue';
+const tab = ref(null);
 useSeoMeta({
     title: '2lay.net | About Me',
     ogTitle: '2lay.net | About Me',

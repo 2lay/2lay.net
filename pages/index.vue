@@ -16,6 +16,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+const tab = ref(null);
 useSeoMeta({
     title: '2lay.net',
     ogTitle: '2lay.net',
