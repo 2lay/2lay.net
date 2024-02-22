@@ -14,7 +14,7 @@
         </v-snackbar>
     </v-btn>
 
-    <v-btn block href="https://en.pronouns.page/@2lay" class="text-center custom-btn spacing"
+    <v-btn block href="https://transfem.social/@2lay" class="text-center custom-btn spacing"
         style="background-color: rgba(38, 129, 162, 0.212); border: 1px solid #204e5e;">
         <span /><font-awesome-icon icon="fa-brands fa-mastodon" /> &nbsp;Mastodon&nbsp; <div style="color: #979797;">
             2lay@transfem.social</div>
