@@ -74,6 +74,8 @@ onUnmounted(() => {
     border: 1px solid #4e4e4e;
 }
 
+
+
 .custom-btn {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -134,15 +136,15 @@ onUnmounted(() => {
 
 @keyframes shadowAnimation {
     0% {
-        text-shadow: 3px 3px 0px rgb(180, 131, 139);
+        text-shadow: 3px 3px 0px rgb(255, 187, 198);
     }
 
     50% {
-        text-shadow: -3px -3px 0px rgb(180, 131, 139);
+        text-shadow: -3px -3px 0px rgb(255, 187, 198);
     }
 
     100% {
-        text-shadow: 3px 3px 0px rgb(180, 131, 139);
+        text-shadow: 3px 3px 0px rgb(255, 187, 198);
     }
 }
 

@@ -4,7 +4,7 @@
             <v-responsive class="align-center fill-height">
                 <header-me />
                 <br />
-                <v-card class="mx-auto card-style" max-width="344">
+                <v-card class="mx-auto card-style" max-width=500>
                     <v-card-text>
                         <h2>My socials</h2>
                         <br />

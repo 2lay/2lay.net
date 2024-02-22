@@ -20,7 +20,7 @@
                                     Hey again! My name is Ashley and I'm a self taught developer from Sweden. I'm also
                                     very passionate about Linux
                                     <i>*i use arch btw*</i>
-                                    . I also love listening to music! Need to contact me?
+                                    . I also love listening to music! Need to contact me? Check out <strong><NuxtLink to="/contact" style="text-decoration:none; color: inherit;">this</NuxtLink></strong>.
                                     <br />
                                     <br />
                                     <h3>Also check out my cute friends!</h3>
