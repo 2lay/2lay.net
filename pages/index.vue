@@ -1,5 +1,6 @@
 <template>
     <v-app class="hero">
+        <!-- ignore it's for verification, https://transfem.social/@2lay 2lay@transfem.social -->
         <v-container class="fill-height">
             <v-responsive class="align-center text-center fill-height">
                 <v-card class="card-home card-style">
