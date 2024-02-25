@@ -17,7 +17,7 @@
                     <!-- too lazy doing css -->
                     <router-link to="/" tag="v-btn">
                         <v-btn style="background-color: rgba(87, 87, 87, 0.212); border: 1px solid #424242">
-                            <span class="mdi mdi-home-flood" />
+                            <span class="mdi mdi-home" />
                             &nbsp;Go home
                         </v-btn>
                     </router-link>

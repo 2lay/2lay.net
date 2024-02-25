@@ -42,9 +42,9 @@ export default {
         return {
             isBlogPath: false,
             menuItems: [
-                { title: 'Home', path: '/', icon: 'mdi mdi-home-city' },
+                { title: 'Home', path: '/', icon: 'mdi mdi-home' },
                 { title: 'About me', path: '/aboutme', icon: 'mdi mdi-account' },
-                { title: 'Contact', path: '/contact', icon: 'mdi mdi-account-box' },
+                { title: 'Contact', path: '/contact', icon: 'mdi mdi-mailbox' },
             ],
         }
     },
