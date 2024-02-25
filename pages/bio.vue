@@ -1,16 +1,16 @@
 <template>
-    <v-app class="hero">
+    <v-app class="img-bg">
         <v-container class="fill-height">
             <v-responsive class="align-center fill-height">
                 <header-me />
                 <br />
-                <v-card class="mx-auto card-style" max-width=500>
+                <v-card class="mx-auto card-custom" max-width=500>
                     <v-card-text>
                         <h2>My socials</h2>
                         <br />
                         <v-responsive class="align-center text-center">
                             <links />
-                            <v-btn block to="/" class="text-center custom-btn spacing"
+                            <v-btn block to="/" class="text-center btn-custom btn-spacing"
                                 style="background-color: rgba(123, 177, 238, 0.212); border: 1px solid #4e6376">
                                 <span />
                                 <span class="mdi mdi-web" />

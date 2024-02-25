@@ -1,10 +1,10 @@
 <template>
-    <v-app class="hero">
+    <v-app class="img-bg">
         <v-container class="fill-height">
             <v-responsive class="align-center text-center fill-height">
-                <v-card class="card-home card-style">
+                <v-card class="card-home card-custom">
                     <h1 class="text-h3 font-weight-bold">404 not found</h1>
-                    <p class="code-text">This page isn't here. Maybe it moved, or it never existed.</p>
+                    <p class="spacer">This page isn't here. Maybe it moved, or it never existed.</p>
                     <v-btn style="background-color: rgba(223, 123, 238, 0.212); border: 1px solid #754e76"
                         @click="$router.go(-1)">
                         <span class="mdi mdi-arrow-left-bold" />

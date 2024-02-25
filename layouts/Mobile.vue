@@ -1,5 +1,5 @@
 <template>
-    <v-btn fab dark color="primary" class="overlay-button" density="comfortable" icon="mdi mdi-menu" @click="toggleDrawer">
+    <v-btn fab dark class="nav-mobile-btn" density="comfortable" icon="mdi mdi-menu" @click="toggleDrawer">
         <v-icon />
     </v-btn>
     <v-card>

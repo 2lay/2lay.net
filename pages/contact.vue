@@ -1,10 +1,10 @@
 <template>
-    <v-app class="hero">
+    <v-app class="img-bg">
         <v-container class="fill-height">
             <v-responsive class="align-center text-center fill-height">
-                <v-card class="card-home card-style">
-                    <h1 class="text-h3 font-weight-bold animated-text">Contact me</h1>
-                    <p class="code-text">
+                <v-card class="card-home card-custom">
+                    <h1 class="text-h3 font-weight-bold shadow-animation">Contact me</h1>
+                    <p class="spacer">
                         Have a question? Feel free to reach out!
                         <br />
                         You can email me at
@@ -14,7 +14,7 @@
                         <strong>2lay</strong>
                     </p>
 
-                    <v-btn href="mailto:mail@2lay.net" class="text-center custom-btn spacing"
+                    <v-btn href="mailto:mail@2lay.net" class="text-center btn-custom btn-spacing"
                         style="background-color: rgba(77, 77, 77, 0.212); border: 1px solid #3c3c3c">
                         <span />
                         <span class="mdi mdi-email" />
@@ -23,7 +23,7 @@
                     &nbsp;
 
                     <v-btn @click="snackbar = true, copyclipboard('2lay')" target="_blank"
-                        class="text-center custom-btn spacing"
+                        class="text-center btn-custom btn-spacing"
                         style="background-color: rgba(123, 148, 238, 0.212); border: 1px solid #4e5776">
                         <span />
                         <font-awesome-icon icon="fa-brands fa-discord" />

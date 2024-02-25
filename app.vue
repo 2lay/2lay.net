@@ -32,25 +32,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-.xd {
-    box-sizing: border-box;
-}
-
-.gg {
-    display: none;
-}
-
-.gg {
-    backdrop-filter: blur(2px);
-    background: rgb(0 0 0 / 0.8);
-}
-
-@media (prefers-color-scheme: dark) {
-    .gg {
-        background: rgb(0 0 0 / 0.4);
-    }
-}
-
 .nav {
     background-color: rgba(0, 0, 0, 0.527);
     border-radius: 10px;
@@ -62,14 +43,18 @@ onUnmounted(() => {
     backdrop-filter: blur(4px);
 }
 
-.overlay-button {
+.nav-mobile-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #4e4e4e;
     position: fixed;
     top: 16px;
     right: 16px;
     z-index: 1000;
 }
 
-.card-style {
+.card-custom {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     color: #ffffff;
@@ -78,37 +63,18 @@ onUnmounted(() => {
 }
 
 
-
-.custom-btn {
+.btn-custom {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     color: #ffffff;
 }
 
-.card-style1 {
-    background-color: rgba(0, 0, 0, 0);
-}
 
-.main,
-.sidebar {
-    border: 3px solid black;
-    padding: 15px;
-    background-color: #a35959;
-}
-
-.spacing {
+.btn-spacing {
     margin-bottom: 10px;
 }
 
-.rasd {
-    background-color: rgba(87, 87, 87, 0);
-}
-
-.amg {
-    background-color: rgba(87, 87, 87, 0.192);
-}
-
-.hero {
+.img-bg {
     background: url('https://i.imgur.com/KNICpay.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -116,7 +82,7 @@ onUnmounted(() => {
     height: relative;
 }
 
-.img {
+.img-discord {
     margin: auto;
     width: 70%;
     background-repeat: no-repeat;
@@ -131,7 +97,7 @@ onUnmounted(() => {
     box-sizing: border-box;
 }
 
-.code-text {
+.spacer {
     margin-top: 10px;
     color: #dedede;
     margin-bottom: 25px;
@@ -139,18 +105,27 @@ onUnmounted(() => {
 
 @keyframes shadowAnimation {
     0% {
-        text-shadow: 3px 3px 0px rgb(255, 187, 198);
+        text-shadow: 3px 3px 0px rgb(255, 187, 198), 5px 5px 8px rgb(148, 108, 114);
+    }
+
+    25% {
+        text-shadow: -3px -3px 0px rgb(255, 187, 198), -5px -5px 8px rgb(148, 108, 114);
     }
 
     50% {
-        text-shadow: -3px -3px 0px rgb(255, 187, 198);
+        text-shadow: -3px -3px 0px rgb(255, 187, 198), -5px -5px 8px rgb(148, 108, 114);
+    }
+
+    75% {
+        text-shadow: 3px 3px 0px rgb(255, 187, 198), 5px 5px 8px rgb(148, 108, 114);
     }
 
     100% {
-        text-shadow: 3px 3px 0px rgb(255, 187, 198);
+        text-shadow: 3px 3px 0px rgb(255, 187, 198), 5px 5px 8px rgb(148, 108, 114);
     }
 }
 
-.animated-text {
-    animation: shadowAnimation 1.5s infinite;
-}</style>
+.shadow-animation {
+    animation: shadowAnimation 3s infinite ease-out;
+}
+</style>
