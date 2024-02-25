@@ -106,7 +106,7 @@ onUnmounted(() => {
 }
 
 .hero {
-    background: url('https://i.imgur.com/lpGOQ7Z.png');
+    background: url('https://i.imgur.com/KNICpay.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
