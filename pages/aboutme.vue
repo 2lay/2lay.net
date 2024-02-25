@@ -147,16 +147,6 @@ const friends = ref([
         username: 'katelyynn',
         website: 'cutensilly.org',
     },
-    {
-        name: 'kate',
-        username: 'katelyynn',
-        website: 'cutensilly.org',
-    },
-    {
-        name: 'kate',
-        username: 'katelyynn',
-        website: 'cutensilly.org',
-    },
 ])
 </script>
 <style scoped>
