@@ -20,7 +20,10 @@
                                     Hey again! My name is Ashley and I'm a self taught developer from Sweden. I'm also
                                     very passionate about Linux
                                     <i>*i use arch btw*</i>
-                                    . I also love listening to music! Need to contact me? Check out <strong><NuxtLink to="/contact" style="text-decoration:none; color: inherit;">this</NuxtLink></strong>.
+                                    . I also love listening to music! Need to contact me? Check out <strong>
+                                        <NuxtLink to="/contact" style="text-decoration:none; color: inherit;">this
+                                        </NuxtLink>
+                                    </strong>.
                                     <br />
                                     <br />
                                     <h3>Also check out my cute friends!</h3>
@@ -28,17 +31,10 @@
                                     <div style="display: flex">
                                         <div v-for="item in friends">
                                             <v-list-item-content>
-                                                <v-btn
-                                                    icon
-                                                    rounded
-                                                    class="rounded-button margright"
-                                                    :href="'https://' + item.website"
-                                                >
-                                                    <img
-                                                        :src="'https://github.com/' + item.username + '.png'"
-                                                        alt="Image"
-                                                        class="button-image"
-                                                    />
+                                                <v-btn icon rounded class="rounded-button margright"
+                                                    :href="'https://' + item.website">
+                                                    <img :src="'https://github.com/' + item.username + '.png'" alt="Image"
+                                                        class="button-image" />
                                                     <v-tooltip activator="parent" location="start">
                                                         {{ item.name }} ({{ item.website }})
                                                     </v-tooltip>
@@ -54,12 +50,9 @@
                                 <p class="title-newline">Here is a list of programming languages/frameworks I know</p>
                                 <v-list class="rasd margintop">
                                     <v-list-item-group v-model="tab" class="custom-list-item-group">
-                                        <v-list-item
-                                            v-for="(item, index) in skills"
-                                            :key="index"
+                                        <v-list-item v-for="(item, index) in skills" :key="index"
                                             style="margin-top: -7px; margin-bottom: -7px"
-                                            :class="item.type === 'subheader' ? 'subheader' : ''"
-                                        >
+                                            :class="item.type === 'subheader' ? 'subheader' : ''">
                                             <v-list-item-content>
                                                 <v-list-item-title v-if="item.type !== 'divider'">
                                                     <v-icon v-if="item.icon">
@@ -91,11 +84,8 @@
                                 </p>
                                 <v-responsive class="align-center text-center">
                                     <br />
-                                    <v-btn
-                                        href="https://tmw.gg"
-                                        class="text-center custom-btn spacing"
-                                        style="background-color: rgba(223, 123, 238, 0.212); border: 1px solid #754e76"
-                                    >
+                                    <v-btn href="https://tmw.gg" class="text-center custom-btn spacing"
+                                        style="background-color: rgba(223, 123, 238, 0.212); border: 1px solid #754e76">
                                         <span class="mdi mdi-open-in-new" />
                                         &nbsp;Go to
                                     </v-btn>

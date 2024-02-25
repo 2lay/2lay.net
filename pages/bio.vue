@@ -10,12 +10,8 @@
                         <br />
                         <v-responsive class="align-center text-center">
                             <links />
-                            <v-btn
-                                block
-                                to="/"
-                                class="text-center custom-btn spacing"
-                                style="background-color: rgba(123, 177, 238, 0.212); border: 1px solid #4e6376"
-                            >
+                            <v-btn block to="/" class="text-center custom-btn spacing"
+                                style="background-color: rgba(123, 177, 238, 0.212); border: 1px solid #4e6376">
                                 <span />
                                 <span class="mdi mdi-web" />
                                 &nbsp;Main website

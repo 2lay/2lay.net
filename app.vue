@@ -39,15 +39,18 @@ onUnmounted(() => {
 .gg {
     display: none;
 }
+
 .gg {
     backdrop-filter: blur(2px);
     background: rgb(0 0 0 / 0.8);
 }
+
 @media (prefers-color-scheme: dark) {
     .gg {
         background: rgb(0 0 0 / 0.4);
     }
 }
+
 .nav {
     background-color: rgba(0, 0, 0, 0.527);
     border-radius: 10px;
@@ -150,5 +153,4 @@ onUnmounted(() => {
 
 .animated-text {
     animation: shadowAnimation 1.5s infinite;
-}
-</style>
+}</style>

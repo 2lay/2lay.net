@@ -6,30 +6,12 @@
                     <v-list>
                         <v-list-item prepend-avatar="https://github.com/2lay.png" title="Ashley" subtitle="she/her" />
                     </v-list>
-
                     <v-divider />
-
                     <v-list density="compact" nav>
-                        <v-list-item
-                            v-for="item in menuItems"
-                            :key="item.path"
-                            :prepend-icon="item.icon"
-                            :title="item.title"
-                            :to="item.path"
-                            :exact="true"
-                        />
+                        <v-list-item v-for="item in menuItems" :key="item.path" :prepend-icon="item.icon"
+                            :title="item.title" :to="item.path" :exact="true" />
                     </v-list>
-                    <!--<template v-slot:append>
-      
-            <v-list density="compact" nav>
-            <v-list-item  key="info" prepend-icon="mdi mdi-information" title="Information" to="info" exact="true"></v-list-item>
-            
-  
-          </v-list>
-         
-        </template>-->
                 </v-navigation-drawer>
-
                 <NuxtPage />
             </v-app>
         </v-layout>

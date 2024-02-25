@@ -1,48 +1,18 @@
 <template>
-    <v-btn
-        fab
-        dark
-        color="primary"
-        class="overlay-button"
-        density="comfortable"
-        icon="mdi mdi-menu"
-        @click="toggleDrawer"
-    >
+    <v-btn fab dark color="primary" class="overlay-button" density="comfortable" icon="mdi mdi-menu" @click="toggleDrawer">
         <v-icon />
     </v-btn>
-
     <v-card>
         <v-navigation-drawer v-model="drawer" expand-on-hover class="nav">
             <v-list>
                 <v-list-item prepend-avatar="https://github.com/2lay.png" title="Ashley" subtitle="she/her" />
             </v-list>
-
             <v-divider />
-
             <v-list density="compact" nav>
-                <v-list-item
-                    v-for="item in menuItems"
-                    :key="item.path"
-                    :prepend-icon="item.icon"
-                    :title="item.title"
-                    :to="item.path"
-                    :exact="true"
-                />
+                <v-list-item v-for="item in menuItems" :key="item.path" :prepend-icon="item.icon" :title="item.title"
+                    :to="item.path" :exact="true" />
             </v-list>
-
-            <!--<template v-slot:append>
-            <v-list density="compact" nav>
-              <v-list-item
-                key="info"
-                prepend-icon="mdi mdi-information"
-                title="Information"
-                to="info"
-                exact="true"
-              ></v-list-item>
-            </v-list>
-          </template>-->
         </v-navigation-drawer>
-
         <router-view />
     </v-card>
 </template>

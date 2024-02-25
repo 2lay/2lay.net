@@ -1,5 +1,6 @@
 <template>
-    <v-btn @click="snackbar = true, copyclipboard('2lay')" block target="_blank" class="text-center custom-btn spacing" style=" background-color: rgba(123, 148, 238, 0.212); border: 1px solid #4e5776;
+    <v-btn @click="snackbar = true, copyclipboard('2lay')" block target="_blank" class="text-center custom-btn spacing"
+        style=" background-color: rgba(123, 148, 238, 0.212); border: 1px solid #4e5776;
                 ">
         <span /><font-awesome-icon icon="fa-brands fa-discord" /> &nbsp;Discord&nbsp;<div style="color: #979797;">@2lay
         </div>
@@ -47,15 +48,7 @@
         <span /><font-awesome-icon icon="fa-brands fa-youtube" />&nbsp;YouTube&nbsp; <div style="color: #979797;">@2lay
         </div>
     </v-btn>
-
-    <!--
-        blehhh page to be re-made
-        <v-btn block href="https://pcpartpicker.com/user/2lay/saved/cQv8ZL" class="text-center custom-btn spacing"
-            style="background-color: rgba(255, 227, 149, 0.212); border: 1px solid #5a4b24;">
-            <span /><span class="mdi mdi-laptop" />&nbsp;My setup
-        </v-btn>-->
 </template>
-
 
 <script>
 export default {
@@ -65,8 +58,9 @@ export default {
         timeout: 2000,
     }),
     methods: {
-        copyclipboard (text) {
-        navigator.clipboard.writeText(text)
-    },
-}}
+        copyclipboard(text) {
+            navigator.clipboard.writeText(text)
+        },
+    }
+}
 </script>
