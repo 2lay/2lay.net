@@ -2,7 +2,7 @@
     <v-app class="img-bg">
         <v-container class="fill-height">
             <v-responsive class="align-center fill-height">
-                <header-me style="margin-bottom: 20px" />
+                <headerCard style="margin-bottom: 20px" />
                 <v-card class="mx-auto card-custom" max-width="500">
                     <v-tabs v-model="tab" align-tabs="center" style="background-color: rgba(87, 87, 87, 0.192);">
                         <v-tab value="aboutme">About me</v-tab>
@@ -20,10 +20,10 @@
                                     Hey again! My name is Ashley and I'm a self taught developer from Sweden. I'm also
                                     very passionate about Linux
                                     <i>*i use arch btw*</i>
-                                    . I also love listening to music! Need to contact me? Check out <strong>
+                                    . I also love listening to music! Need to contact me? Check <strong>
                                         <NuxtLink to="/contact" style="text-decoration:none; color: inherit;">this
                                         </NuxtLink>
-                                    </strong>.
+                                    </strong> out.
                                     <br />
                                     <br />
                                     <h3>Also check out my cute friends!</h3>

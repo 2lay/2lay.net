@@ -1,39 +1,39 @@
 <template>
     <v-app>
-        <Mobile v-if="isMobile" />
-        <AppBar v-else />
+        <SideBar v-if="notMobile" />
+        <MobileSideBar v-else  />
     </v-app>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-import AppBar from './layouts/AppBar.vue'
-import Mobile from './layouts/Mobile.vue'
+import SideBar from './layouts/SideBar.vue'
+import MobileSideBar from './layouts/MobileSideBar.vue'
 
-const isMobile = ref<boolean>(false)
+const notMobile = ref<boolean>(true)
 
-const updateIsMobile = (): void => {
-    isMobile.value = window.innerWidth <= 1280
+const updateNotMobile = (): void => {
+    notMobile.value = window.innerWidth >= 1280
 }
 
 onMounted(() => {
     if (process.client) {
-        updateIsMobile()
-        window.addEventListener('resize', updateIsMobile)
+        updateNotMobile()
+        window.addEventListener('resize', updateNotMobile)
     }
 })
 
 onUnmounted(() => {
     if (process.client) {
-        window.removeEventListener('resize', updateIsMobile)
+        window.removeEventListener('resize', updateNotMobile)
     }
 })
 </script>
 
 <style>
 .nav {
-    background-color: rgba(0, 0, 0, 0.527);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     color: #ffffff;
     border-radius: 0px 15px 15px 0px;
@@ -62,13 +62,11 @@ onUnmounted(() => {
     border: 1px solid #4e4e4e;
 }
 
-
 .btn-custom {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     color: #ffffff;
 }
-
 
 .btn-spacing {
     margin-bottom: 10px;
