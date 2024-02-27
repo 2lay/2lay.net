@@ -62,10 +62,22 @@ onUnmounted(() => {
     border: 1px solid #4e4e4e;
 }
 
+.card-custom {
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: scale(1.02);
+}
+
 .btn-custom {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     color: #ffffff;
+}
+
+.btn-hover:hover {
+    transform: scale(1.05);
 }
 
 .btn-spacing {
@@ -103,23 +115,23 @@ onUnmounted(() => {
 
 @keyframes shadowAnimation {
     0% {
-        text-shadow: 3px 3px 0px rgb(255, 187, 198), 5px 5px 8px rgb(148, 108, 114);
+        text-shadow: 3px 3px 0px rgb(230, 195, 226), 5px 5px 8px rgb(133, 111, 132);
     }
 
     25% {
-        text-shadow: -3px -3px 0px rgb(255, 187, 198), -5px -5px 8px rgb(148, 108, 114);
+        text-shadow: -3px -3px 0px rgb(230, 195, 226), -5px -5px 8px rgb(133, 111, 132);
     }
 
     50% {
-        text-shadow: -3px -3px 0px rgb(255, 187, 198), -5px -5px 8px rgb(148, 108, 114);
+        text-shadow: -3px -3px 0px rgb(230, 195, 226), -5px -5px 8px rgb(133, 111, 132);
     }
 
     75% {
-        text-shadow: 3px 3px 0px rgb(255, 187, 198), 5px 5px 8px rgb(148, 108, 114);
+        text-shadow: 3px 3px 0px rgb(230, 195, 226), 5px 5px 8px rgb(133, 111, 132);
     }
 
     100% {
-        text-shadow: 3px 3px 0px rgb(255, 187, 198), 5px 5px 8px rgb(148, 108, 114);
+        text-shadow: 3px 3px 0px rgb(230, 195, 226), 5px 5px 8px rgb(133, 111, 132);
     }
 }
 

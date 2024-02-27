@@ -10,7 +10,7 @@
             <v-divider />
             <v-list density="compact" nav>
                 <v-list-item v-for="item in menuItems" :key="item.path" :prepend-icon="item.icon" :title="item.title"
-                    :to="item.path" :exact="true" />
+                    :to="item.path" :exact="true" color="#e6c3e2" />
             </v-list>
         </v-navigation-drawer>
         <router-view />
@@ -21,7 +21,6 @@
 export default {
     data() {
         return {
-            isBlogPath: false,
             drawer: false,
             menuItems: [
                 { title: 'Home', path: '/', icon: 'mdi mdi-home' },
@@ -29,11 +28,6 @@ export default {
                 { title: 'Contact', path: '/contact', icon: 'mdi mdi-mailbox' },
             ],
         }
-    },
-    watch: {
-        $route(to, from) {
-            this.isBlogPath = to.path.startsWith('/blog/')
-        },
     },
     methods: {
         toggleDrawer() {

@@ -10,7 +10,7 @@
                         <v-responsive class="align-center text-center">
                             <links />
                             <v-btn block to="/" class="text-center btn-custom btn-spacing"
-                                style="background-color: rgba(123, 177, 238, 0.212); border: 1px solid #4e6376">
+                                style="background-color: rgba(123, 177, 238, 0.212); border: 1px solid rgba(123, 177, 238, 0.412)">
                                 <span />
                                 <span class="mdi mdi-web" />
                                 &nbsp;Main website
@@ -33,6 +33,8 @@ useSeoMeta({
     ogDescription: 'My bio page :3',
     ogImage: 'https://2lay.net/blahaj.png',
     twitterCard: 'summary_large_image',
-    themeColor: '#d754ff',
+    themeColor: '#e6c3e2',
 })
+
+
 </script>

@@ -9,7 +9,7 @@
                     <v-divider />
                     <v-list density="compact" nav>
                         <v-list-item v-for="item in menuItems" :key="item.path" :prepend-icon="item.icon"
-                            :title="item.title" :to="item.path" :exact="true" />
+                            :title="item.title" :to="item.path" :exact="true" color="#e6c3e2" />
                     </v-list>
                 </v-navigation-drawer>
                 <NuxtPage />
@@ -22,18 +22,12 @@
 export default {
     data() {
         return {
-            isBlogPath: false,
             menuItems: [
                 { title: 'Home', path: '/', icon: 'mdi mdi-home' },
                 { title: 'About me', path: '/aboutme', icon: 'mdi mdi-account' },
                 { title: 'Contact', path: '/contact', icon: 'mdi mdi-mailbox' },
             ],
         }
-    },
-    watch: {
-        $route(to, from) {
-            this.isBlogPath = to.path.startsWith('/blog/')
-        },
     },
 }
 </script>

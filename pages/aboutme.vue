@@ -4,11 +4,12 @@
             <v-responsive class="align-center fill-height">
                 <headerCard style="margin-bottom: 20px" />
                 <v-card class="mx-auto card-custom" max-width="500">
-                    <v-tabs v-model="tab" align-tabs="center" style="background-color: rgba(87, 87, 87, 0.192);">
+                    <v-tabs v-model="tab" align-tabs="center" color="#e6c3e2"
+                        style="background-color: rgba(87, 87, 87, 0.192);">
                         <v-tab value="aboutme">About me</v-tab>
-                        <v-tab value="one">Skills</v-tab>
-                        <v-tab value="two">Socials</v-tab>
-                        <v-tab value="three">My work</v-tab>
+                        <v-tab value="skills">Skills</v-tab>
+                        <v-tab value="socials">Socials</v-tab>
+                        <v-tab value="work">My work</v-tab>
                     </v-tabs>
 
                     <v-card-text>
@@ -28,7 +29,7 @@
                                     <br />
                                     <h3>Also check out my cute friends!</h3>
 
-                                    <div style="display: flex">
+                                    <div style="display: flex;">
                                         <div v-for="item in friends">
                                             <v-list-item-content>
                                                 <v-btn icon rounded class="rounded-button margright"
@@ -45,7 +46,7 @@
                                 </v-responsive>
                             </v-window-item>
 
-                            <v-window-item value="one">
+                            <v-window-item value="skills">
                                 <h2 style="margin-bottom: 5px">My skills</h2>
                                 <p class="title-newline">Here is a list of programming languages/frameworks I know</p>
                                 <v-list class="margintop" style="background-color: rgba(87, 87, 87, 0);">
@@ -66,7 +67,7 @@
                                 </v-list>
                             </v-window-item>
 
-                            <v-window-item value="two">
+                            <v-window-item value="socials">
                                 <h2 style="margin-bottom: 5px">My socials</h2>
                                 <p class="title-newline">
                                     Here are all of my social media profiles. Feel free to take a look!
@@ -76,7 +77,7 @@
                                 </v-responsive>
                             </v-window-item>
 
-                            <v-window-item value="three">
+                            <v-window-item value="work">
                                 <h2 class="title-newline">TMW.gg</h2>
                                 <p>
                                     The Modded Warehouse is a modded Network providing everyone a high quality non pay
@@ -84,8 +85,8 @@
                                 </p>
                                 <v-responsive class="align-center text-center">
                                     <br />
-                                    <v-btn href="https://tmw.gg" class="text-center btn-custom btn-spacing"
-                                        style="background-color: rgba(223, 123, 238, 0.212); border: 1px solid #754e76">
+                                    <v-btn href="https://tmw.gg" class="text-center btn-custom btn-spacing btn-hover"
+                                        style="background-color: rgba(230, 195, 225, 0.212); border: 1px solid rgba(230, 195, 225, 0.212)">
                                         <span class="mdi mdi-open-in-new" />
                                         &nbsp;Go to
                                     </v-btn>
@@ -109,7 +110,7 @@ useSeoMeta({
     ogDescription: 'On this site, you can learn more about me and all the stuff that I have done.',
     ogImage: 'https://2lay.net/blahaj.png',
     twitterCard: 'summary_large_image',
-    themeColor: '#d754ff',
+    themeColor: '#e6c3e2',
 })
 const skills = ref([
     { type: 'subheader', title: 'Fluent in' },

@@ -14,8 +14,8 @@
                         <strong>2lay</strong>
                     </p>
 
-                    <v-btn href="mailto:mail@2lay.net" class="text-center btn-custom btn-spacing"
-                        style="background-color: rgba(77, 77, 77, 0.212); border: 1px solid #3c3c3c">
+                    <v-btn href="mailto:mail@2lay.net" class="text-center btn-custom btn-spacing btn-hover"
+                        style="background-color: rgba(230, 195, 226, 0.212); border: 1px solid rgba(230, 195, 226, 0.412)">
                         <span />
                         <span class="mdi mdi-email" />
                         &nbsp;Mail
@@ -23,8 +23,8 @@
                     &nbsp;
 
                     <v-btn @click="snackbar = true, copyclipboard('2lay')" target="_blank"
-                        class="text-center btn-custom btn-spacing"
-                        style="background-color: rgba(123, 148, 238, 0.212); border: 1px solid #4e5776">
+                        class="text-center btn-custom btn-spacing btn-hover"
+                        style="background-color: rgba(86, 96, 234, 0.212); border: 1px solid rgba(86, 96, 234, 0.412)">
                         <span />
                         <font-awesome-icon icon="fa-brands fa-discord" />
                         &nbsp;Discord
@@ -64,6 +64,6 @@ useSeoMeta({
     ogDescription: 'Need to contact me? Here are all the ways you can reach me.',
     ogImage: 'https://2lay.net/blahaj.png',
     twitterCard: 'summary_large_image',
-    themeColor: '#d754ff',
+    themeColor: '#e6c3e2',
 });
 </script>

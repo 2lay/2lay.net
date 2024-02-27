@@ -23,7 +23,7 @@ const twolaytheme: ThemeOptions = {
     colors: {
         background: '#424242',
         surface: '#424242',
-        primary: '#d754ff',
+        primary: '#e6c3e2',
         'primary-darken-1': '#3700B3',
         secondary: '#03DAC6',
         'secondary-darken-1': '#018786',

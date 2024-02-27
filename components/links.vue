@@ -1,10 +1,10 @@
 <template>
     <v-btn @click="snackbar = true, copyclipboard('2lay')" block target="_blank" class="text-center btn-custom btn-spacing"
-        style=" background-color: rgba(123, 148, 238, 0.212); border: 1px solid #4e5776;
+        style=" background-color: rgba(86, 96, 234, 0.212); border: 1px solid rgba(86, 96, 234, 0.412);
                 ">
         <span /><font-awesome-icon icon="fa-brands fa-discord" /> &nbsp;Discord&nbsp;<div style="color: #979797;">@2lay
         </div>
-        <v-snackbar class="snackbar-style" v-model="snackbar" color="rgba(0, 0, 0, 0.7)" border="1px solid #4e4e4e">
+        <v-snackbar class="snackbar-style" v-model="snackbar" color="rgba(0, 0, 0, 0.4)" border="1px solid #4e4e4e">
             <div style="color: white;">{{ text }}</div>
 
             <template v-slot:actions>
@@ -14,43 +14,72 @@
             </template>
         </v-snackbar>
     </v-btn>
-
-    <v-btn block href="https://transfem.social/@2lay" class="text-center btn-custom btn-spacing"
-        style="background-color: rgba(38, 129, 162, 0.212); border: 1px solid #204e5e;">
-        <span /><font-awesome-icon icon="fa-brands fa-mastodon" /> &nbsp;Mastodon&nbsp; <div style="color: #979797;">
-            2lay@transfem.social</div>
-    </v-btn>
-
-    <v-btn block href="https://en.pronouns.page/@2lay" class="text-center btn-custom btn-spacing"
-        style="background-color: rgba(238, 123, 226, 0.212); border: 1px solid #764e6b;">
-        <span /><span class="mdi mdi-card-account-details" /> &nbsp;Pronouns.page&nbsp; <div style="color: #979797;">@2lay
-        </div>
-    </v-btn>
-
-    <v-btn block href="https://github.com/2lay" class="text-center btn-custom btn-spacing"
-        style="background-color: rgba(147, 147, 147, 0.212); border: 1px solid #555555;">
-        <span /><font-awesome-icon icon="fa-brands fa-github" /> &nbsp;GitHub&nbsp; <div style="color: #979797;">@2lay</div>
-    </v-btn>
-
-    <v-btn block href="https://www.last.fm/user/twolay" class="text-center btn-custom btn-spacing"
-        style="background-color: rgba(161, 0, 0, 0.212); border: 1px solid #531e1e;">
-        <span /><font-awesome-icon icon="fa-brands fa-lastfm" />&nbsp;Last.fm&nbsp; <div style="color: #979797;">@twolay
-        </div>
-    </v-btn>
-
-    <v-btn block href="https://steamcommunity.com/id/2lay" class="text-center btn-custom btn-spacing"
-        style="background-color: rgba(36, 134, 255, 0.212); border: 1px solid #24415a;">
-        <span /><font-awesome-icon icon="fa-brands fa-steam" />&nbsp;Steam&nbsp; <div style="color: #979797;">@2lay</div>
-    </v-btn>
-
-    <v-btn block href="https://www.youtube.com/@2lay" class="text-center btn-custom btn-spacing"
-        style="background-color: rgba(255, 0, 0, 0.212); border: 1px solid #5a2424;">
-        <span /><font-awesome-icon icon="fa-brands fa-youtube" />&nbsp;YouTube&nbsp; <div style="color: #979797;">@2lay
-        </div>
-    </v-btn>
+    <div v-for="item in links_socials" :key="item.name">
+        <v-btn block :href="item.link" class="text-center btn-custom btn-spacing"
+            :style="'background-color: rgba(' + item.rgb + ', 0.212); border: 1px solid rgba(' + item.rgb + ', 0.412);'">
+            <template v-if="item.icon.startsWith('mdi')">
+                <span :class="item.icon"></span>
+            </template>
+            <template v-else>
+                <font-awesome-icon :icon="item.icon" />
+            </template>
+            &nbsp;{{ item.name }}&nbsp;
+            <div style="color: #979797;">{{ item.domain }}</div>
+        </v-btn>
+    </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
+
+const links_socials = ref([
+    {
+        rgb: '95, 201, 241',
+        icon: 'mdi mdi-message-text',
+        name: 'Fediverse',
+        domain: '@2lay@transfem.social',
+        link: 'https://transfem.social/@2lay',
+    },
+    {
+        rgb: '255, 149, 187',
+        icon: 'mdi mdi-card-account-details',
+        name: 'Pronouns.page',
+        domain: '@2lay',
+        link: 'https://en.pronouns.page/@2lay',
+    },
+    {
+        rgb: '147, 147, 147',
+        icon: 'fa-brands fa-github',
+        name: 'GitHub',
+        domain: '@2lay',
+        link: 'https://github.com/2lay',
+    },
+    {
+        rgb: '220, 27, 37',
+        icon: 'fa-brands fa-lastfm',
+        name: 'Last.fm',
+        domain: '@twolay',
+        link: 'https://www.last.fm/user/twolay',
+    },
+    {
+        rgb: '19, 115, 163',
+        icon: 'fa-brands fa-steam',
+        name: 'Steam',
+        domain: '@2lay',
+        link: 'https://steamcommunity.com/id/2lay',
+    },
+    {
+        rgb: '247, 15, 27',
+        icon: 'fa-brands fa-youtube ',
+        name: 'YouTube',
+        domain: '@2lay',
+        link: 'https://www.youtube.com/@2lay',
+    },
+])
+
+</script>
+
+<script >
 export default {
     data: () => ({
         snackbar: false,
