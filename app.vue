@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <SideBar v-if="notMobile" />
-        <MobileSideBar v-else  />
+        <MobileSideBar v-else />
     </v-app>
 </template>
 
@@ -73,7 +73,7 @@ onUnmounted(() => {
 }
 
 .img-bg {
-    background: url('https://i.imgur.com/KNICpay.png');
+    background: url('/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

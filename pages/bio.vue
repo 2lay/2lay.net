@@ -31,6 +31,7 @@ useSeoMeta({
     ogTitle: '2lay.net | Bio',
     description: 'My bio page :3',
     ogDescription: 'My bio page :3',
+    ogImage: 'https://2lay.net/blahaj.png',
     twitterCard: 'summary_large_image',
     themeColor: '#d754ff',
 })

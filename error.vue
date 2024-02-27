@@ -31,6 +31,7 @@ useSeoMeta({
     description: "Uh oh, something went wrong. This page isn't here. Maybe it moved, or it never existed.",
     ogDescription: "Uh oh, something went wrong. This page isn't here. Maybe it moved, or it never existed.",
     themeColor: '#d754ff',
+    ogImage: 'https://2lay.net/blahaj.png',
     twitterCard: 'summary_large_image',
 })
 </script>

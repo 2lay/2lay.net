@@ -25,6 +25,7 @@ useSeoMeta({
         'Welcome to my website! I write code and some other stuff. Check out my website to learn more about me.',
     ogDescription:
         'Welcome to my website! I write code and some other stuff. Check out my website to learn more about me.',
+    ogImage: 'https://2lay.net/blahaj.png',
     twitterCard: 'summary_large_image',
     themeColor: '#d754ff',
 })

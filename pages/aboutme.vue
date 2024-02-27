@@ -107,6 +107,7 @@ useSeoMeta({
     ogTitle: '2lay.net | About Me',
     description: 'On this site, you can learn more about me and all the stuff that I have done.',
     ogDescription: 'On this site, you can learn more about me and all the stuff that I have done.',
+    ogImage: 'https://2lay.net/blahaj.png',
     twitterCard: 'summary_large_image',
     themeColor: '#d754ff',
 })
