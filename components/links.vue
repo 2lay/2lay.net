@@ -1,6 +1,6 @@
-<template>
-    <v-btn @click="snackbar = true, copyclipboard('2lay')" block target="_blank" class="text-center btn-custom btn-spacing"
-        style=" background-color: rgba(86, 96, 234, 0.212); border: 1px solid rgba(86, 96, 234, 0.412);
+<template >
+    <v-btn @click="snackbar = true, copyclipboard('2lay')" block target="_blank"
+        class="text-center btn-custom btn-spacing btn-hover" style=" background-color: rgba(86, 96, 234, 0.212); border: 1px solid rgba(86, 96, 234, 0.412); overflow: visible;
                 ">
         <span /><font-awesome-icon icon="fa-brands fa-discord" /> &nbsp;Discord&nbsp;<div style="color: #979797;">@2lay
         </div>
@@ -15,7 +15,7 @@
         </v-snackbar>
     </v-btn>
     <div v-for="item in links_socials" :key="item.name">
-        <v-btn block :href="item.link" class="text-center btn-custom btn-spacing"
+        <v-btn block :href="item.link" class="text-center btn-custom btn-spacing  btn-hover"
             :style="'background-color: rgba(' + item.rgb + ', 0.212); border: 1px solid rgba(' + item.rgb + ', 0.412);'">
             <template v-if="item.icon.startsWith('mdi')">
                 <span :class="item.icon"></span>

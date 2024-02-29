@@ -32,6 +32,10 @@ onUnmounted(() => {
 </script>
 
 <style>
+.v-responsive {
+    overflow: visible;
+}
+
 .nav {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;

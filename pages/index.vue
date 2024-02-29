@@ -2,7 +2,7 @@
     <v-app class="img-bg">
         <v-container class="fill-height">
             <v-responsive class="align-center text-center fill-height">
-                <v-card class="card-home card-custom">
+                <v-card class="card-home card-custom card-hover">
                     <h1 class="text-h3 font-weight-bold shadow-animation">2lay.net</h1>
                     <p class="spacer">
                         Hiya I'm Ashley, check out the sidebar to learn more about me!

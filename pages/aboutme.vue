@@ -14,83 +14,94 @@
 
                     <v-card-text>
                         <v-window v-model="tab">
+
                             <v-window-item value="aboutme">
-                                <h2 class="title-newline">About me</h2>
+                                <v-card-text>
+                                    <h2 class="title-newline">About me</h2>
 
-                                <v-responsive class="align-center">
-                                    Hey again! My name is Ashley and I'm a self taught developer from Sweden. I'm also
-                                    very passionate about Linux
-                                    <i>*i use arch btw*</i>
-                                    . I also love listening to music! Need to contact me? Check <strong>
-                                        <NuxtLink to="/contact" style="text-decoration:none; color: inherit;">this
-                                        </NuxtLink>
-                                    </strong> out.
-                                    <br />
-                                    <br />
-                                    <h3>Also check out my cute friends!</h3>
+                                    <v-responsive class="align-center">
+                                        Hey again! My name is Ashley and I'm a self taught developer from Sweden. I'm also
+                                        very passionate about Linux
+                                        <i>*i use arch btw*</i>
+                                        . I also love listening to music! Need to contact me? Check <strong>
+                                            <NuxtLink to="/contact" style="text-decoration:none; color: inherit;">this
+                                            </NuxtLink>
+                                        </strong> out.
+                                        <br />
+                                        <br />
+                                        <h3>Also check out my cute friends!</h3>
 
-                                    <div style="display: flex;">
-                                        <div v-for="item in friends">
-                                            <v-list-item-content>
-                                                <v-btn icon rounded class="rounded-button margright"
-                                                    :href="'https://' + item.website">
-                                                    <img :src="'https://github.com/' + item.username + '.png'" alt="Image"
-                                                        class="button-image" />
-                                                    <v-tooltip activator="parent" location="start">
-                                                        {{ item.name }} ({{ item.website }})
-                                                    </v-tooltip>
-                                                </v-btn>
-                                            </v-list-item-content>
+                                        <div style="display: flex;">
+                                            <div v-for="item in friends">
+                                                <v-list-item-content>
+                                                    <v-btn icon rounded class="rounded-button margrigh btn-hover"
+                                                        :href="'https://' + item.website">
+                                                        <img :src="'https://github.com/' + item.username + '.png'"
+                                                            alt="Image" class="button-image" />
+                                                        <v-tooltip activator="parent" location="start">
+                                                            {{ item.name }} ({{ item.website }})
+                                                        </v-tooltip>
+                                                    </v-btn>
+                                                </v-list-item-content>
+                                            </div>
                                         </div>
-                                    </div>
-                                </v-responsive>
+                                    </v-responsive>
+                                </v-card-text>
                             </v-window-item>
 
                             <v-window-item value="skills">
-                                <h2 style="margin-bottom: 5px">My skills</h2>
-                                <p class="title-newline">Here is a list of programming languages/frameworks I know</p>
-                                <v-list class="margintop" style="background-color: rgba(87, 87, 87, 0);">
-                                    <v-list-item-group v-model="tab" class="custom-list-item-group">
-                                        <v-list-item v-for="(item, index) in skills" :key="index"
-                                            style="margin-top: -7px; margin-bottom: -7px"
-                                            :class="item.type === 'subheader' ? 'subheader' : ''">
-                                            <v-list-item-content>
-                                                <v-list-item-title v-if="item.type !== 'divider'">
-                                                    <v-icon v-if="item.icon">
-                                                        {{ item.icon }}
-                                                    </v-icon>
-                                                    {{ item.title }}
-                                                </v-list-item-title>
-                                            </v-list-item-content>
-                                        </v-list-item>
-                                    </v-list-item-group>
-                                </v-list>
+                                <v-card-text>
+                                    <h2 style="margin-bottom: 5px">My skills</h2>
+                                    <p class="title-newline">Here is a list of programming languages/frameworks I know</p>
+                                    <v-list class="margintop" style="background-color: rgba(87, 87, 87, 0);">
+                                        <v-list-item-group v-model="tab" class="custom-list-item-group">
+                                            <v-list-item v-for="(item, index) in skills" :key="index"
+                                                style="margin-top: -7px; margin-bottom: -7px"
+                                                :class="item.type === 'subheader' ? 'subheader' : ''">
+                                                <v-list-item-content>
+                                                    <v-list-item-title v-if="item.type !== 'divider'">
+                                                        <v-icon v-if="item.icon">
+                                                            {{ item.icon }}
+                                                        </v-icon>
+                                                        {{ item.title }}
+                                                    </v-list-item-title>
+                                                </v-list-item-content>
+                                            </v-list-item>
+                                        </v-list-item-group>
+                                    </v-list>
+                                </v-card-text>
                             </v-window-item>
 
                             <v-window-item value="socials">
-                                <h2 style="margin-bottom: 5px">My socials</h2>
-                                <p class="title-newline">
-                                    Here are all of my social media profiles. Feel free to take a look!
-                                </p>
-                                <v-responsive class="align-center text-center">
+                                <v-card-text>
+                                    <h2>My socials</h2>
+                                    <br />
                                     <links />
-                                </v-responsive>
+                                    <v-btn block to="/" class="text-center btn-custom btn-spacing"
+                                        style="background-color: rgba(123, 177, 238, 0.212); border: 1px solid rgba(123, 177, 238, 0.412)">
+                                        <span />
+                                        <span class="mdi mdi-web" />
+                                        &nbsp;Main website
+                                    </v-btn>
+                                </v-card-text>
                             </v-window-item>
 
                             <v-window-item value="work">
-                                <h2 class="title-newline">TMW.gg</h2>
-                                <p>
-                                    The Modded Warehouse is a modded Network providing everyone a high quality non pay
-                                    to win gameplay.
-                                </p>
-                                <v-responsive class="align-center text-center">
-                                    <br />
-                                    <v-btn href="https://tmw.gg" class="text-center btn-custom btn-spacing btn-hover"
-                                        style="background-color: rgba(230, 195, 225, 0.212); border: 1px solid rgba(230, 195, 225, 0.212)">
-                                        <span class="mdi mdi-open-in-new" />
-                                        &nbsp;Go to
-                                    </v-btn>
-                                </v-responsive>
+                                <v-card-text>
+                                    <h2 class="title-newline">TMW.gg</h2>
+                                    <p>
+                                        The Modded Warehouse is a modded Network providing everyone a high quality non pay
+                                        to win gameplay.
+                                    </p>
+                                    <v-responsive class="align-center text-center">
+                                        <br />
+                                        <v-btn href="https://tmw.gg" class="text-center btn-custom btn-spacing btn-hover"
+                                            style="background-color: rgba(230, 195, 225, 0.212); border: 1px solid rgba(230, 195, 225, 0.212)">
+                                            <span class="mdi mdi-open-in-new" />
+                                            &nbsp;Go to
+                                        </v-btn>
+                                    </v-responsive>
+                                </v-card-text>
                             </v-window-item>
                         </v-window>
                     </v-card-text>
