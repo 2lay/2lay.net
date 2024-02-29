@@ -9,7 +9,7 @@
                         <br />
                         <v-responsive class="align-center text-center">
                             <links />
-                            <v-btn block to="/" class="text-center btn-custom btn-spacing  btn-hover"
+                            <v-btn block to="/" class="text-center btn-custom btn-spacing btn-hover"
                                 style="background-color: rgba(123, 177, 238, 0.212); border: 1px solid rgba(123, 177, 238, 0.412)">
                                 <span />
                                 <span class="mdi mdi-web" />

@@ -77,12 +77,6 @@
                                     <h2>My socials</h2>
                                     <br />
                                     <links />
-                                    <v-btn block to="/" class="text-center btn-custom btn-spacing"
-                                        style="background-color: rgba(123, 177, 238, 0.212); border: 1px solid rgba(123, 177, 238, 0.412)">
-                                        <span />
-                                        <span class="mdi mdi-web" />
-                                        &nbsp;Main website
-                                    </v-btn>
                                 </v-card-text>
                             </v-window-item>
 

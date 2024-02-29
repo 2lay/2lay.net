@@ -15,7 +15,7 @@
         </v-snackbar>
     </v-btn>
     <div v-for="item in links_socials" :key="item.name">
-        <v-btn block :href="item.link" class="text-center btn-custom btn-spacing  btn-hover"
+        <v-btn block :href="item.link" class="text-center btn-custom btn-spacing btn-hover"
             :style="'background-color: rgba(' + item.rgb + ', 0.212); border: 1px solid rgba(' + item.rgb + ', 0.412);'">
             <template v-if="item.icon.startsWith('mdi')">
                 <span :class="item.icon"></span>
