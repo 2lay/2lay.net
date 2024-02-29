@@ -5,7 +5,7 @@
                 <v-card class="card-home card-custom">
                     <h1 class="text-h3 font-weight-bold shadow-animation">2lay.net</h1>
                     <p class="spacer">
-                        I write code, check out the sidebar to learn more about me!
+                        Hiya I'm Ashley, check out the sidebar to learn more about me!
                         <br />
                     </p>
                     <v-img class="img-discord" src="https://discord.c99.nl/widget/theme-4/356867455303548929.png" />
