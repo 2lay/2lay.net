@@ -4,7 +4,7 @@
                 ">
         <span /><font-awesome-icon icon="fa-brands fa-discord" /> &nbsp;Discord&nbsp;<div style="color: #979797;">@2lay
         </div>
-        <v-snackbar class="snackbar-style" v-model="snackbar" color="rgba(0, 0, 0, 0.4)" border="1px solid #4e4e4e">
+        <v-snackbar class="snackbar-style" v-model="snackbar" color="rgba(0, 0, 0, 0.7)" border="1px solid #4e4e4e">
             <div style="color: white;">{{ text }}</div>
 
             <template v-slot:actions>

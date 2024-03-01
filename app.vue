@@ -1,34 +1,13 @@
 <template>
     <v-app>
-        <SideBar v-if="notMobile" />
-        <MobileSideBar v-else />
+        <NuxtLayout>
+            <MainView />
+        </NuxtLayout>
     </v-app>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-
-import SideBar from './layouts/SideBar.vue'
-import MobileSideBar from './layouts/MobileSideBar.vue'
-
-const notMobile = ref<boolean>(true)
-
-const updateNotMobile = (): void => {
-    notMobile.value = window.innerWidth >= 1280
-}
-
-onMounted(() => {
-    if (process.client) {
-        updateNotMobile()
-        window.addEventListener('resize', updateNotMobile)
-    }
-})
-
-onUnmounted(() => {
-    if (process.client) {
-        window.removeEventListener('resize', updateNotMobile)
-    }
-})
+import MainView from './layouts/mainView.vue'
 </script>
 
 <style>
