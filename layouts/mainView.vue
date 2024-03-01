@@ -50,10 +50,13 @@ export default {
     },
     methods: {
         toggleDrawer() {
-            this.drawer = !this.drawer
+            this.drawer = !this.drawer;
         },
         updateNotMobile() {
             this.notMobile = window.innerWidth >= 1280;
+            if (!this.notMobile) {
+                this.drawer = false;
+            }
         },
     },
     mounted() {
@@ -67,5 +70,12 @@ export default {
             window.removeEventListener('resize', this.updateNotMobile);
         }
     },
+    watch: {
+        notMobile(value) {
+            if (!value) {
+                this.drawer = false;
+            }
+        }
+    }
 }
 </script>
