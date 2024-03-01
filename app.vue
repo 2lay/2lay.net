@@ -33,7 +33,7 @@ import MainView from './layouts/mainView.vue'
     border: 1px solid #4e4e4e;
     position: fixed;
     top: 16px;
-    right: 16px;
+    left: 16px;
     z-index: 1000;
 }
 

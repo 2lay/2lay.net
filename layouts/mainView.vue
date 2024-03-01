@@ -1,10 +1,11 @@
 <template>
     <v-card>
-        <v-btn v-if="!notMobile" fab dark class="nav-mobile-btn" density="comfortable" icon="mdi mdi-menu"
-            @click="toggleDrawer">
-            <v-icon />
-        </v-btn>
-
+        <transition name="fade">
+            <v-btn v-if="!notMobile && !drawer" fab dark class="nav-mobile-btn btn-hover" density="comfortable"
+                icon="mdi mdi-menu" @click="toggleDrawer">
+                <v-icon />
+            </v-btn>
+        </transition>
         <!-- Desktop -->
         <v-navigation-drawer v-if="notMobile" expand-on-hover class="nav" rail>
             <v-list>
@@ -79,3 +80,33 @@ export default {
     }
 }
 </script>
+
+<style>
+@keyframes fadeIn {
+    from {
+        opacity: 0.0001;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.0001;
+    }
+}
+
+.fade-enter-active {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.fade-leave-active {
+    animation: fadeOut 0.3s ease-out;
+}
+</style>
