@@ -18,14 +18,14 @@ import MainView from './layouts/mainView.vue'
         --primary-l: 83%;
     
         --danger-h: 0;
-        --danger-s: 72%;
+        --danger-s: 100%;
 
         --info-h: 206;
     
         --primary: var(--primary-h), var(--primary-s), var(--primary-l);
         --darker-primary: var(--primary-h), calc(var(--primary-s) - 30%), calc(var(--primary-l) - 40%);
     
-        --danger: var(--danger-h), var(--dange-s), var(--primary-l);
+        --danger: var(--danger-h), var(--danger-s), var(--primary-l);
         --info: var(--info-h), var(--primary-s), var(--primary-l);
     
         --border: hsla(0, 0%, 31%, 1);

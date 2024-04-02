@@ -1,13 +1,15 @@
 <template>
     <v-card>
+        <!-- Mobile nav hamburger -->
         <transition name="fade">
-            <v-btn v-if="!notMobile && !drawer" fab dark class="nav-mobile-btn btn-hover" density="comfortable"
-                icon="mdi mdi-menu" @click="toggleDrawer">
+            <v-btn v-if="!notMobile && !drawer && !showNav" fab dark class="nav-mobile-btn btn-hover"
+                density="comfortable" icon="mdi mdi-menu" @click="toggleDrawer">
                 <v-icon />
             </v-btn>
         </transition>
+
         <!-- Desktop -->
-        <v-navigation-drawer v-if="notMobile" expand-on-hover class="nav" rail>
+        <v-navigation-drawer v-if="notMobile && !showNav" expand-on-hover class="nav" rail>
             <v-list>
                 <v-list-item prepend-avatar="https://github.com/2lay.png" title="Ashley" subtitle="she/her" />
             </v-list>
@@ -19,7 +21,8 @@
         </v-navigation-drawer>
 
         <!-- Mobile -->
-        <v-navigation-drawer v-if="!notMobile" expand-on-hover class="nav" v-model="drawer" :rail="notMobile">
+        <v-navigation-drawer v-if="!notMobile && !showNav" expand-on-hover class="nav" v-model="drawer"
+            :rail="notMobile">
             <v-list>
                 <v-list-item prepend-avatar="https://github.com/2lay.png" title="Ashley" subtitle="she/her" />
             </v-list>
@@ -36,7 +39,6 @@
 
 <script>
 import { ref, onMounted, onUnmounted } from 'vue';
-
 export default {
     data() {
         return {
@@ -45,8 +47,14 @@ export default {
             menuItems: [
                 { title: 'Home', path: '/', icon: 'mdi mdi-home' },
                 { title: 'About me', path: '/aboutme', icon: 'mdi mdi-account' },
+                { title: 'Projects', path: '/projects', icon: 'mdi mdi-folder-multiple' },
                 { title: 'Contact', path: '/contact', icon: 'mdi mdi-mailbox' },
             ],
+        }
+    },
+    computed: {
+        showNav() {
+            return this.$route.path === '/bio';
         }
     },
     methods: {

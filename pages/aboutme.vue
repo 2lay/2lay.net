@@ -9,7 +9,6 @@
                         <v-tab value="aboutme">About me </v-tab>
                         <v-tab value="skills">Skills</v-tab>
                         <v-tab value="socials">Socials</v-tab>
-                        <v-tab value="work">My work</v-tab>
                     </v-tabs>
 
                     <v-card-text>
@@ -81,25 +80,6 @@
                                     <links />
                                 </v-card-text>
                             </v-window-item>
-
-                            <v-window-item value="work">
-                                <v-card-text>
-                                    <h2 style="margin-bottom: 15px;">TMW.gg</h2>
-                                    <p>The Modded Warehouse is a modded Network providing everyone a high-quality non
-                                        pay-to-win gameplay.</p>
-                                    <v-responsive class="align-center text-center">
-                                        <br />
-                                        <v-btn href="https://tmw.gg"
-                                            class="text-center btn-custom btn-spacing btn-hover" style="
-                        background-color: rgba(230, 195, 225, 0.212);
-                        border: 1px solid rgba(230, 195, 225, 0.212);
-                    ">
-                                            <span class="mdi mdi-open-in-new" />
-                                            &nbsp;Go to
-                                        </v-btn>
-                                    </v-responsive>
-                                </v-card-text>
-                            </v-window-item>
                         </v-window>
                     </v-card-text>
                 </v-card>
@@ -118,7 +98,7 @@ useSeoMeta({
     ogTitle: '2lay.net | About Me',
     description: 'On this site, you can learn more about me and all the stuff that I have done.',
     ogDescription: 'On this site, you can learn more about me and all the stuff that I have done.',
-    ogImage: 'https://2lay.net/blahaj.png',
+    ogImage: 'https://2lay.net/avatar.png',
     twitterCard: 'summary_large_image',
     themeColor: '#e6c3e2',
 })

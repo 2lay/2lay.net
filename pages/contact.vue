@@ -62,7 +62,7 @@ useSeoMeta({
     ogTitle: '2lay.net | Contact',
     description: 'Need to contact me? Here are all the ways you can reach me.',
     ogDescription: 'Need to contact me? Here are all the ways you can reach me.',
-    ogImage: 'https://2lay.net/blahaj.png',
+    ogImage: 'https://2lay.net/avatar.png',
     twitterCard: 'summary_large_image',
     themeColor: '#e6c3e2',
 });

@@ -25,6 +25,7 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@nuxt/eslint-config": "^0.2.0",
+    "@nuxtjs/composition-api": "^0.33.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/router": "^1.7.0",
     "@nuxtjs/sitemap": "^5.0.5",
