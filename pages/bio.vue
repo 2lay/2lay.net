@@ -35,6 +35,4 @@ useSeoMeta({
     twitterCard: 'summary_large_image',
     themeColor: '#e6c3e2',
 })
-
-
 </script>

@@ -11,41 +11,56 @@ import MainView from './layouts/mainView.vue'
 </script>
 
 <style>
-.v-responsive {
-    overflow: visible;
+
+:root {
+        --primary-h: 307;
+        --primary-s: 41%;
+        --primary-l: 83%;
+    
+        --danger-h: 0;
+        --danger-s: 72%;
+
+        --info-h: 206;
+    
+        --primary: var(--primary-h), var(--primary-s), var(--primary-l);
+        --darker-primary: var(--primary-h), calc(var(--primary-s) - 30%), calc(var(--primary-l) - 40%);
+    
+        --danger: var(--danger-h), var(--dange-s), var(--primary-l);
+        --info: var(--info-h), var(--primary-s), var(--primary-l);
+    
+        --border: hsla(0, 0%, 31%, 1);
+        --card: hsla(0, 0%, 0%, 0.7);
 }
 
+/* navigation */
+
 .nav {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    color: #ffffff;
-    border-radius: 0px 15px 15px 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;
+    color: white;
+    background-color: var(--card);
+    box-shadow: 0 0 10px var(--card);
     backdrop-filter: blur(4px);
+    border-color: var(--border);
+    border-radius: 0px 15px 15px 0px;
 }
 
 .nav-mobile-btn {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid #4e4e4e;
-    position: fixed;
-    top: 16px;
-    left: 16px;
+    color: white;
+    background-color: var(--card);
+    box-shadow: 0 0 10px var(--card);
+    border: 1px solid var(--border);
+    margin: 16px;
     z-index: 1000;
+    position: fixed;
 }
 
+/* card */
+
 .card-custom {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
     color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid #4e4e4e;
-}
-
-.card-custom {
+    background-color: var(--card);
+    box-shadow: 0 0 10px var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -53,10 +68,20 @@ import MainView from './layouts/mainView.vue'
     transform: scale(1.02);
 }
 
+.card-home {
+    padding: 25px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* button */
+
 .btn-custom {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px var(--card);
     border-radius: 10px;
-    color: #ffffff;
+    color: white;
 }
 
 .btn-hover:hover {
@@ -66,6 +91,8 @@ import MainView from './layouts/mainView.vue'
 .btn-spacing {
     margin-bottom: 10px;
 }
+
+/* image */
 
 .img-bg {
     background: url('/background.png');
@@ -82,43 +109,60 @@ import MainView from './layouts/mainView.vue'
     border-radius: 2px;
 }
 
-.card-home {
-    padding: 25px;
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+/* vuetify overrides */
+
+.v-responsive {
+    overflow: visible;
 }
+
+/* other */
 
 .spacer {
     margin-top: 10px;
-    color: #dedede;
+    color: white;
     margin-bottom: 25px;
 }
 
+/* shadow animation */
+
 @keyframes shadowAnimation {
     0% {
-        text-shadow: 3px 3px 0px rgb(230, 195, 226), 5px 5px 8px rgb(133, 111, 132);
+        text-shadow: 3px 3px 0px hsl(var(--primary)), 5px 5px 8px hsl(var(--darker-primary));
     }
 
     25% {
-        text-shadow: -3px -3px 0px rgb(230, 195, 226), -5px -5px 8px rgb(133, 111, 132);
+        text-shadow: -3px -3px 0px hsl(var(--primary)), -5px -5px 8px hsl(var(--darker-primary));
     }
 
     50% {
-        text-shadow: -3px -3px 0px rgb(230, 195, 226), -5px -5px 8px rgb(133, 111, 132);
+        text-shadow: -3px -3px 0px hsl(var(--primary)), -5px -5px 8px hsl(var(--darker-primary));
     }
 
     75% {
-        text-shadow: 3px 3px 0px rgb(230, 195, 226), 5px 5px 8px rgb(133, 111, 132);
+        text-shadow: 3px 3px 0px hsl(var(--primary)), 5px 5px 8px hsl(var(--darker-primary));
     }
 
     100% {
-        text-shadow: 3px 3px 0px rgb(230, 195, 226), 5px 5px 8px rgb(133, 111, 132);
+        text-shadow: 3px 3px 0px hsl(var(--primary)), 5px 5px 8px hsl(var(--darker-primary));
     }
 }
 
 .shadow-animation {
     animation: shadowAnimation 3s infinite ease-out;
 }
+
+/* emojis */
+
+.emoji {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.emoji-trans {
+    background-image: url('/emojis/trans_flag.png');
+}
+
 </style>

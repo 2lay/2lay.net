@@ -4,11 +4,11 @@
                 ">
         <span /><font-awesome-icon icon="fa-brands fa-discord" /> &nbsp;Discord&nbsp;<div style="color: #979797;">@2lay
         </div>
-        <v-snackbar class="snackbar-style" v-model="snackbar" color="rgba(0, 0, 0, 0.7)" border="1px solid #4e4e4e">
+        <v-snackbar class="snackbar-style" v-model="snackbar" color="rgba(0, 0, 0, 0.7)">
             <div style="color: white;">{{ text }}</div>
 
             <template v-slot:actions>
-                <v-btn color="primary" variant="tonal" @click="snackbar = false">
+                <v-btn color="hsl(var(--primary))" variant="tonal" @click="snackbar = false">
                     Close
                 </v-btn>
             </template>
@@ -34,18 +34,11 @@ import { ref } from 'vue';
 
 const links_socials = ref([
     {
-        rgb: '95, 201, 241',
-        icon: 'mdi mdi-message-text',
-        name: 'Fediverse',
-        domain: '@2lay@transfem.social',
-        link: 'https://transfem.social/@2lay',
-    },
-    {
-        rgb: '255, 149, 187',
-        icon: 'mdi mdi-card-account-details',
-        name: 'Pronouns.page',
-        domain: '@2lay',
-        link: 'https://en.pronouns.page/@2lay',
+        rgb: '220, 27, 37',
+        icon: 'fa-brands fa-lastfm',
+        name: 'Last.fm',
+        domain: '@twolay',
+        link: 'https://www.last.fm/user/twolay',
     },
     {
         rgb: '147, 147, 147',
@@ -55,11 +48,11 @@ const links_socials = ref([
         link: 'https://github.com/2lay',
     },
     {
-        rgb: '220, 27, 37',
-        icon: 'fa-brands fa-lastfm',
-        name: 'Last.fm',
-        domain: '@twolay',
-        link: 'https://www.last.fm/user/twolay',
+        rgb: '247, 15, 27',
+        icon: 'fa-brands fa-youtube ',
+        name: 'YouTube',
+        domain: '@2lay',
+        link: 'https://www.youtube.com/channel/UC-jrEls9AJslFXMyonCd09w',
     },
     {
         rgb: '19, 115, 163',
@@ -69,11 +62,11 @@ const links_socials = ref([
         link: 'https://steamcommunity.com/id/2lay',
     },
     {
-        rgb: '247, 15, 27',
-        icon: 'fa-brands fa-youtube ',
-        name: 'YouTube',
+        rgb: '255, 149, 187',
+        icon: 'mdi mdi-card-account-details',
+        name: 'Pronouns.page',
         domain: '@2lay',
-        link: 'https://www.youtube.com/@2lay',
+        link: 'https://en.pronouns.page/@2lay',
     },
 ])
 

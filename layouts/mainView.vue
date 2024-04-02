@@ -14,7 +14,7 @@
             <v-divider />
             <v-list density="compact" nav>
                 <v-list-item v-for="item in menuItems" :key="item.path" :prepend-icon="item.icon" :title="item.title"
-                    :to="item.path" :exact="true" color="#e6c3e2" />
+                    :to="item.path" :exact="true" color=hsl(var(--primary)) />
             </v-list>
         </v-navigation-drawer>
 
@@ -26,7 +26,7 @@
             <v-divider />
             <v-list density="compact" nav>
                 <v-list-item v-for="item in menuItems" :key="item.path" :prepend-icon="item.icon" :title="item.title"
-                    :to="item.path" :exact="true" color="#e6c3e2" />
+                    :to="item.path" :exact="true" color=hsl(var(--primary)) />
             </v-list>
         </v-navigation-drawer>
 

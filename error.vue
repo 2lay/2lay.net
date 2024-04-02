@@ -3,10 +3,10 @@
         <v-container class="fill-height">
             <v-responsive class="align-center text-center fill-height">
                 <v-card class="card-home card-custom">
-                    <h1 class="text-h3 font-weight-bold">404 not found</h1>
+                    <h1 class="text-h3 font-weight-bold shadow-animation">404 not found</h1>
                     <p class="spacer">This page isn't here. Maybe it moved, or it never existed.</p>
                     <v-btn
-                        style="background-color: rgba(230, 195, 226, 0.212); border: 1px solid rgba(230, 195, 226, 0.412)"
+                        style="background-color: hsl(var(--primary), 0.2);;  border: 1px solid hsl(var(--primary), 0.4)"
                         @click="$router.go(-1)">
                         <span class="mdi mdi-arrow-left-bold" />
                         &nbsp;Go back

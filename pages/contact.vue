@@ -15,7 +15,7 @@
                     </p>
 
                     <v-btn href="mailto:mail@2lay.net" class="text-center btn-custom btn-spacing btn-hover"
-                        style="background-color: rgba(230, 195, 226, 0.212); border: 1px solid rgba(230, 195, 226, 0.412)">
+                        style="background-color: hsl(var(--primary), 0.2);;  border: 1px solid hsl(var(--primary), 0.4)">
                         <span />
                         <span class="mdi mdi-email" />
                         &nbsp;Mail
