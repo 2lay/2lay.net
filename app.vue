@@ -92,6 +92,27 @@ import MainView from './layouts/mainView.vue'
     margin-bottom: 10px;
 }
 
+/* tooltip */
+
+.tooltip-custom>.v-overlay__content {
+    color: #ffffff;
+        background-color: var(--card);
+        box-shadow: 0 0 10px var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+}
+
+/* snackbar */
+
+.snackbar-custom>.v-overlay__content {
+    color: #ffffff;
+    background-color: var(--card);
+    box-shadow: 0 0 10px var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+}
 /* image */
 
 .img-bg {
@@ -123,7 +144,16 @@ import MainView from './layouts/mainView.vue'
     margin-bottom: 25px;
 }
 
-/* shadow animation */
+/* animations */
+
+.hover-animation:hover {
+    transform: scale(1.05);
+    overflow: visible;
+}
+
+.hover-animation {
+    transition: transform .5s ease;
+}
 
 @keyframes shadowAnimation {
     0% {

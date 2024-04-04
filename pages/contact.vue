@@ -30,12 +30,12 @@
                         &nbsp;Discord
                     </v-btn>
 
-                    <v-snackbar class="snackbar-style" v-model="snackbar" color="rgba(0, 0, 0, 0.7)"
-                        border="1px solid #4e4e4e">
-                        <div style="color: white;">{{ text }}</div>
+                    <v-snackbar class="snackbar-custom" v-model="snackbar" color="rgba(0, 0, 0, 0.7)">
+                        <div style="color: white;">Copied username to clipboard.</div>
 
                         <template v-slot:actions>
-                            <v-btn color="primary" variant="tonal" @click="snackbar = false">
+                            <v-btn color="primary" variant="tonal" @click="snackbar = false"
+                                class="hover-animation btn-custom">
                                 Close
                             </v-btn>
                         </template>
@@ -55,7 +55,6 @@ const copyclipboard = (text: string) => {
 };
 
 const snackbar = ref(false);
-const text = 'Copied username to clipboard.';
 
 useSeoMeta({
     title: '2lay.net | Contact',

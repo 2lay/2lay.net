@@ -1,22 +1,32 @@
-<template >
-    <v-btn @click="snackbar = true, copyclipboard('2lay')" block target="_blank"
-        class="text-center btn-custom btn-spacing btn-hover" style=" background-color: rgba(86, 96, 234, 0.212); border: 1px solid rgba(86, 96, 234, 0.412); overflow: visible;
-                ">
-        <span /><font-awesome-icon icon="fa-brands fa-discord" /> &nbsp;Discord&nbsp;<div style="color: #979797;">@2lay
-        </div>
-        <v-snackbar class="snackbar-style" v-model="snackbar" color="rgba(0, 0, 0, 0.7)">
-            <div style="color: white;">{{ text }}</div>
+<template>
+    <v-btn
+        @click="(snackbar = true), copyclipboard('2lay')"
+        block
+        target="_blank"
+        class="text-center btn-custom btn-spacing hover-animation"
+        style="
+            background-color: rgba(86, 96, 234, 0.212);
+            border: 1px solid rgba(86, 96, 234, 0.412);
+            overflow: visible;
+        "
+    >
+        <span /><font-awesome-icon icon="fa-brands fa-discord" /> &nbsp;Discord&nbsp;
+        <div style="color: #979797">@2lay</div>
+        <v-snackbar class="snackbar-custom" v-model="snackbar" color="rgba(0, 0, 0, 0.7)">
+            <div style="color: white">Copied username to clipboard.</div>
 
             <template v-slot:actions>
-                <v-btn color="hsl(var(--primary))" variant="tonal" @click="snackbar = false">
-                    Close
-                </v-btn>
+                <v-btn color="hsl(var(--primary))" variant="tonal" @click="snackbar = false" class="hover-animation btn-custom"> Close </v-btn>
             </template>
         </v-snackbar>
     </v-btn>
     <div v-for="item in links_socials" :key="item.name">
-        <v-btn block :href="item.link" class="text-center btn-custom btn-spacing btn-hover"
-            :style="'background-color: rgba(' + item.rgb + ', 0.212); border: 1px solid rgba(' + item.rgb + ', 0.412);'">
+        <v-btn
+            block
+            :href="item.link"
+            class="text-center btn-custom btn-spacing hover-animation"
+            :style="'background-color: rgba(' + item.rgb + ', 0.212); border: 1px solid rgba(' + item.rgb + ', 0.412);'"
+        >
             <template v-if="item.icon.startsWith('mdi')">
                 <span :class="item.icon"></span>
             </template>
@@ -24,13 +34,13 @@
                 <font-awesome-icon :icon="item.icon" />
             </template>
             &nbsp;{{ item.name }}&nbsp;
-            <div style="color: #979797;">{{ item.domain }}</div>
+            <div style="color: #979797">{{ item.domain }}</div>
         </v-btn>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const links_socials = ref([
     {
@@ -69,10 +79,9 @@ const links_socials = ref([
         link: 'https://en.pronouns.page/@2lay',
     },
 ])
-
 </script>
 
-<script >
+<script>
 export default {
     data: () => ({
         snackbar: false,
@@ -83,6 +92,6 @@ export default {
         copyclipboard(text) {
             navigator.clipboard.writeText(text)
         },
-    }
+    },
 }
 </script>

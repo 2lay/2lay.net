@@ -15,8 +15,9 @@
             </v-list>
             <v-divider />
             <v-list density="compact" nav>
-                <v-list-item v-for="item in menuItems" :key="item.path" :prepend-icon="item.icon" :title="item.title"
-                    :to="item.path" :exact="true" color=hsl(var(--primary)) />
+                <v-list-item class="hover-animation"  v-for="item in menuItems" :key="item.path"
+                    :prepend-icon="item.icon" :title="item.title" :to="item.path" :exact="true"
+                    color=hsl(var(--primary)) />
             </v-list>
         </v-navigation-drawer>
 

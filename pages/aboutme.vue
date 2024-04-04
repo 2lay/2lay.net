@@ -6,43 +6,50 @@
                 <v-card class="mx-auto card-custom" max-width="500">
                     <v-tabs v-model="tab" align-tabs="center" color="hsl(var(--primary))"
                         style="background-color: rgba(87, 87, 87, 0.192)">
-                        <v-tab value="aboutme">About me </v-tab>
-                        <v-tab value="skills">Skills</v-tab>
-                        <v-tab value="socials">Socials</v-tab>
+                        <v-tab value="aboutme"><span class="hover-animation">About me</span></v-tab>
+                        <v-tab value="skills"><span class="hover-animation">Skills</span></v-tab>
+                        <v-tab value="socials"><span class="hover-animation">Socials</span></v-tab>
                     </v-tabs>
 
                     <v-card-text>
                         <v-window v-model="tab">
                             <v-window-item value="aboutme">
                                 <v-card-text>
-                                    <h2 style="margin-bottom: 15px;">About me</h2>
+                                    <h2 style="margin-bottom: 15px">Hey there, I'm Ashley <span
+                                            class="emoji emoji-trans" /></h2>
 
                                     <v-responsive class="align-center">
-                                        Hey again! My name is Ashley and I'm a self-taught developer from Sweden. I'm
-                                        also very passionate about Linux
-                                        <i>*i use arch btw*</i>. I also love listening to music! Need to contact me?
-                                        Check
-                                        <strong>
-                                            <NuxtLink to="/contact" style="text-decoration: none; color: inherit">this
-                                            </NuxtLink>
-                                        </strong>
-                                        out.
-                                        <br />
-                                        <br />
-                                        <h3>Also check out my cute friends!</h3>
+                                        <p>Hey there, I'm Ashley .<br>
+                                            I'm a self-taught systems administrator and developer from Sweden. I'm
+                                            passionate about <strong>Linux</strong> and
+                                            <strong>open-source</strong> software. Besides that, I enjoy immersing
+                                            myself in music and video games.
+                                        </p>
 
+                                        <p style="margin-top: 5px;">Need to reach out? Feel free to <strong>
+                                                <NuxtLink to="/contact" style="text-decoration: none; color: inherit;">
+                                                    contact me</NuxtLink>
+                                            </strong>.</p>
+
+                                        <h3 style="margin-bottom: 5px; margin-top: 15px;">Also, check out my adorable
+                                            friends!</h3>
                                         <div style="display: flex">
                                             <div v-for="item in friends">
                                                 <v-list-item-content>
-                                                    <v-btn icon rounded class="margrigh btn-hover"
-                                                        style=" width: 50px; margin-top: 5px; height: 50px; border-radius: 50%;"
-                                                        :href="'https://' + item.website">
+                                                    <v-btn icon rounded class="margrigh hover-animation" style="
+                                                            width: 50px;
+                                                            margin-top: 5px;
+                                                            height: 50px;
+                                                            border-radius: 50%;
+                                                        " :href="'https://' + item.website">
                                                         <img :src="'https://github.com/' + item.username + '.png'"
                                                             alt="Image"
                                                             style="width: 100%; height: auto; border-radius: 50%" />
-                                                        <v-tooltip activator="parent" location="start">
+                                                        <v-tooltip class="tooltip-custom" activator="parent"
+                                                            location="start">
                                                             {{ item.name }} ({{ item.website }})
                                                         </v-tooltip>
+
                                                     </v-btn>
                                                 </v-list-item-content>
                                             </div>
@@ -53,23 +60,25 @@
 
                             <v-window-item value="skills">
                                 <v-card-text>
-                                    <h2 style="margin-bottom: 5px">My skills</h2>
-                                    <p style="margin-bottom: 15px;">Here is a list of programming languages/frameworks I
-                                        know</p>
-                                    <v-list style="background-color: rgba(87, 87, 87, 0); margin-top: -15px">
-                                        <v-list-item-group v-model="tab" class="custom-list-item-group">
-                                            <v-list-item v-for="(item, index) in skills" :key="index"
-                                                style="margin-top: -7px; margin-bottom: -7px"
-                                                :class="item.type === 'subheader' ? 'subheader' : ''">
-                                                <v-list-item-content>
-                                                    <v-list-item-title v-if="item.type !== 'divider'">
-                                                        <v-icon v-if="item.icon">{{ item.icon }}</v-icon>
-                                                        {{ item.title }}
-                                                    </v-list-item-title>
-                                                </v-list-item-content>
-                                            </v-list-item>
-                                        </v-list-item-group>
-                                    </v-list>
+                                    <h2>Skills</h2>
+                                    <p style="margin-bottom: 15px; margin-top: 5px">
+                                        Below are the programming languages and frameworks I am familiar with :)
+                                    </p>
+
+                                    <v-list-item v-for="(item, index) in skills" :key="index" class="hover-animation"
+                                        :class="item.type === 'subheader' ? 'subheader' : ''">
+                                        <v-list-item-content>
+                                            <v-list-item-title v-if="item.type !== 'divider'">
+                                                <v-icon v-if="item.icon">{{ item.icon }}</v-icon>
+                                                <template v-if="item.type === 'subheader'">
+                                                    <strong>{{ item.title }}</strong>
+                                                </template>
+                                                <template v-else>
+                                                    {{ item.title }}
+                                                </template>
+                                            </v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
                                 </v-card-text>
                             </v-window-item>
 
@@ -114,7 +123,5 @@ const skills = ref([
     { title: 'Rust', value: 6, icon: 'mdi-language-rust' },
 ])
 
-const friends = ref([
-    { name: 'kate', username: 'katelyynn', website: 'cutensilly.org' },
-])
+const friends = ref([{ name: 'kate', username: 'katelyynn', website: 'cutensilly.org' }])
 </script>
