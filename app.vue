@@ -144,19 +144,14 @@ import MainView from './layouts/mainView.vue'
     margin-bottom: 25px;
 }
 
-/* animations */
-
 .hover-animation:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
     overflow: visible;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .hover-animation {
-    transition: transform 0.5s ease;
-}
-
-.hover-color {
-    transition: color 0.3s ease;
+    transition: transform 0.7s ease;
 }
 
 .hover-color:hover {

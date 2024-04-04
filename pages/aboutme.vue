@@ -109,8 +109,8 @@ const tab = ref(null)
 useSeoMeta({
     title: '2lay.net | About Me',
     ogTitle: '2lay.net | About Me',
-    description: 'On this site, you can learn more about me and all the stuff that I have done.',
-    ogDescription: 'On this site, you can learn more about me and all the stuff that I have done.',
+    description: 'Here you can learn more about.',
+    ogDescription: 'Here you can learn more about.',
     ogImage: 'https://2lay.net/avatar.png',
     twitterCard: 'summary_large_image',
     themeColor: '#e6c3e2',
