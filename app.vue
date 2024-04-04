@@ -96,11 +96,11 @@ import MainView from './layouts/mainView.vue'
 
 .tooltip-custom>.v-overlay__content {
     color: #ffffff;
-        background-color: var(--card);
-        box-shadow: 0 0 10px var(--card);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        transition: transform 0.3s ease;
+    background-color: var(--card);
+    box-shadow: 0 0 10px var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 /* snackbar */
@@ -152,7 +152,15 @@ import MainView from './layouts/mainView.vue'
 }
 
 .hover-animation {
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
+}
+
+.hover-color {
+    transition: color 0.3s ease;
+}
+
+.hover-color:hover {
+    color: hsl(var(--primary));
 }
 
 @keyframes shadowAnimation {

@@ -19,19 +19,22 @@
                                             class="emoji emoji-trans" /></h2>
 
                                     <v-responsive class="align-center">
-                                        <p>Hey there, I'm Ashley .<br>
-                                            I'm a self-taught systems administrator and developer from Sweden. I'm
+                                        <p>Hey there, I'm Ashley.<br>
+                                            I'm a self-taught <strong>systems administrator</strong> and
+                                            <strong>developer</strong> from Sweden. I'm
                                             passionate about <strong>Linux</strong> and
                                             <strong>open-source</strong> software. Besides that, I enjoy immersing
-                                            myself in music and video games.
+                                            myself in <strong>music</strong> and <strong>video games</strong>.
                                         </p>
 
                                         <p style="margin-top: 5px;">Need to reach out? Feel free to <strong>
-                                                <NuxtLink to="/contact" style="text-decoration: none; color: inherit;">
-                                                    contact me</NuxtLink>
+                                                <NuxtLink to="/contact"
+                                                    style="text-decoration: none; border-bottom: 2px dotted hsl(var(--primary)); color: inherit;">
+                                                    <span class="hover-color">contact me</span>
+                                                </NuxtLink>
                                             </strong>.</p>
 
-                                        <h3 style="margin-bottom: 5px; margin-top: 15px;">Also, check out my adorable
+                                        <h3 style="margin-bottom: 5px; margin-top: 15px;">Also, check out my cute
                                             friends!</h3>
                                         <div style="display: flex">
                                             <div v-for="item in friends">
@@ -65,7 +68,8 @@
                                         Below are the programming languages and frameworks I am familiar with :)
                                     </p>
 
-                                    <v-list-item v-for="(item, index) in skills" :key="index" class="hover-animation"
+                                    <v-list-item v-for="(item, index) in skills" :key="index"
+                                        class="hover-animation hover-color"
                                         :class="item.type === 'subheader' ? 'subheader' : ''">
                                         <v-list-item-content>
                                             <v-list-item-title v-if="item.type !== 'divider'">
