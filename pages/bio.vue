@@ -3,7 +3,7 @@
         <v-container class="fill-height">
             <v-responsive class="align-center fill-height">
                 <headerCard style="margin-bottom: 20px" />
-                <v-card class="mx-auto card-custom" max-width=500>
+                <v-card class="mx-auto card-custom" style="padding: 10px;" max-width=500>
                     <v-card-text>
                         <h2>My socials</h2>
                         <br />
