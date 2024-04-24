@@ -95,22 +95,6 @@ const projects = ref<Project[]>([
         project_btncolor: "main",
         project_btnurl: "https://tmw.gg/"
     },
-    {
-        project_title: 'wiz-rest',
-        project_shortdesc: 'A simple program to control your lights',
-        project_image: '/projects/wiz-rest.png',
-
-        project_version: "1.0.0",
-        project_showversion: true,
-        project_license: "MIT",
-        project_showLicense: true,
-        project_longdescription: "A simple rest-api with a cute front-end to control your lights, using reverse engineered WiZ light api",
-        project_showDescriptionTitle: true,
-
-        project_btntext: "View Source",
-        project_btncolor: "main",
-        project_btnurl: "https://github.com/2lay/wiz-rest"
-    },
 ])
 
 const dialog = ref(false);
