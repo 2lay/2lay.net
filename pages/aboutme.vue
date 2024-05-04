@@ -15,11 +15,11 @@
                         <v-window v-model="tab">
                             <v-window-item value="aboutme">
                                 <v-card-text>
-                                    <h2 style="margin-bottom: 15px">Hey there, I'm Ashley <span
-                                            class="emoji emoji-trans" /></h2>
-
+                                    <p class="text-h6 font-weight-bold mb-2">
+                                        Hey there, I'm Ashley <span class="emoji emoji-trans" />
+                                    </p>
                                     <v-responsive class="align-center">
-                                        <p>Hey there, I'm Ashley.<br>
+                                        <p>
                                             I'm a self-taught <strong>systems administrator</strong> and
                                             <strong>developer</strong> from Sweden. I'm
                                             passionate about <strong>Linux</strong> and
@@ -63,7 +63,9 @@
 
                             <v-window-item value="skills">
                                 <v-card-text>
-                                    <h2>Skills</h2>
+                                    <p class="text-h6 font-weight-bold mb-2">
+                                        Skills
+                                    </p>
                                     <p style="margin-bottom: 15px; margin-top: 5px">
                                         Below are the programming languages and frameworks I am familiar with :)
                                     </p>
@@ -88,7 +90,9 @@
 
                             <v-window-item value="socials">
                                 <v-card-text>
-                                    <h2>My socials</h2>
+                                    <p class="text-h6 font-weight-bold mb-2">
+                                        My socials
+                                    </p>
                                     <br />
                                     <links />
                                 </v-card-text>

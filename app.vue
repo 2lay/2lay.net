@@ -30,6 +30,8 @@ import MainView from './layouts/mainView.vue'
     
         --border: hsla(0, 0%, 31%, 1);
         --card: hsla(0, 0%, 0%, 0.7);
+        --card-active: hsla(0, 0%, 0%, 0.5);
+
 }
 
 /* navigation */
@@ -55,7 +57,7 @@ import MainView from './layouts/mainView.vue'
 
 /* card */
 
-.card-custom {
+.card-custom  {
     color: #ffffff;
     background-color: var(--card);
     box-shadow: 0 0 10px var(--card);
@@ -66,6 +68,15 @@ import MainView from './layouts/mainView.vue'
 
 .card-custom:hover {
     transform: scale(1.02);
+}
+
+.card-custom-noanim {
+    color: #ffffff;
+    background-color: var(--card);
+    box-shadow: 0 0 10px var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 .card-home {
@@ -129,6 +140,21 @@ import MainView from './layouts/mainView.vue'
     background-repeat: no-repeat;
     border-radius: 2px;
 }
+
+/* pagination */
+
+  .v-pagination__first,
+  .v-pagination__prev,
+  .v-pagination__item,
+  .v-pagination__item--is-active,
+  .v-pagination__next,
+  .v-pagination__last {
+        color: #ffffff;
+        background-color: var(--card);
+        box-shadow: 0 0 10px var(--card);
+        border: 1px solid var(--border);
+        border-radius: 5px;
+  }
 
 /* vuetify overrides */
 

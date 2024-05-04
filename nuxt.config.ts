@@ -1,3 +1,4 @@
+
 export default defineNuxtConfig({
     devtools: { enabled: true },
 
@@ -11,12 +12,42 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ['nuxt-mdi', '@nuxtjs/google-fonts', '@nuxtjs/sitemap'],
+    modules: [
+        'nuxt-mdi',
+        '@nuxtjs/google-fonts',
+        '@nuxtjs/sitemap',
+        "@nuxt/content",
+        "@nuxtjs/tailwindcss"
+    ],
     site: {
         url: 'https://2lay.net',
     },
     sitemap: {
         // saved for future use :3 exclude: ['/blog/**', '/blog', '/info'],
+    },
+
+
+    content: {
+        api: {
+            baseURL: '/blog/_my_content'
+        },
+        // https://content.nuxtjs.org/api/configuration
+        highlight: {
+            theme: 'github-dark',
+            preload: ['java', 'javascript']
+        },
+        markdown: {
+            // https://github.com/rehypejs/rehype-external-links
+            rehypePlugins: [
+                [
+                    'rehype-external-links',
+                    {
+                        target: '_blank',
+                        rel: 'noopener noreferer'
+                    }
+                ]
+            ]
+        }
     },
 
     googleFonts: {

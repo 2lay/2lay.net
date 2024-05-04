@@ -5,7 +5,9 @@
                 <headerCard style="margin-bottom: 20px" />
                 <v-card class="mx-auto card-custom" style="padding: 10px;" max-width=500>
                     <v-card-text>
-                        <h2>My socials</h2>
+                        <p class="text-h6 font-weight-bold mb-2">
+                            My socials
+                        </p>
                         <br />
                         <v-responsive class="align-center text-center">
                             <links />

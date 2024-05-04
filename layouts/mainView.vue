@@ -49,6 +49,7 @@ export default {
                 { title: 'Home', path: '/', icon: 'mdi mdi-home' },
                 { title: 'About me', path: '/aboutme', icon: 'mdi mdi-account' },
                 { title: 'Projects', path: '/projects', icon: 'mdi mdi-folder-multiple' },
+                { title: 'Blog', path: '/blog', icon: 'mdi mdi-newspaper' },
                 { title: 'Contact', path: '/contact', icon: 'mdi mdi-mailbox' },
             ],
         }
