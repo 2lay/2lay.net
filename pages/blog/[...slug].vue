@@ -3,11 +3,7 @@
     <v-card
       class="relative mx-auto max-w-3xl overflow-hidden mt-10 py-8 px-6 sm:px-8 md:px-10 lg:px-12 shadow-lg card-custom-noanim">
       <nuxt-link class="block text-gray-400 hover:text-gray-700 transition-colors duration-300" href="/blog">
-        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-        <span class="text-sm">Back to Blog</span>
+        <p class="text-sm"><span class="mr-1 mdi mdi-arrow-left-bold"></span>Back to Blog</p>
       </nuxt-link>
       <ContentDoc v-slot="{ doc }">
         <h1 class="mt-4 mb-6 text-3xl md:text-4xl font-semibold text-white-900">{{ doc.doctitle }}</h1>
@@ -18,7 +14,8 @@
             <p class="text-sm font-medium">{{ doc.author.name }}</p>
             <time :datetime="doc.date" class="text-xs">{{ new Date(doc.time * 1000).toLocaleDateString('en-US', {
               day:
-              'numeric', month: 'long', year: 'numeric' }) }}</time>
+                'numeric', month: 'long', year: 'numeric'
+            }) }}</time>
           </div>
         </div>
         <hr class="my-8 border-gray-700">

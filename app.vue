@@ -11,7 +11,6 @@ import MainView from './layouts/mainView.vue'
 </script>
 
 <style>
-
 :root {
         --primary-h: 307;
         --primary-s: 41%;
@@ -220,8 +219,20 @@ import MainView from './layouts/mainView.vue'
     background-size: contain;
 }
 
+.av {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+    background-image: url('https://github.com/2lay.png');
+    border-radius: 25%;
+    
+}
+
 .emoji-trans {
     background-image: url('/emojis/trans_flag.png');
 }
+
 
 </style>

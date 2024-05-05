@@ -1,12 +1,12 @@
 <template>
   <main>
     <v-app class="img-bg">
-      <v-container style="margin-top: 50px;">
-        <v-responsive class="align-center text-center fill-height">
+      <v-container class="mt-10">
+        <v-responsive class="text-center ">
           <v-card class="card-home card-custom card-hover">
             <h1 class="text-h3 font-weight-bold shadow-animation">Blog</h1>
-            <p class="">
-              Welcome to my blog page! Here are sme of my latest articles and
+            <p class="mt-1">
+              Welcome to my blog page! Here are some of my latest articles and
               posts.
             </p>
           </v-card>
@@ -14,44 +14,35 @@
       </v-container>
       <v-container>
         <ContentList path="/blog" v-slot="{ list }">
-          <div v-for="(article, index) in sortedList(list).slice(minIndex, maxIndex)" :key="article._path">
-            <v-row no-gutters class="align-end justify-center">
-              <NuxtLink :to="article._path + '/'" class="block relative" style="text-decoration: none">
-                <v-card class="card-custom" :image="article.img" style="
-                        margin-bottom: 20px; 
-                        min-width: 500px;
-                        max-width: 500px;
-                        max-height: 200px;
-                        padding: 15px;
-                    ">
-
-                  <v-row no-gutters>
-                    <v-col cols="9">
-                      <div>
-                        <v-text class="text-h5 font-weight-bold">
-                          {{ article.doctitle }}
-                        </v-text>
-                        <br />
-                        <v-text class="text-higih-emphasis text-body-2">{{
-                          article.description
-                          }}</v-text>
-                      </div>
-                    </v-col>
-                  </v-row>
-                  <div class="text-right">
-                    <p class="mb-1 mr-2 text-disabled text-caption">
-                      {{ new Date(article.time * 1000).toLocaleDateString('en-US', {
-                      day:
-                      'numeric', month: 'long', year: 'numeric' }) }}
-                    </p>
+          <v-card v-for="(article, index) in sortedList(list).slice(minIndex, maxIndex)" :key="article._path"
+            class="card-custom card-home" :image="article.img">
+            <NuxtLink :to="article._path + '/'">
+              <v-row no-gutters>
+                <v-col cols="9">
+                  <div>
+                    <v-text class="text-h5 font-weight-bold">
+                      {{ article.doctitle }}
+                    </v-text>
+                    <br />
+                    <v-text class="text-body-2 text-higih-emphasis">{{
+                      article.description
+                      }}</v-text>
                   </div>
-                </v-card>
-              </NuxtLink>
-            </v-row>
-          </div>
+                </v-col>
+              </v-row>
+              <div class="text-right">
+                <p class="mr-2 text-caption text-disabled">
+                  {{ new Date(article.time * 1000).toLocaleDateString('en-UK', {
+                  day:
+                  'numeric', month: 'long', year: 'numeric' }) }}
+                </p>
+              </div>
+            </NuxtLink>
+          </v-card>
         </ContentList>
         <div class="text-center">
-          <v-pagination v-model="page" :length="3" :total-visible="7"></v-pagination>
+          <v-pagination v-model="page" :length="pages" :total-visible="7" class="mt-5"></v-pagination>
+
         </div>
       </v-container>
     </v-app>
@@ -61,7 +52,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const tab = ref(null)
+
+const count = await queryContent('blog').count();
+const dividedCount = Math.ceil(count / 6);
+const adjustedCount = dividedCount > 3 ? 3 : dividedCount;
+
+const pages = adjustedCount;
+
+console.log(count)
 
 useSeoMeta({
   title: '2lay.net | Blog',
@@ -73,6 +71,8 @@ useSeoMeta({
   themeColor: '#e6c3e2',
 })
 </script>
+
+
 
 <script lang="ts">
 export default {
@@ -96,7 +96,4 @@ export default {
     },
   },
 }
-
-
-
 </script>
