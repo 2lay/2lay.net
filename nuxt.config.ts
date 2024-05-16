@@ -1,7 +1,9 @@
 
 export default defineNuxtConfig({
     devtools: { enabled: true },
-
+    colorMode: {
+        preference: 'dark'
+    },
     css: ['vuetify/lib/styles/main.sass', '@fortawesome/fontawesome-svg-core/styles.css'],
     build: {
         transpile: ['vuetify'],
