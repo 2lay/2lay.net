@@ -1,113 +1,98 @@
 <template>
-    <v-app class="img-bg">
-        <v-container class="fill-height">
-            <v-responsive class="align-center text-center fill-height">
-                <v-card class="card-home card-custom card-hover">
-                    <h1 class="text-h3 font-weight-bold shadow-animation">Projects</h1>
-                    <p class="spacer">
-                        Here are some of my projects! Click on them to learn more.
-                    </p>
-                    <div v-for="(item, index) in projects" :key="index">
-                        <v-card @click="openDialog(index)" class="mx-auto my-2 text-left card-custom" max-width="344"
-                            :subtitle="item.project_shortdesc" :title="item.project_title" link
-                            :image="item.project_image" color="#1e1e1e" style="user-select: none;"></v-card>
-                    </div>
-                </v-card>
+    <div>
+        <h1>
+            <img src="https://github.com/2lay.png" class="hide-mobile avatar" />
+            My <span class="title-highlight">Projects</span>.
+        </h1>
+        <p>
+            Welcome to my
+            <span style="color: #6aaee6; text-shadow: 1px 0 10px #6aaee6">projects</span>
+            page! Here is a big list of all the projects that I have worked on.
+            <br /><br />
+            You'll find me all over the web:
+        </p>
 
-                <v-dialog overlay-color="black" theme="light" v-model="dialog" width="auto">
-                    <v-card class="card-custom card-hover" max-width="400" color="var(--card)"
-                        style="    backdrop-filter: blur(4px);">
-                        <div style="margin-left: 25px; margin-right:25px; margin-top: 8px; margin-bottom: 15px;">
-                            <h1 class="text-h4 text-center font-weight-bold" style="margin-bottom: 8px;">{{
-                                selectedProject.project_title }}</h1>
-                            <span v-if="selectedProject?.project_showversion"><strong>Version: </strong>{{
-                                selectedProject.project_version }}<br /></span>
-                            <span v-if="selectedProject?.project_showLicense"><strong>License: </strong>{{
-                                selectedProject.project_license }}<br /><br /></span>
-                            <strong v-if="selectedProject?.project_showDescriptionTitle">Description: </strong>{{
-                            selectedProject.project_longdescription }}
-                        </div>
+        <div v-for="(contact, index) in contactLinks" :key="index">
+            <h2 :href="contact.link" class="entry"
+                :style="{ color: contact.color, 'text-shadow': '1px 0 10px ' + contact.color }">
+                <span class="hover-color">{{ contact.name }}</span>
+            </h2>
+            <hr :style="{ color: contact.color }" />
 
-                        <template v-slot:actions>
-                            <v-divider color="#00000000"></v-divider>
-
-                            <v-btn :href="selectedProject.project_btnurl" target="_blank"
-                                style="background-color: hsl(var(--info), 0.3); border: 1px solid hsl(var(--info), 0.4)">
-                                <span class="mdi mdi-link-variant"></span>&nbsp;{{ selectedProject.project_btntext }}
-                            </v-btn>
-
-                            <v-btn @click="closeDialog"
-                                style="background-color: hsl(var(--danger), 0.3); border: 1px solid hsl(var(--danger), 0.4)">
-                                <span class="mdi mdi-close"></span>&nbsp;Close
-                            </v-btn>
-                        </template>
-                    </v-card>
-                </v-dialog>
-
-            </v-responsive>
-        </v-container>
-    </v-app>
+            <p>{{ contact.description }}</p>
+            <div class="container">
+                <a :href="contact.link" class="button"
+                    :style="{ 'border-color': contact.color, 'background-color:hover': contact.color }">Go to</a>
+            </div>
+        </div>
+    </div>
 </template>
-
 <script setup lang="ts">
 import { ref } from 'vue';
 const tab = ref(null);
 useSeoMeta({
-    title: '2lay.net | Projects',
-    ogTitle: '2lay.net | Projects',
-    description: 'Here are some of my projects!',
-    ogDescription: 'Here are some of my projects!',
-    ogImage: 'https://2lay.net/avatar.png',
+    title: '2lay.net - projects',
+    ogTitle: '2lay.net - projects',
+    description: 'here are the projects i work on',
+    ogDescription: 'here are the projects i work on',
+    ogImage: 'https://github.com/2lay.png',
     twitterCard: 'summary_large_image',
-    themeColor: '#e6c3e2',
-});
-interface Project {
-    project_title: string;
-    project_shortdesc: string;
-    project_image: string;
-
-    project_version: string;
-    project_showversion: boolean;
-    project_license: string;
-    project_showLicense: boolean;
-    project_longdescription: string;
-    project_showDescriptionTitle: boolean;
-
-    project_btntext: string;
-    project_btncolor: string;
-    project_btnurl: string;
-}
-
-const projects = ref<Project[]>([
-    {
-        project_title: 'TMW.gg',
-        project_shortdesc: 'A different modded network',
-        project_image: '/projects/tmw.png',
-
-        project_version: "",
-        project_showversion: false,
-        project_license: "",
-        project_showLicense: false,
-        project_longdescription: "A different modded network for Minecraft, providing everyone a unique modded experience",
-        project_showDescriptionTitle: false,
-
-        project_btntext: "Go to",
-        project_btncolor: "main",
-        project_btnurl: "https://tmw.gg/"
-    },
-])
-
-const dialog = ref(false);
-const selectedProject = ref<Project | null>(null); 
-
-function openDialog(index: number) {
-    selectedProject.value = projects.value[index];
-    dialog.value = true;
-}
-
-function closeDialog() {
-    dialog.value = false;
-}
+    themeColor: '#f5a9b8',
+})
 </script>
 
+<script lang="ts">
+export default {
+    data() {
+        return {
+            contactLinks: [
+                {
+                    link: "https://tmw.gg/",
+                    color: "#e183d9",
+                    name: "TMW.gg",
+                    description: "Modded Minecraft server network, served over 1000 unique players since 2022"
+                },
 
+
+            ]
+        };
+    },
+    methods: {
+        copyToClipboard(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    this.discordLinkText = "> Copied username to clipboard!";
+                    setTimeout(() => {
+                        this.discordLinkText = "> Discord";
+                    }, 4000);
+                })
+
+        }
+    }
+};
+</script>
+
+<style scoped>
+.container {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+
+    text-align: center;
+    background-color: transparent;
+    text-decoration-style: dotted;
+
+    text-decoration: none;
+    border-bottom: 2px dotted;
+}
+
+.entry {
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+</style>
