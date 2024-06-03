@@ -1,7 +1,12 @@
 # 2lay.net 
 hey there! this is the source code of my terminal-ish website. it's built using vue, nuxt and my css!
+<p align="center">
+  <img src="https://github.com/2lay/2lay.net/assets/82117939/b77bf2cd-88b2-48ce-8efb-4d997a0aa082" alt="image psd" width="700"/>
+</p>
 
-## ``Development`` 
+
+
+## ``development`` 
 
 to run this project, ensure you have node.js installed
 1. clone this repository
