@@ -9,8 +9,10 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint . --fix",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "serve": "npx serve .output/public"
   },
   "dependencies": {
     "nuxt": "^3.11.2",
