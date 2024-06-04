@@ -3,22 +3,20 @@
     <div class="h-screen flex sm:flex-row sm:justify-center overflow-y-auto">
       <main style="margin-top:auto;margin-bottom:auto">
         <div style="display: flex; align-items: center;">
-
-          <div class="hide-desktop ani-nav-fadein ">
-            <a class="nav-link" style="margin-right: 10px;"><img src="https://github.com/2lay.png" alt="Avatar" class="hide-desktop avatar-small">2lay.net |</a>
-            <nuxt-link :to="{ 'path': '/' }" :class="{ 'active': $route.path === '/' }" style="margin-right:10px;"
+          <div class="hide-desktop ani-nav-fadein">
+            <a class="nav-link" style="margin-right: 10px;"><img src="https://github.com/2lay.png" alt="Avatar"
+                class="hide-desktop avatar-small">2lay.net |</a>
+            <nuxt-link :to="{ path: '/' }" :class="{ 'active': $route.path === '/' }" style="margin-right:10px;"
               class="text-deco nav-link">whoami</nuxt-link>
-            <nuxt-link :to="{ 'path': '/projects' }" :class="{ 'active': $route.path === '/projects' }"
+            <nuxt-link :to="{ path: '/projects' }" :class="{ 'active': $route.path === '/projects' }"
               style="margin-right:10px;" class="text-deco nav-link">projects</nuxt-link>
           </div>
         </div>
-
-        <div style="display: flex; align-items: center; justify-content: space-between;" class="hide-mobile ">
+        <div style="display: flex; align-items: center; justify-content: space-between;" class="hide-mobile">
           <transition name="fade">
-            <p v-if="showConsoleText" class="ani-typing" style="color:#4E4E4E">{{ getPageTitle }}</p>
+            <p v-if="showConsoleText" class="ani-typing typing-animation" style="color:#4E4E4E">{{ getPageTitle }}</p>
           </transition>
-
-          <div style="display: flex; align-items: center;" class="ani-nav-fadein ">
+          <div style="display: flex; align-items: center;" class="ani-nav-fadein">
             <nuxt-link to="/" :class="{ 'active': $route.path === '/' }" style="margin-right:10px;"
               class="text-deco nav-link">whoami</nuxt-link>
             <nuxt-link to="/projects" :class="{ 'active': $route.path === '/projects' }" style="margin-right:10px;"
@@ -34,6 +32,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'YourComponentName',
@@ -58,19 +57,18 @@ export default {
       this.showConsoleText = false;
       setTimeout(() => {
         this.showConsoleText = true;
-      }); 
+      }, 0);
     }
   }
 }
 </script>
-
 <style>
 
 .avatar-small {
   max-height: 1.5em;
-  vertical-align: middle; 
-  display: inline-block; 
-  line-height: 1; 
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
   border-radius: 6px;
   margin-right: 5px;
   pointer-events: none;
@@ -301,7 +299,6 @@ main * {
 }
 
 /* typing animation */
-
 @keyframes typing {
   from {
     width: 0;
@@ -311,11 +308,13 @@ main * {
     width: 100%;
   }
 }
-
 .ani-typing {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 2s steps(90, end);
+  display: inline-block;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* page content fade in */

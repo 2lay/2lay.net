@@ -5,13 +5,12 @@
                 <span class="title-highlight">Error 404</span>
             </h1>
             <p>
-                File not found on the server!
+                file not found on the server
             </p>
-            <a href="/" class="button">Go Home</a>
+            <a href="/" class="button">go home</a>
         </div>
     </div>
 </template>
-
 
 <style scoped>
 .container {

@@ -23,8 +23,7 @@
     </a>
     <div v-for="(contact, index) in contactLinks" :key="index">
       <a :href="contact.link" class="entry"
-        :style="{ color: contact.color, 'text-shadow': '1px 0 10px ' + contact.color }"
-        @click="copyToClipboard(contact.name)">
+        :style="{ color: contact.color, 'text-shadow': '1px 0 10px ' + contact.color }">
         <span class="hover-color">> {{ contact.name }}</span>
       </a>
     </div>

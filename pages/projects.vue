@@ -8,8 +8,6 @@
             Welcome to my
             <span style="color: #6aaee6; text-shadow: 1px 0 10px #6aaee6">projects</span>
             page! Here is a big list of all the projects that I have worked on.
-            <br /><br />
-            You'll find me all over the web:
         </p>
 
         <div v-for="(contact, index) in contactLinks" :key="index">
@@ -22,7 +20,7 @@
             <p>{{ contact.description }}</p>
             <div class="container">
                 <a :href="contact.link" class="button"
-                    :style="{ 'border-color': contact.color, 'background-color:hover': contact.color }">Go to</a>
+                    :style="{ 'border-color': contact.color, 'background-color:hover': contact.color }">go to</a>
             </div>
         </div>
     </div>
