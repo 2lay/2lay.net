@@ -149,8 +149,13 @@ export default {
 
 /* base styling */
 body {
+  background: #1f1f1f url('/noise.png');
   box-sizing: border-box;
-  background-color: #1f1f1f;
+  pointer-events: none;
+}
+
+body * {
+  pointer-events: auto;
 }
 
 h1 {
