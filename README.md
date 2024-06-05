@@ -1,3 +1,4 @@
+## ⚠️Branch preserved for archival purposes, no longer in use.
 # 2lay.net 🌍
 Hiya, 2lay.net is my silly website built using Vue.js, Vuetify, Nuxt.js and ~~Tailwind~~ *soon!*.
 
