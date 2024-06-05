@@ -35,7 +35,7 @@ import { ref } from 'vue';
 const tab = ref(null);
 useSeoMeta({
     title: '2lay.net',
-    ogTitle: '2lay.net ',
+    ogTitle: '2lay.net',
     description: 'hey there! welcome to my website',
     ogDescription: 'hey there! welcome to my website',
     ogImage: 'https://github.com/2lay.png',

@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'YourComponentName',
+  name: '2lay.net',
   data() {
     return {
       showConsoleText: true
