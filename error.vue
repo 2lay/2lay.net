@@ -4,8 +4,8 @@
             <main style="margin-top: auto; margin-bottom: auto">
                 <div style="display: flex; align-items: center">
                     <div class="hide-desktop ani-nav-fadein">
-                        <a class="nav-link" style="margin-right: 10px"><img src="https://github.com/2lay.png"
-                                alt="Avatar" class="hide-desktop avatar-small" />2lay.net |</a>
+                        <a style="margin-right: 10px; color: #4e4e4e"><img src="https://github.com/2lay.png"
+                                alt="Avatar" class="hide-desktop avatar-small">2lay.net |</a>
                         <nuxt-link :to="{ path: '/' }" :class="{ 'active': $route.path === '/' }"
                             style="margin-right: 10px" class="text-deco nav-link">whoami</nuxt-link>
                         <nuxt-link :to="{ path: '/projects' }" :class="{ 'active': $route.path === '/projects' }"
@@ -16,7 +16,7 @@
                     <transition name="fade">
                         <p v-if="showConsoleText" class="ani-typing-error typing-animation" style="color: #4e4e4e">
                             {{
-                            getPageTitle }}
+                                getPageTitle }}
                         </p>
                     </transition>
                     <div style="display: flex; align-items: center" class="ani-nav-fadein">
