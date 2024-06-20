@@ -259,7 +259,7 @@ main * {
 
 /* media properties */
 
-@media (min-width: 640px) {
+@media (min-width: 940px) {
   main {
     max-width: 800px;
   }
@@ -285,7 +285,7 @@ main * {
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 939px) {
   main {
     max-width: 100%;
   }

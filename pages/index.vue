@@ -58,37 +58,37 @@ export default {
         {
           link: "https://www.last.fm/user/twolay",
           color: "#f54c54",
-          name: "Last.fm"
+          name: "last.fm"
         },
         {
           link: "https://github.com/2lay",
           color: "#e6edf3",
-          name: "Github"
+          name: "github"
         },
         {
           link: "https://youtube.com/@2lay",
           color: "#f23d3d",
-          name: "YouTube"
+          name: "youtube"
         },
         {
           link: "https://steamcommunity.com/id/2lay",
           color: "#4ab3ff",
-          name: "Steam"
+          name: "steam"
         },
         {
           link: "https://modrinth.com/user/2lay",
           color: "#19ca63",
-          name: "Modrinth"
+          name: "modrinth"
         },
         {
           link: "https://www.curseforge.com/members/2lay",
           color: "#f0774f",
-          name: "Curseforge"
+          name: "curseforge"
         },
         {
           link: "https://en.pronouns.page/@2lay",
           color: "#ff95bb",
-          name: "Pronouns.page"
+          name: "pronouns.page"
         }
       ]
     };
