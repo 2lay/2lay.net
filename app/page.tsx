@@ -44,7 +44,7 @@ export default function Home() {
                             myself in music and video games <a className="font-bold">^w^</a>
                         </p>
                         <p>
-                            Besides that i love my <a className="italic">BLÅHAJ Soft toy, shark, 39 ¼ "</a> shork :3
+                            Besides that i love my <a className="italic">BLÅHAJ Soft toy, shark, 39 ¼ &quot;</a> shork :3
                         </p>
                     </div>
 
