@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <main className="flex flex-col min-h-screen justify-between">
             {/* nav */}
-            <div className="text-ash_primary-400 flex justify-between border-ash_primary-400 border-2 rounded-xl px-3 py-2 mb-10 mt-5">
+            <div className="text-ash_primary-400 flex justify-between border-ash_primary-400 border-2 rounded-xl px-3 py-2 mb-10 mt-5 mx-2">
                 <div className="flex">
                     <h1 className="font-extrabold">2lay.net</h1>
                     <h1 className="mx-1"> |</h1>
@@ -41,7 +41,7 @@ export default function Home() {
             </div>
 
             {/* footer */}
-            <div className="border-t-2 border-ash_primary-400 text-ash_primary-400 mt-4 px-1">
+            <div className="border-t-2 border-ash_primary-400 text-ash_primary-400 mt-4 px-1 mx-2">
                 <div className="flex  justify-between mt-1 mb-2 text-sm font-thin ">
                     <div className="text-center  ">2021-2024 2lay.net</div>
                     <div className="text-center ">read if cute</div>
