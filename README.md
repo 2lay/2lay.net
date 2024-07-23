@@ -2,10 +2,10 @@
 Deployements on this branch will fail. Current website is located in the ``vue-legacy`` branch!
 
 # 2lay.net 
-hey there! this is the source code of my terminal-ish website. it's built using vue, nuxt and my css!
-<p align="center">
-  <img src="https://github.com/2lay/2lay.net/assets/82117939/b77bf2cd-88b2-48ce-8efb-4d997a0aa082" alt="image psd" width="700"/>
-</p>
+hey there! this is the source code of my website. it's built using next.js and tailwind!
+<!--<p align="center">
+  <img src="" alt="website image" width="700"/>
+</p>-->
 
 
 
