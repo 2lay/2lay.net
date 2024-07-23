@@ -33,10 +33,10 @@ export default function Home() {
                     {/* about me */}
                     <div className="text-sm flex flex-col gap-y-2">
                         <p className="text-xl">
-                            Hey there, I'm <a className="font-bold">Ashley</a>!
+                            Hey there, I&apos;m <a className="font-bold">Ashley</a>!
                         </p>
                         <p>
-                            I'm a self-taught systems administrator and developer from Poland, currently residing in
+                            I&apos;m a self-taught systems administrator and developer from Poland, currently residing in
                             Sweden.
                         </p>
                         <p>
@@ -52,7 +52,7 @@ export default function Home() {
                     <div>
                         <div className="mb-4">
                             <p className="text-lg ">Music</p>
-                            <p className="text-sm">I love music, check out what I'm listening to bellow!</p>
+                            <p className="text-sm">I love music, check out what I&apos;m listening to bellow!</p>
                         </div>
                         <div className="backdrop-blur p-6 rounded-lg shadow-2xl flex items-center max-w-md overflow-hidden ">
                             <div className="bg-ash_background-600 absolute w-full h-full inset-0 z-[-1] bg-blend-darken">
