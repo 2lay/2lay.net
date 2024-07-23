@@ -19,7 +19,7 @@ export default function RootLayout({
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
-            <body className={`${font.className} bg-ash_background-500 pt-10 pb-5 px-6 max-w-screen-lg mx-auto`}>
+            <body className={`${font.className} bg-ash_background-500 max-w-screen-lg mx-auto`}>
                 {children}
             </body>
         </html>
