@@ -1,5 +1,5 @@
 ### New website work in progres
-Deployements on this branch will fail. Current website is located in the ``vue-legacy`` branch!
+Current website is located in the ``vue-legacy`` branch!
 
 # 2lay.net 
 hey there! this is the source code of my website. it's built using next.js and tailwind!
