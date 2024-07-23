@@ -1,3 +1,6 @@
+### New website work in progres
+Deployements on this branch will fail. Current website is located in the ``vue-legacy`` branch!
+
 # 2lay.net 
 hey there! this is the source code of my terminal-ish website. it's built using vue, nuxt and my css!
 <p align="center">
