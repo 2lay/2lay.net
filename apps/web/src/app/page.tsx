@@ -1,11 +1,22 @@
 import Image from "next/image";
-import { UiNavigation, UiFooter } from "@repo/ui";
+
 
 export default function Home() {
     return (
         <main className="flex flex-col min-h-screen justify-between">
             {/* nav */}
-            <UiNavigation />
+            <div className="text-ash_primary-400 flex justify-between border-ash_primary-400 border-2 rounded-xl px-3 py-2 mb-5 mt-5 mx-2">
+                <div className="flex">
+                    <h1 className="font-extrabold">2lay.net</h1>
+                    <h1 className="mx-1"> |</h1>
+                    <h1 className="font-thin">she/her/hers</h1>
+                </div>
+                <div className="flex gap-2">
+                    <p>[ Home ]</p>
+                    <p>[ Home ]</p>
+                    <p>[ Home ]</p>
+                </div>
+            </div>
 
             {/* content */}
             <div className="text-ash_primary-400 px-5 flex-grow">
@@ -75,7 +86,12 @@ export default function Home() {
             </div>
 
             {/* footer */}
-            <UiFooter />
+            <div className="border-t-2 border-ash_primary-400 text-ash_primary-400 mt-4 px-1 mx-2">
+                <div className="flex  justify-between mt-1 mb-2 text-sm font-thin ">
+                    <div className="text-center  ">2021-2024 2lay.net</div>
+                    <div className="text-center ">read if cute</div>
+                </div>
+            </div>
         </main>
     );
 }
