@@ -25,4 +25,3 @@ to preview the production build as it would appear in production run ``bun run p
 
 ## ``license``
 this project is licensed under the [MIT License](https://github.com/2lay/2lay.net/blob/main/LICENSE)
-
