@@ -1,95 +1,109 @@
 import Image from "next/image";
 
-
 export default function Home() {
     return (
-        <main className="flex flex-col min-h-screen justify-between">
+        <main className="pt-8">
             {/* nav */}
-            <div className="text-ash_primary-400 flex justify-between border-ash_primary-400 border-2 rounded-xl px-3 py-2 mb-5 mt-5 mx-2">
-                <div className="flex">
-                    <h1 className="font-extrabold">2lay.net</h1>
-                    <h1 className="mx-1"> |</h1>
-                    <h1 className="font-thin">she/her/hers</h1>
-                </div>
-                <div className="flex gap-2">
-                    <p>[ Home ]</p>
-                    <p>[ Home ]</p>
-                    <p>[ Home ]</p>
-                </div>
-            </div>
 
             {/* content */}
-            <div className="text-ash_primary-400 px-5 flex-grow">
-                <div>
-                    <div className="flex items-center mb-3">
-                        <img src="https://github.com/2lay.png" className="max-w-24 rounded-2xl mr-4" />
-                        <div className="inline-block">
-                            <p className="text-2xl font-bold text-ash_secondary-500">Ashley</p>
-                            <p className="text-ash_secondary-700">she/her/hers</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="text-ash_secondary-400 break-words flex flex-col gap-y-6">
-                    {/* about me */}
-                    <div className="text-sm flex flex-col gap-y-2">
-                        <p className="text-xl">
-                            Hey there, I&apos;m <a className="font-bold">Ashley</a>!
-                        </p>
-                        <p>
-                            I&apos;m a self-taught systems administrator and developer from Poland, currently residing
-                            in Sweden.
-                        </p>
-                        <p>
-                            My favorite interests are Linux and open-source software. Besides that, I love immersing
-                            myself in music and video games <a className="font-bold">^w^</a>
-                        </p>
-                        <p>
-                            Besides that i love my <a className="italic">BLÅHAJ Soft toy, shark, 39 ¼ &quot;</a> shork
-                            :3
-                        </p>
-                    </div>
-
-                    {/* last.fm */}
+            <div className="text-neutral-100 px-5 flex-grow text-lg">
+                <div className="flex flex-col gap-y-5">
                     <div>
-                        <div className="text-sm flex flex-col gap-y-2 mb-2">
-                            <p className="text-xl">Music</p>
-                            <p>I love music, check out what I&apos;m listening to bellow!</p>
-                        </div>
-                        <div className="backdrop-blur p-5 rounded-lg shadow-2xl flex items-center max-w-md overflow-hidden ">
-                            <div className="bg-ash_background-600 absolute w-full h-full inset-0 z-[-1] bg-blend-darken">
-                                <div className="bg-[url('https://i1.sndcdn.com/artworks-5Sia68wBvokYFWO5-Av0lmw-t500x500.jpg')] blur-3xl absolute w-full h-full inset-0 z-[-3] opacity-40" />
-                            </div>
-                            <div className="flex-grow pr-4">
-                                <p className="text-emerald-400 text-xs uppercase font-semibold tracking-wider mb-1">
-                                    NOW PLAYING
+                        <p className="text-5xl">
+                            hey, i'm <a className="text-ash_primary-500 font-bold">ashley</a>
+                            <span className="text-neutral-600 text-2xl italic"> (she/her)</span>
+                        </p>
+                        <p className="pt-2">welcome to my corner of the internet!</p>
+                    </div>
+
+                    <div className="flex flex-col gap-y-3">
+                        <p>
+                            Surprise! <a className="italic">(Not really, it's Ashley again)</a>. I'm a 17 year old
+                            software engineer from Sweden, the land of blåhajar and amazing meatballs.
+                        </p>
+                        <p>
+                            My passions? Server administration, software development, and a sily block game that I can't
+                            seem to put down.
+                        </p>
+                        <p>
+                            When my fingers aren't typing code, you'll usually find me cooking up something in the
+                            kitchen, wandering through nature, and sometimes playing a few tunes on my guitar.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className="text-3xl pb-2">$ skills</p>
+                        <p>
+                            I'm not sure what's more impressive: the fact that I can code or the fact that I can still
+                            tie my shoelaces. Anyway, here are a few of the things I'm decent at:
+                        </p>
+
+                        <div className="flex flex-col gap-y-3 mt-3">
+                            <div className="flex flex-col text-base">
+                                <p className="text-xl mb-1">Programming Languages</p>
+                                <p className="flex gap-x-2 flex-wrap">
+                                    <a className="text-[#92adfd] bg-[#92adfd] bg-opacity-20 px-2 py-1 rounded-md">
+                                        TypeScript
+                                    </a>
+                                    <a className="text-[#fdf192] bg-[#fdf192] bg-opacity-20 px-2 py-1 rounded-md">
+                                        JavaScript
+                                    </a>
+                                    <a className="text-[#92c2fd] bg-[#92c2fd] bg-opacity-20 px-2 py-1 rounded-md">
+                                        C++
+                                    </a>
+                                    <a className="text-[#eb92fd] bg-[#eb92fd] bg-opacity-20 px-2 py-1 rounded-md">
+                                        Kotlin
+                                    </a>
+                                    <a className="text-[#fdc492] bg-[#fdc492] bg-opacity-20 px-2 py-1 rounded-md">
+                                        Java
+                                    </a>
                                 </p>
-                                <div className="flex items-baseline space-x-2">
-                                    <p className="text-white text-lg font-bold leading-none">Huh</p>
-                                    <p className="text-gray-300 text-base leading-none">•</p>
-                                    <p className="text-gray-400 text-sm">glaive</p>
-                                </div>
-                                <p className="text-gray-400 text-sm mt-1 italic">a bit of a mad one</p>
                             </div>
-                            <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0">
-                                <img
-                                    src="https://i1.sndcdn.com/artworks-5Sia68wBvokYFWO5-Av0lmw-t500x500.jpg"
-                                    alt="Profile"
-                                    className="w-full h-full object-cover"
-                                />
+
+                            <div className="flex flex-col text-base">
+                                <p className="text-xl mb-1">Frameworks</p>
+                                <p className="flex gap-x-2 flex-wrap">
+                                    <a className="text-[#dfdfdf] bg-[#bfbfbf] bg-opacity-20 px-2 py-1 rounded-md">
+                                        Next.js
+                                    </a>
+                                    <a className="text-[#00c8ff] bg-[#00c8ff] bg-opacity-20 px-2 py-1 rounded-md">
+                                        React.js
+                                    </a>
+                                    <a className="text-[#92fdbd] bg-[#92fdbd] bg-opacity-20 px-2 py-1 rounded-md">
+                                        FastAPI
+                                    </a>
+                                    <a className="text-[#fd9692] bg-[#fd9692] bg-opacity-20 px-2 py-1 rounded-md">
+                                        TurboRepo
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col text-base">
+                                <p className="text-xl mb-1">Technologies & Tools</p>
+                                <p className="flex gap-x-2 flex-wrap">
+                                    <a className="text-[#9296fd] bg-[#9296fd] bg-opacity-20 px-2 py-1 rounded-md">
+                                        Docker
+                                    </a>
+                                    <a className="text-[#ffd700] bg-[#ffd700] bg-opacity-20 px-2 py-1 rounded-md">
+                                        Linux
+                                    </a>
+                                    <a className="text-[#fdaf92] bg-[#fdaf92] bg-opacity-20 px-2 py-1 rounded-md">
+                                        Git
+                                    </a>
+                                    <a className="text-[#d092fd] bg-[#d092fd] bg-opacity-20 px-2 py-1 rounded-md">
+                                        CI/CD
+                                    </a>
+                                    <a className="text-[#92c9fd] bg-[#92c9fd] bg-opacity-20 px-2 py-1 rounded-md">
+                                        Azure
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    {/* end */}
-                </div>
-            </div>
-
-            {/* footer */}
-            <div className="border-t-2 border-ash_primary-400 text-ash_primary-400 mt-4 px-1 mx-2">
-                <div className="flex  justify-between mt-1 mb-2 text-sm font-thin ">
-                    <div className="text-center  ">2021-2024 2lay.net</div>
-                    <div className="text-center ">read if cute</div>
+                    <div>
+                        <p className="text-3xl pb-2">$ contact</p>
+                        <p>You'll find me all over the web:</p>
+                    </div>
                 </div>
             </div>
         </main>
