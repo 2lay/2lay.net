@@ -15,10 +15,12 @@
   "engines": {
     "node": ">=18"
   },
-  "name": "kitchen-sink",
+  "name": "2lay.net",
   "packageManager": "yarn@1.22.22",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "author": "ashley <mail@2lay.net>",
+  "license": "MIT"
 }
