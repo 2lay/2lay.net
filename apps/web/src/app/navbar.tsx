@@ -31,11 +31,12 @@ export default function Navbar() {
                 <div key={link.href} className="relative">
                     <Link href={link.href} className="text-neutral-100 text-lg relative group">
                         {link.label}
-                        <span
-                            className={`absolute  top-6 left-0 h-1 bg-ash_primary-500 rounded-md transition-all duration-300 ease-in-out ${
-                                pathname === link.href ? "w-full" : "w-0"
-                            }`}
-                        ></span>
+                        <div className="relative flex justify-center top-2.5">
+                            <span
+                                className={`absolute bottom-2 h-1 bg-ash_primary-500 rounded-md transition-all duration-300 ease-in-out ${
+                                    pathname === link.href ? "w-[50%]" : "w-0"
+                                }`}></span>
+                        </div>
                     </Link>
                 </div>
             ))}

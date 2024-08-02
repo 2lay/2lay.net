@@ -13,7 +13,7 @@ export default function Projects() {
                     <div className="flex flex-col gap-y-2">
                         <div className="flex flex-col gap-y-2  mb-5">
                             <p className="text-3xl">
-                                <a className="font-bold">$</a> project
+                                <a className="font-bold">$</a> projects
                             </p>
                             <p>
                                 Welcome to my projects page! Here you'll find a collection of my recent work and
@@ -30,7 +30,7 @@ export default function Projects() {
                                 <p className="text-base text-neutral-400 mb-5">
                                     Next-gen modded Minecraft network delivering an unforgettable player experience with
                                     seamless integration across our CMS, Discord, and game servers. Each server runs on
-                                    custom-developed software with a coding API for streamlined development and
+                                    custom-developed software with a coding API for easier development and
                                     deployment.
                                 </p>
                                 <div className="text-sm text-neutral-500">
