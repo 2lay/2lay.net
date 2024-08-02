@@ -4,7 +4,7 @@ module.exports = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
-        
+
         "./**/*.{js,ts,jsx,tsx}",
         "./pages/**/*.{js,ts,jsx,tsx}",
 
@@ -48,6 +48,21 @@ module.exports = {
                     900: "#292b30",
                 },
             },
+        },
+        
+        keyframes: {
+            fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+            },
+            fadeOut: {
+                "0%": { opacity: 1 },
+                "100%": { opacity: 0 },
+            },
+        },
+        animation: {
+            fadeIn: "fadeIn 0.5s ease-in-out",
+            fadeOut: "fadeOut 0.5s ease-in-out",
         },
     },
     plugins: [],
