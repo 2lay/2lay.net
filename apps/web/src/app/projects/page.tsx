@@ -3,6 +3,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "2lay.net - projects",
     description: "here are the projects i work on",
+    twitter: {
+        card: "summary_large_image",
+        title: "2lay.net - projects",
+        description: "here are the projects i work on",
+        images: ["https://github.com/2lay.png"],
+    },
 };
 
 export default function Projects() {
@@ -30,8 +36,7 @@ export default function Projects() {
                                 <p className="text-base text-neutral-400 mb-5">
                                     Next-gen modded Minecraft network delivering an unforgettable player experience with
                                     seamless integration across our CMS, Discord, and game servers. Each server runs on
-                                    custom-developed software with a coding API for easier development and
-                                    deployment.
+                                    custom-developed software with a coding API for easier development and deployment.
                                 </p>
                                 <div className="text-sm text-neutral-500">
                                     <div className="max-h-28 overflow-y-auto flex flex-wrap gap-2">

@@ -1,9 +1,13 @@
 import { Inter } from "next/font/google";
 import "./styles.css";
 import Navbar from "./navbar";
+import type { Viewport } from 'next'
 
 const font = Inter({ subsets: ["cyrillic"] });
 
+export const viewport: Viewport = {
+    themeColor: '#f5a9b8',
+  }
 
 
 export default function RootLayout({
@@ -15,6 +19,7 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="icon" href="https://github.com/2lay.png" sizes="any" />
             </head>
 
             <body className={`${font.className} bg-neutral-950 max-w-screen-lg mx-auto mt-12`}>

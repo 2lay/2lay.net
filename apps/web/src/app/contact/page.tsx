@@ -4,7 +4,13 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "2lay.net - contact",
-    description: "wanna contat me?",
+    description: "wanna contact me?",
+    twitter: {
+        card: "summary_large_image",
+        title: "2lay.net - contact",
+        description: "wanna contact me?",
+        images: ["https://github.com/2lay.png"],
+    },
 };
 
 export default function Home() {
