@@ -1,28 +1,12 @@
-# Nuxt dev/build outputs
-.output
-.data
-.nuxt
-.nitro
-.cache
-dist
-
-# Node dependencies
-node_modules
-
-# Logs
-logs
-*.log
-
-# Misc
 .DS_Store
-.fleet
-.idea
-
-# Local env files
+node_modules
+.turbo
+*.log
+.next
+dist
+dist-ssr
+*.local
 .env
-.env.*
-!.env.example
-
-# windows moment 
-bun.lockb
-package-lock.json
+.cache
+server/dist
+public/dist
