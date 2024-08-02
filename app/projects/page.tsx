@@ -22,7 +22,7 @@ export default function Projects() {
                                 <a className="font-bold">$</a> projects
                             </p>
                             <p>
-                                Welcome to my projects page! Here you'll find a collection of my recent work and
+                                Welcome to my projects page! Here you&#39;ll find a collection of my recent work and
                                 personal projects.
                             </p>
                         </div>

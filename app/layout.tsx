@@ -28,7 +28,7 @@ export default function RootLayout({
                         <div>
                             <div className="flex justify-between">
                                 <p className="text-5xl">
-                                    hey, i'm <a className="text-ash_primary-500 font-bold">ashley</a>
+                                    hey, i&#39;m <a className="text-ash_primary-500 font-bold">ashley</a>
                                     <a className="text-neutral-600 text-2xl italic"> (she/her)</a>
                                 </p>
                                 <Navbar />

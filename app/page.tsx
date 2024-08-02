@@ -21,15 +21,15 @@ export default function Home() {
                             <a className="font-bold">$</a> me
                         </p>
                         <p>
-                            Surprise! <a className="italic">(Not really, it's Ashley again)</a>. I'm a 17 year old
+                            Surprise! <a className="italic">(Not really, it&#39;s Ashley again)</a>. I&#39;m a 17 year old
                             software engineer from Sweden, the land of blåhajar and amazing meatballs.
                         </p>
                         <p>
-                            My passions? Server administration, software development, and a sily block game that I can't
+                            My passions? Server administration, software development, and a sily block game that I can&#39;t
                             seem to put down.
                         </p>
                         <p>
-                            When my fingers aren't typing code, you'll usually find me cooking up something in the
+                            When my fingers aren&#39;t typing code, you&#39;ll usually find me cooking up something in the
                             kitchen, wandering through nature, and sometimes playing a few tunes on my guitar.
                         </p>
                     </div>
@@ -39,8 +39,8 @@ export default function Home() {
                             <a className="font-bold">$</a> skills
                         </p>
                         <p>
-                            I'm not sure what's more impressive: the fact that I can code or the fact that I can still
-                            tie my shoelaces. Anyway, here are a few of the things I'm decent at:
+                            I&#39;m not sure what&#39;s more impressive: the fact that I can code or the fact that I can still
+                            tie my shoelaces. Anyway, here are a few of the things I&#39;m decent at:
                         </p>
 
                         <div className="flex flex-col gap-y-3 mt-3">
