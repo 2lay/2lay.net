@@ -1,6 +1,15 @@
 "use client";
 import { useState } from "react";
 
+/* TODO: convert useState stuff to a separate client component 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "2lay.net - contact",
+    description: "wanna contat me?",
+};
+*/
+
 const contactLinks = [
     {
         href: "https://signal.me/#eu/5qHJPU61wlVVptnGkeqWmfVMP0iAaJonyWglIumBT1HSWQuB3N1LYYP83HrQ6Bk7",

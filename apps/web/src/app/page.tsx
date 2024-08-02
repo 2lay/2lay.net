@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "2lay.net",
+    description: "hey there! welcome to my website",
+};
+
 export default function Home() {
     return (
         <main className="pt-8">

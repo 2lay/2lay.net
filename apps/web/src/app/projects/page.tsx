@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "2lay.net - projects",
+    description: "here are the projects i work on",
+};
+
 export default function Projects() {
     return (
         <main className="pt-8">
