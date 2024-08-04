@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
+
 export const fetchCache = "force-no-store";
+
 interface TrackImage {
     size: string;
     "#text": string;
@@ -24,15 +26,14 @@ export const GET = async () => {
         const track = data.recenttracks.track[0] as RecentTrack;
 
         const imageUrl = track.image.find((img) => img.size === "large")?.["#text"];
-        const nowPlaying = track["@attr"]?.nowplaying === "true" ? "1" : undefined;
-        const responseDate = track.date?.["uts"] || nowPlaying;
+        const timestamp = track.date?.["uts"] ? parseInt(track.date["uts"], 10) : Math.floor(Date.now() / 1000);
 
         const response = {
             track: track.name,
             album: track.album["#text"],
             artist: track.artist["#text"],
             image: imageUrl,
-            date: responseDate,
+            date: timestamp,
         };
 
         return new NextResponse(JSON.stringify(response), {

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import NowPlaying from "./nowplaying";
 
 export const metadata: Metadata = {
     title: "2lay.net",
@@ -32,6 +33,7 @@ export default function Home() {
                             When my fingers aren&#39;t typing code, you&#39;ll usually find me cooking up something in the
                             kitchen, wandering through nature, and sometimes playing a few tunes on my guitar.
                         </p>
+                        <NowPlaying />
                     </div>
 
                     <div>
