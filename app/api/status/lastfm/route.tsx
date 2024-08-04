@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-
+export const fetchCache = "force-no-store";
 interface TrackImage {
     size: string;
     "#text": string;
@@ -23,7 +23,7 @@ export const GET = async () => {
         const data = await res.json();
         const track = data.recenttracks.track[0] as RecentTrack;
 
-        const imageUrl = track.image.find(img => img.size === "large")?.["#text"];
+        const imageUrl = track.image.find((img) => img.size === "large")?.["#text"];
         const nowPlaying = track["@attr"]?.nowplaying === "true" ? "1" : undefined;
         const responseDate = track.date?.["uts"] || nowPlaying;
 
