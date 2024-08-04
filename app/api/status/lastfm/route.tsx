@@ -10,31 +10,39 @@ interface RecentTrack {
     album: { "#text": string };
     artist: { "#text": string };
     image: TrackImage[];
-    date: { uts: string };
+    date?: { uts: string; "#text"?: string };
+    "@attr"?: { nowplaying?: string };
 }
 
 export const GET = async () => {
     const apikey = process.env.LFM_KEY;
-    console.log(apikey);
-    const res = await fetch(
-        `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=twolay&limit=1&api_key=${apikey}&format=json`
-    );
-    const repo = await res.json();
-    const req: RecentTrack = repo.recenttracks.track[0];
+    const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=twolay&limit=1&api_key=${apikey}&format=json`;
 
-    const track = req.name;
-    const album = req.album["#text"];
-    const artist = req.artist["#text"];
-    const image = req.image.find((img: TrackImage) => img.size === "large")?.["#text"];
-    const date = req.date.uts;
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        const track = data.recenttracks.track[0] as RecentTrack;
 
-    const response = {
-        track,
-        album,
-        artist,
-        image,
-        date,
-    };
+        const imageUrl = track.image.find(img => img.size === "large")?.["#text"];
+        const nowPlaying = track["@attr"]?.nowplaying === "true" ? "1" : undefined;
+        const responseDate = track.date?.["uts"] || nowPlaying;
 
-    return new NextResponse(JSON.stringify(response), { headers: { "Content-Type": "application/json" } });
+        const response = {
+            track: track.name,
+            album: track.album["#text"],
+            artist: track.artist["#text"],
+            image: imageUrl,
+            date: responseDate,
+        };
+
+        return new NextResponse(JSON.stringify(response), {
+            headers: { "Content-Type": "application/json" },
+        });
+    } catch (error) {
+        console.error(error);
+        return new NextResponse(JSON.stringify({ error: "failed to fetch recent tracks" }), {
+            headers: { "Content-Type": "application/json" },
+            status: 500,
+        });
+    }
 };
