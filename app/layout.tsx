@@ -2,6 +2,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./styles.css";
 import Navbar from "./navbar";
 import type { Viewport } from "next";
+import Navigation from "./components/Navigation";
 
 const font = JetBrains_Mono({ subsets: ["cyrillic"] });
 
@@ -27,17 +28,7 @@ export default function RootLayout({
                     <div className="text-purple-400 hidden md:block">
                         <a>&gt; 2lay.net</a>
                     </div>
-                    <div className="flex flex-row sm:flex-row space-x-3 space-y-0">
-                        <a className="font-bold text-purple-400 hover:text-purple-500 underline underline-offset-2 transition duration-300 ease-in-out">
-                            home
-                        </a>
-                        <a className="text-purple-400 hover:text-purple-500 transition duration-300 ease-in-out">
-                            projects
-                        </a>
-                        <a className="text-purple-400 hover:text-purple-500 transition duration-300 ease-in-out">
-                            contact
-                        </a>
-                    </div>
+                        <Navigation />
                 </div>
 
                 {/* Main Content */}

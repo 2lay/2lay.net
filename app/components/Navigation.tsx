@@ -26,20 +26,20 @@ export default function Navigation() {
     }, [pathname]);
 
     return (
-        <div className="gap-x-4 flex">
-            {links.map((link) => (
-                <div key={link.href} className="relative">
-                    <Link href={link.href} className="text-neutral-100 text-lg relative group">
-                        {link.label}
-                        <div className="relative flex justify-center top-2.5">
-                            <span
-                                className={`absolute bottom-2 h-1 bg-ash_primary-500 rounded-md transition-all duration-300 ease-in-out ${
-                                    pathname === link.href ? "w-[50%]" : "w-0"
-                                }`}></span>
-                        </div>
-                    </Link>
-                </div>
-            ))}
+<div className="gap-x-3 flex">
+    {links.map((link) => (
+        <div key={link.href} className="relative">
+            <Link href={link.href} className="text-purple-400 group hover:text-purple-500 duration-300 text-lg relative">
+                {link.label}
+                <span
+                    className={`absolute left-0 bottom-[-0.1rem] h-[2px] bg-purple-400 duration-300 ease-in-out
+                    ${pathname === link.href ? "w-full" : "w-0"} group-hover:bg-purple-500`}
+                ></span>
+            </Link>
         </div>
+    ))}
+</div>
+
+
     );
 }
