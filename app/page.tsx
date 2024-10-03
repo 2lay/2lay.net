@@ -1,108 +1,43 @@
 import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "2lay.net",
     description: "hey there! welcome to my website",
     twitter: {
-        card: 'summary_large_image',
-        title: '2lay.net',
-        description: 'hey there! welcome to my website',
+        card: "summary_large_image",
+        title: "2lay.net",
+        description: "hey there! welcome to my website",
         images: ["https://github.com/2lay.png"],
-      },
+    },
 };
 
 export default function Home() {
     return (
-        <main className="pt-8">
-            <div className="text-neutral-100 px-5 flex-grow text-lg">
-                <div className="flex flex-col gap-y-6">
-                    <div className="flex flex-col gap-y-2">
-                        <p className="text-3xl">
-                            <a className="font-bold">$</a> me
-                        </p>
-                        <p>
-                            Surprise! <a className="italic">(Not really, it&#39;s Ashley again)</a>. I&#39;m a 17 year old
-                            software engineer from Sweden, the land of blåhajar and amazing meatballs.
-                        </p>
-                        <p>
-                            My passions? Server administration, software development, and a sily block game that I can&#39;t
-                            seem to put down.
-                        </p>
-                        <p>
-                            When my fingers aren&#39;t typing code, you&#39;ll usually find me cooking up something in the
-                            kitchen, wandering through nature, and sometimes playing a few tunes on my guitar.
-                        </p>
-                    </div>
-
-                    <div>
-                        <p className="text-3xl pb-2 ">
-                            <a className="font-bold">$</a> skills
-                        </p>
-                        <p>
-                            I&#39;m not sure what&#39;s more impressive: the fact that I can code or the fact that I can still
-                            tie my shoelaces. Anyway, here are a few of the things I&#39;m decent at:
-                        </p>
-
-                        <div className="flex flex-col gap-y-3 mt-3">
-                            <div className="flex flex-col text-base">
-                                <p className="text-xl mb-1">Programming Languages</p>
-                                <p className="flex gap-x-2 flex-wrap">
-                                    <a className="text-[#92adfd] bg-[#92adfd] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        TypeScript
-                                    </a>
-                                    <a className="text-[#fdf192] bg-[#fdf192] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        JavaScript
-                                    </a>
-                                    <a className="text-[#92c2fd] bg-[#92c2fd] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        C++
-                                    </a>
-                                    <a className="text-[#eb92fd] bg-[#eb92fd] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        Kotlin
-                                    </a>
-                                    <a className="text-[#fdc492] bg-[#fdc492] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        Java
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div className="flex flex-col text-base">
-                                <p className="text-xl mb-1">Frameworks</p>
-                                <p className="flex gap-x-2 flex-wrap">
-                                    <a className="text-[#dfdfdf] bg-[#bfbfbf] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        Next.js
-                                    </a>
-                                    <a className="text-[#92c4fd] bg-[#92c4fd] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        React.js
-                                    </a>
-                                    <a className="text-[#92fdbd] bg-[#92fdbd] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        FastAPI
-                                    </a>
-                                    <a className="text-[#fd9692] bg-[#fd9692] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        TurboRepo
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div className="flex flex-col text-base">
-                                <p className="text-xl mb-1">Technologies & Tools</p>
-                                <p className="flex gap-x-2 flex-wrap">
-                                    <a className="text-[#9296fd] bg-[#9296fd] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        Docker
-                                    </a>
-                                    <a className="text-[#fdfb92] bg-[#fdfb92] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        Linux
-                                    </a>
-                                    <a className="text-[#fdaf92] bg-[#fdaf92] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        Git
-                                    </a>
-                                    <a className="text-[#d092fd] bg-[#d092fd] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        CI/CD
-                                    </a>
-                                    <a className="text-[#92c9fd] bg-[#92c9fd] bg-opacity-20 px-3 py-1 rounded-lg">
-                                        Azure
-                                    </a>
-                                </p>
-                            </div>
+        <main className="my-4">
+            <div className="flex flex-col md:flex-row justify-center items-center px-4 md:px-10 lg:px-20 py-4 space-y-6 md:space-y-0 md:space-x-8">
+                <Image
+                    src="https://github.com/2lay.png"
+                    width={250}
+                    height={250}
+                    alt="my avatar"
+                    className="rounded-xl object-cover w-32 h-32 md:w-64 md:h-64"
+                />
+                <div className="flex flex-col justify-center max-w-xl text-center md:text-left">
+                    <p className="text-2xl font-bold pb-2">Haiii, welcome!</p>
+                    <div className="text-base space-y-3">
+                        <div>
+                            <p>My name is Ashley!</p>
+                            <p>I am a full-stack developer and sysadmin, currently studying economics.</p>
+                        </div>
+                        <div>
+                            <p>
+                                Want to learn more about me? Check out my <Link href="/projects" className="text-pink-300">projects</Link> page.
+                            </p>
+                            <p>
+                                Want to chat? Don't hesitate to <Link href="/contact" className="text-blue-300">contact</Link> me. I love making new friends!
+                            </p>
                         </div>
                     </div>
                 </div>
