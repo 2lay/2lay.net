@@ -1,8 +1,7 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./styles.css";
-import Navbar from "./navbar";
 import type { Viewport } from "next";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/navigation";
 
 const font = JetBrains_Mono({ subsets: ["cyrillic"] });
 
