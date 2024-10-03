@@ -1,5 +1,4 @@
-import Contacts from "./contacts";
-import Socials from "./socials";
+import Links from "./links";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,15 +22,7 @@ export default function Home() {
                             <a className="font-bold">$</a> contact me
                         </p>
                         <p>Here are the ways you can contact me:</p>
-                        <Contacts />
-                    </div>
-
-                    <div>
-                        <p className="text-3xl pb-2">
-                            <a className="font-bold">$</a> social media
-                        </p>
-                        <p>... or places where you can find me:</p>
-                        <Socials />
+                        <Links />
                     </div>
                 </div>
             </div>
