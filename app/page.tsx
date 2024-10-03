@@ -25,7 +25,7 @@ export default function Home() {
                     className="rounded-xl object-cover w-32 h-32 md:w-64 md:h-64"
                 />
                 <div className="flex flex-col justify-center max-w-xl text-center md:text-left">
-                    <p className="text-2xl font-bold pb-2">About me</p>
+                    <p className="text-2xl font-bold pb-2">Haiii, welcome!</p>
                     <div className="text-base space-y-3">
                         <div>
                             <p>My name is Ashley!</p>
