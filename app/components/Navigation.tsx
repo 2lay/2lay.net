@@ -15,7 +15,7 @@ const links: NavLink[] = [
     { label: "contact", href: "/contact" },
 ];
 
-export default function Navigation() {
+export default function Nav() {
     const pathname = usePathname();
     const [prevPathname, setPrevPathname] = useState(pathname);
 

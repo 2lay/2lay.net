@@ -1,7 +1,7 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./styles.css";
 import type { Viewport } from "next";
-import Navigation from "./components/navigation";
+import Nav from "./components/Navigation";
 
 const font = JetBrains_Mono({ subsets: ["cyrillic"] });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
                     <div className="text-pink-300 hidden md:block">
                         <a>&gt; 2lay.net</a>
                     </div>
-                        <Navigation />
+                        <Nav />
                 </div>
 
                 {/* Main Content */}
