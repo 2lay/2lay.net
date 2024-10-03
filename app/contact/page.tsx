@@ -19,9 +19,9 @@ export default function Home() {
                 <div className="flex flex-col gap-y-6">
                     <div>
                         <p className="text-3xl pb-2">
-                            <a className="font-bold">$</a> contact me
+                            <a className="font-bold">$</a> find me
                         </p>
-                        <p>Here are the ways you can contact me:</p>
+                        <p>here's some placed you can find me on</p>
                         <Links />
                     </div>
                 </div>

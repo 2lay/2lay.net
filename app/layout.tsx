@@ -25,7 +25,7 @@ export default function RootLayout({
             <body className={`${font.className} bg-neutral-900 max-w-screen-2xl mx-auto mt-8 sm:mt-12 text-base md:text-lg`}>
                 {/* Navbar */}
                 <div className="flex justify-between items-center bg-neutral-950 rounded-t-lg px-3 py-2 sm:py-1 mx-4 md:mx-6 lg:mx-8 xl:mx-12 2xl:mx-16">
-                    <div className="text-purple-400 hidden md:block">
+                    <div className="text-pink-300 hidden md:block">
                         <a>&gt; 2lay.net</a>
                     </div>
                         <Navigation />
