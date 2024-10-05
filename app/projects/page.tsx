@@ -26,9 +26,9 @@ export default function Projects() {
                     </p>
                 </div>
                 <Link href="https://tmw.gg/" className="block">
-                    <div className="border border-neutral-800 p-6 bg-neutral-900 text-white rounded-lg">
+                    <div className="border border-neutral-800 p-6 bg-neutral-900 text-white rounded-lg transition-all duration-300 ease-in-out hover:scale-[1.005] hover:border-pink-300 hover:shadow-lg hover:shadow-pink-300/20">
                         <span
-                            className="text-2xl font-bold hover:text-pink-300 transition-colors duration-300 block mb-2">
+                            className="text-2xl font-bold transition-colors duration-300 block mb-2">
                             TMW.gg
                         </span>
                         <p className="text-sm text-neutral-400 mb-4">Founder & DevOps | 2022 - now</p>
