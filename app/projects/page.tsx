@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "2lay.net - projects",
@@ -24,13 +25,12 @@ export default function Projects() {
                         personal projects.
                     </p>
                 </div>
-                <div className="flex flex-col max-w-lg">
-                    <div className="border border-neutral-800 p-6 bg-neutral-900 text-white rounded-lg transition-all duration-300 ease-in-out hover:shadow-[5px_5px_0px_0px_#f472b6]">
-                        <a
-                            href="https://tmw.gg/"
+                <Link href="https://tmw.gg/" className="block">
+                    <div className="border border-neutral-800 p-6 bg-neutral-900 text-white rounded-lg">
+                        <span
                             className="text-2xl font-bold hover:text-pink-300 transition-colors duration-300 block mb-2">
                             TMW.gg
-                        </a>
+                        </span>
                         <p className="text-sm text-neutral-400 mb-4">Founder & DevOps | 2022 - now</p>
                         <p className="text-sm text-neutral-300 mb-4">
                             Experience: Paper Plugin Development, NMS, Web Development, Mixins, Infrastructure Management
@@ -47,7 +47,7 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
         </main>
     );
