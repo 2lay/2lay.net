@@ -14,17 +14,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <main>
-            <div className="text-neutral-100 px-5 flex-grow text-lg">
-                <div className="flex flex-col gap-y-6">
-                    <div>
-                        <p className="text-3xl pb-2">
-                            <a className="font-bold">$</a> find me
-                        </p>
-                        <p>here's some placed you can find me on</p>
-                        <Links />
-                    </div>
-                </div>
+        <main className="flex flex-col gap-y-6 text-neutral-100 px-5 flex-grow text-lg">
+            <div>
+                <p className="text-3xl pb-2">
+                    <span className="font-bold">$</span> find me
+                </p>
+                <p>here's some placed you can find me on</p>
+                <Links />
             </div>
         </main>
     );

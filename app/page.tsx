@@ -15,8 +15,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <main className="my-4">
-            <div className="flex flex-col md:flex-row justify-center items-center px-4 md:px-10 lg:px-20 space-y-6 md:space-y-0 md:space-x-8">
+        <main className="flex flex-col md:flex-row justify-center items-center px-4 md:px-10 lg:px-20 space-y-6 md:space-y-0 md:space-x-8">
                 <Image
                     src="https://github.com/2lay.png"
                     width={250}
@@ -41,7 +40,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
         </main>
     );
 }
