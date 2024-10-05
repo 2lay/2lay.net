@@ -4,9 +4,9 @@ import { useState } from "react";
 
 const contactLinks = [
     {
-        href: "https://signal.me/#eu/5qHJPU61wlVVptnGkeqWmfVMP0iAaJonyWglIumBT1HSWQuB3N1LYYP83HrQ6Bk7",
-        title: "Signal",
-        username: "ashley.1337",
+        href: "t.me/twolay",
+        title: "Telegram",
+        username: "twolay",
         color: "#95BDFF",
         secondaryColor: "#6a87b6",
     },
