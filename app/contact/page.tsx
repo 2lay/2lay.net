@@ -1,5 +1,5 @@
-import Links from "./links";
 import { Metadata } from "next";
+import Links from "./links";
 
 export const metadata: Metadata = {
     title: "2lay.net - contact",
