@@ -4,20 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 const contactLinks = [
+    /*
     {
         href: "#",
         title: "Discord",
         username: "2lay",
         color: { r: 149, g: 160, b: 255 },
         secondaryColor: { r: 104, g: 112, b: 182 },
-    },
-    {
-        href: "https://t.me/twolay",
-        title: "Telegram",
-        username: "twolay",
-        color: { r: 149, g: 189, b: 255 },
-        secondaryColor: { r: 106, g: 135, b: 182 },
-    },
+    },*/
     {
         href: "mailto:ashley@2lay.net",
         title: "Mail",
@@ -25,6 +19,13 @@ const contactLinks = [
         color: { r: 240, g: 168, b: 208 },
         secondaryColor: { r: 170, g: 119, b: 147 },
     },
+    /*{
+        href: "https://t.me/twolay",
+        title: "Telegram",
+        username: "twolay",
+        color: { r: 149, g: 189, b: 255 },
+        secondaryColor: { r: 106, g: 135, b: 182 },
+    },*/
     {
         href: "https://last.fm/user/twolay",
         title: "Last.fm",
