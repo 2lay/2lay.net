@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const contactLinks = [
     {
-        href: "t.me/twolay",
+        href: "https://t.me/twolay",
         title: "Telegram",
         username: "twolay",
         color: "#95BDFF",
