@@ -21,4 +21,4 @@ to build this project for production, run ``pnpm run build`` which will generate
 to preview the production build as it would appear in the production run ``pnpm run preview``
 
 ## ``license``
-this project is licensed under [GNU General Public License v3.0](https://github.com/2lay/2lay.net/LICENSE)
+this project is licensed under [GNU General Public License v3.0](https://github.com/2lay/2lay.net/blob/main/LICENSE)
