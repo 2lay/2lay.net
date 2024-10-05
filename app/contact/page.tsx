@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <main className="pt-8">
+        <main>
             <div className="text-neutral-100 px-5 flex-grow text-lg">
                 <div className="flex flex-col gap-y-6">
                     <div>

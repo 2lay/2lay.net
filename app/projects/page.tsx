@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function Projects() {
     return (
-        <main className="pt-8">
-            <div className="text-neutral-100 px-5 flex-grow text-lg flex flex-col gap-y-8 mb-5">
+        <main>
+            <div className="text-neutral-100 px-5 flex-grow text-lg flex flex-col gap-y-8">
                 <div>
                     <div className="flex flex-col gap-y-2 mb-5">
                         <p className="text-3xl">
@@ -26,7 +26,7 @@ export default function Projects() {
                         </p>
                     </div>
                     <div className="flex flex-col max-w-lg">
-                        <div className="flex flex-col gap-y-4">
+                 
                             <div className="border border-neutral-800 max-w-max p-6 shadow-lg bg-neutral-900 text-white">
                                 <a
                                     href="https://tmw.gg/"
@@ -35,7 +35,7 @@ export default function Projects() {
                                 </a>
                                 <p className="text-sm text-gray-400 mb-4">Owner & DevOps | 2022 - now</p>
                                 <p className="text-xs text-gray-300 mb-4">
-                                    Experience: Spigot Plugin Development, Web Development, Infrastructure Management
+                                    Experience: Paper Plugin Development, NMS, Web Development, Mixins, Infrastructure Management
                                 </p>
                                 <div className="text-xs text-gray-500">
                                     <div className="flex gap-2 flex-wrap">
@@ -66,7 +66,6 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
-            </div>
         </main>
     );
 }

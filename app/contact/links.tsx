@@ -11,9 +11,9 @@ const contactLinks = [
         secondaryColor: "#6a87b6",
     },
     {
-        href: "mailto:mail@2lay.net",
+        href: "mailto:ashley@2lay.net",
         title: "Mail",
-        username: "mail@2lay.net",
+        username: "ashley@2lay.net",
         color: "#F0A8D0",
         secondaryColor: "#aa7793",
     },
@@ -71,7 +71,7 @@ export default function Links() {
     };
 
     return (
-        <div className="flex flex-col gap-y-3 mt-3 max-w-64">
+        <div className="flex flex-col gap-y-3 mt-3 max-w-96">
             {/* Discord Copy Button */}
             <div className="relative">
                 <a
