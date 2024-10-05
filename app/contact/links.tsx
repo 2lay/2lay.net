@@ -93,11 +93,11 @@ export default function Links() {
                             '--shadow-color': `rgb(${link.color.r}, ${link.color.g}, ${link.color.b})`,
                             backgroundColor: 'var(--bg-color)',
                             color: 'var(--text-color)',
-                        }}
+                        } as React.CSSProperties}
                         onClick={link.title === "Discord" ? handleCopy : undefined}
                     >
                         <span>{link.title === "Discord" && copied ? "Copied username!" : link.title}</span>
-                        <span 
+                        <span
                             className="font-semibold"
                             style={{ color: `rgb(${link.secondaryColor.r}, ${link.secondaryColor.g}, ${link.secondaryColor.b})` }}
                         >
