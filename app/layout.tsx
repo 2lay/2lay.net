@@ -21,10 +21,9 @@ export default function RootLayout({
                 <link rel="icon" href="https://github.com/2lay.png" sizes="any" />
             </head>
 
-            <body className={`${font.className} bg-[#111111] min-h-screen relative max-w-screen-lg mx-auto  text-lg`}>
+            <body className={`${font.className} bg-cat-mantle min-h-screen relative max-w-screen-lg mx-auto text-lg`}>
                 {/* Noise background, credits to https://arc.net/ */}
-                <div className="fixed inset-0 bg-[url('/noise.png')] bg-repeat opacity-30 pointer-events-none z-[-1]"></div>
-
+                <div className="fixed inset-0 bg-[url('/noise.png')] bg-repeat opacity-10 pointer-events-none z-[-1]"></div>
                 <div className="pt-6">
                     {/* Navbar */}
                     <div className="flex justify-between items-center bg-neutral-950 rounded-t-lg px-3 py-2 mx-4 md:mx-6 lg:mx-8 xl:mx-12 2xl:mx-16">
