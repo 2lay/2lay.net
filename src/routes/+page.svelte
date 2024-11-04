@@ -8,6 +8,7 @@
     <meta property="og:url" content="https://2lay.net" />
     <meta property="og:image" content="https://2lay.net/avatar.png" />
     <meta property="og:site_name" content="2lay.net" />
+    <meta property="theme-color" content="#c084fc" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="2lay.net" />
     <meta name="twitter:description" content="2lay.net" />
