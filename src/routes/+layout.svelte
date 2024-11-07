@@ -1,8 +1,9 @@
 <script lang="ts">
 	import '../app.css';
 	let { children } = $props();
+	import Styles from '../lib/styles.svelte';
 </script>
 
-<div class="min-h-screen bg-neutral-900 text-white">
+<div>
 	{@render children()}
 </div>
