@@ -13,7 +13,7 @@
 </script>
 
 <button 
-  class="text-neutral-50 dark:text-neutral-900" 
+  class="dark:text-neutral-50 text-neutral-900" 
   on:click={toggle} 
   aria-label="Toggle dark mode">
   {#if isDarkMode}
