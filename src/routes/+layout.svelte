@@ -1,7 +1,10 @@
 <script lang="ts">
 	import '../app.css';
 	let { children } = $props();
-	import Styles from '../lib/styles.svelte';
+	import '@fontsource-variable/jetbrains-mono';
+
+
+
 </script>
 
 <div>

@@ -41,6 +41,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@fontsource-variable/jetbrains-mono": "^5.1.1",
 		"drizzle-orm": "^0.33.0",
 		"lucide-svelte": "^0.454.0",
 		"postgres": "^3.4.4"
