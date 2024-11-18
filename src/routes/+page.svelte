@@ -151,7 +151,7 @@
 		/>
 		<img src="https://utfs.io/f/0nYClWA9oiIm4BmNmw90vTL2nk0aNJXQUA8lzOh63cMmIFH7" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
 		<img
-			src="/badges/misc/debian.gif"
+			src="https://utfs.io/f/0nYClWA9oiImw3Dtk9j8dUwm7QrzLqoZWaBDS3kVsvRCxl0I"
 			alt="88x31 button"
 			width="88"
 			height="31"
