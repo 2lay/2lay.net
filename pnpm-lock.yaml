@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/jetbrains-mono':
+        specifier: ^5.1.1
+        version: 5.1.1
       drizzle-orm:
         specifier: ^0.33.0
         version: 0.33.0(postgres@3.4.5)
+      lucide-svelte:
+        specifier: ^0.454.0
+        version: 0.454.0(svelte@5.1.9)
       postgres:
         specifier: ^3.4.4
         version: 3.4.5
@@ -538,6 +544,9 @@ packages:
   '@eslint/plugin-kit@0.2.2':
     resolution: {integrity: sha512-CXtq5nR4Su+2I47WPOlWud98Y5Lv8Kyxp2ukhgFx/eW6Blm18VXJO5WuQylPugRo8nbluoi6GvvxBLqHcvqUUw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource-variable/jetbrains-mono@5.1.1':
+    resolution: {integrity: sha512-V+1aRFRvuZ66PpO30s8l/2aADKzpV9VRsO3kSZE+rTMvi4vab3cUcPHMN2z+wAvjkYJO71Yf+g3/Y6pSMmQpVQ==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1424,6 +1433,11 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
+  lucide-svelte@0.454.0:
+    resolution: {integrity: sha512-TgW17HI7M8LeFZ3NpaDp1LwPGBGMVjx/x81TtK+AacEQvmJcqetqeJNeBT18NMEJP9+zi/Wt+Zc8mo44K5Uszw==}
+    peerDependencies:
+      svelte: ^3 || ^4 || ^5.0.0-next.42
+
   magic-string@0.30.12:
     resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
@@ -2295,6 +2309,8 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
+  '@fontsource-variable/jetbrains-mono@5.1.1': {}
+
   '@humanfs/core@0.19.1': {}
 
   '@humanfs/node@0.16.6':
@@ -3140,6 +3156,10 @@ snapshots:
   loupe@3.1.2: {}
 
   lru-cache@10.4.3: {}
+
+  lucide-svelte@0.454.0(svelte@5.1.9):
+    dependencies:
+      svelte: 5.1.9
 
   magic-string@0.30.12:
     dependencies:

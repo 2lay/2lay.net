@@ -2,14 +2,25 @@
   <title>2lay.net - not found</title>
 </svelte:head>
 
-<main>
-  <div class="flex h-screen flex-col bg-gradient-to-r from-[#df94fb] to-[#c1adf8]">
-    <div class="absolute inset-0 bg-black opacity-90"></div>
-    <div class="relative z-10 flex h-full items-center justify-center">
-      <div class="flex flex-col items-center gap-4">
-        <p class="text-xl">Page not found</p>
-        <a href="/" class="rounded-lg text-purple-400 transition-all duration-150 hover:bg-gray-100 hover:shadow-lg hover:shadow-white/20 active:translate-y-0.5"> Go home </a>
-      </div>
-    </div>
-  </div>
-</main>
+
+
+<div class="m-4 max-w-sm border border-[#CE97A6] bg-[#101010] p-2 text-white">
+			<p class="text-xl text-[#CE97A6]">page not found</p>
+			<p class="mt-2 text-sm">oops! looks like this page doesn't exist.</p>
+	<ul class="mt-2 list-none space-y-1 text-sm">
+		<li>
+			<a
+				href="/"
+				target="_blank"
+				rel="noopener noreferrer"
+						class="block transition-colors hover:text-[#CE97A6]"
+					>
+						<span class="text-[#CE97A6]">></span> go home
+					</a>
+				</li>
+
+	</ul>
+</div>
+
+
+<p class="text-center text-sm text-gray-400">made with ♥ by ella</p>

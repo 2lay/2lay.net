@@ -1,8 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 	let { children } = $props();
+	import '@fontsource-variable/jetbrains-mono';
+	import Neko from '$lib/neko/Neko.svelte';
 </script>
 
-<div class="min-h-screen bg-neutral-900 text-white">
+<div>
+	<Neko />
 	{@render children()}
 </div>
