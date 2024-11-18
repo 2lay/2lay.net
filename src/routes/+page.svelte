@@ -141,25 +141,25 @@
 	<p class="mt-2 text-sm"></p>
 
 	<div class="flex max-w-2xl flex-wrap gap-2">
-		<img src="/8831.png" alt="88x31 button" width="88" height="31" class="pixelated" />
+		<img src="/8831.png" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
 		<img
 			src="https://utfs.io/f/0nYClWA9oiImqK9PBNu2qiLjEfzdaRBoI7wgvGmFuhtk0QUc"
 			alt="88x31 button"
 			width="88"
 			height="31"
-			class="pixelated"
+			class="pixelated h-[31px] w-[88px]"
 		/>
-		<img src="https://utfs.io/f/0nYClWA9oiIm4BmNmw90vTL2nk0aNJXQUA8lzOh63cMmIFH7" alt="88x31 button" width="88" height="31" class="pixelated" />
+		<img src="https://utfs.io/f/0nYClWA9oiIm4BmNmw90vTL2nk0aNJXQUA8lzOh63cMmIFH7" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
 		<img
 			src="/badges/misc/debian.gif"
 			alt="88x31 button"
 			width="88"
 			height="31"
-			class="pixelated"
+			class="pixelated h-[31px] w-[88px]"
 		/>
-		<img src="https://utfs.io/f/0nYClWA9oiImlL128zc9FYjNg7EMuOpWqBmyVvKfDIirCR0t" alt="88x31 button" width="88" height="31" class="pixelated" />
-		<img src="https://utfs.io/f/0nYClWA9oiImW48VBigrCBaJGy1hmXFT0Z8Kw2xobj3E5IRz" alt="88x31 button" width="88" height="31" class="pixelated" />
-		<img src="https://utfs.io/f/0nYClWA9oiImXvtfzql5MEl6hPZF1meD27Azu8SCsTQUWXqy" alt="88x31 button" width="88" height="31" class="pixelated" />
+		<img src="https://utfs.io/f/0nYClWA9oiImlL128zc9FYjNg7EMuOpWqBmyVvKfDIirCR0t" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
+		<img src="https://utfs.io/f/0nYClWA9oiImW48VBigrCBaJGy1hmXFT0Z8Kw2xobj3E5IRz" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
+		<img src="https://utfs.io/f/0nYClWA9oiImXvtfzql5MEl6hPZF1meD27Azu8SCsTQUWXqy" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
 	</div>
 </div>
 
