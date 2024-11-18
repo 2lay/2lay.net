@@ -2,7 +2,7 @@
 	import '../app.css';
 	let { children } = $props();
 	import '@fontsource-variable/jetbrains-mono';
-	import Neko from '$lib/neko/Neko2.svelte';
+	import Neko from '$lib/neko/Neko.svelte';
 </script>
 
 <div>
