@@ -188,4 +188,4 @@
 	</div>
 </div>
 
-<p class="text-center text-sm text-gray-400">made with ♥ by ella</p>
+<p class="max-w-2xl text-center text-sm text-gray-400">made with ♥ by ella</p>
