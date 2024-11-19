@@ -1,3 +1,39 @@
+<script lang="ts">
+	let tooltip: HTMLElement;
+	let link: HTMLElement;
+
+	import { onMount } from 'svelte';
+
+	let nullptrRing: Array<{ url: string; image: string }> = [];
+
+	// note for me: if you're still using vercel, upload all imgs to uploadthing
+	// remove comment when you move tmw's infra off your vps
+	const staticImages = [
+		'/8831.png',
+		'https://utfs.io/f/0nYClWA9oiImqK9PBNu2qiLjEfzdaRBoI7wgvGmFuhtk0QUc',
+		'https://utfs.io/f/0nYClWA9oiIm4BmNmw90vTL2nk0aNJXQUA8lzOh63cMmIFH7',
+		'https://utfs.io/f/0nYClWA9oiImw3Dtk9j8dUwm7QrzLqoZWaBDS3kVsvRCxl0I',
+		'https://utfs.io/f/0nYClWA9oiImlL128zc9FYjNg7EMuOpWqBmyVvKfDIirCR0t',
+		'https://utfs.io/f/0nYClWA9oiImW48VBigrCBaJGy1hmXFT0Z8Kw2xobj3E5IRz',
+		'https://utfs.io/f/0nYClWA9oiImXvtfzql5MEl6hPZF1meD27Azu8SCsTQUWXqy'
+	];
+
+	onMount(async () => {
+		try {
+			const response = await fetch('https://ring.nullp.tr/api/sites');
+			const sites = await response.json();
+			nullptrRing = sites
+				.filter((site: any) => site.image && !site.url.includes('2lay.net'))
+				.map((site: any) => ({
+					url: site.url,
+					image: site.image
+				}));
+		} catch (error) {
+			console.error('failed to fetch nullptr ring images:', error);
+		}
+	});
+</script>
+
 <svelte:head>
 	<title>2lay.net</title>
 	<meta name="description" content="hi, I'm ella." />
@@ -14,11 +50,6 @@
 	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 </svelte:head>
-
-<script lang="ts">
-	let tooltip: HTMLElement;
-	let link: HTMLElement;
-</script>
 
 <div class="m-4 max-w-2xl border border-[#CE97A6] bg-[#101010] p-2 text-white">
 	<div>
@@ -137,29 +168,23 @@
 
 <div class="m-4 max-w-2xl border border-[#CE97A6] bg-[#101010] p-2 text-white">
 	<p class="text-xl text-[#CE97A6]"># friends & badges</p>
-	<p class="mt-2 text-sm"></p>
-	<p class="mt-2 text-sm"></p>
+	<p class="mt-2 text-sm">some badges and links to cool people, check them out!</p>
 
-	<div class="flex max-w-2xl flex-wrap gap-2">
-		<img src="/8831.png" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
-		<img
-			src="https://utfs.io/f/0nYClWA9oiImqK9PBNu2qiLjEfzdaRBoI7wgvGmFuhtk0QUc"
-			alt="88x31 button"
-			width="88"
-			height="31"
-			class="pixelated h-[31px] w-[88px]"
-		/>
-		<img src="https://utfs.io/f/0nYClWA9oiIm4BmNmw90vTL2nk0aNJXQUA8lzOh63cMmIFH7" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
-		<img
-			src="https://utfs.io/f/0nYClWA9oiImw3Dtk9j8dUwm7QrzLqoZWaBDS3kVsvRCxl0I"
-			alt="88x31 button"
-			width="88"
-			height="31"
-			class="pixelated h-[31px] w-[88px]"
-		/>
-		<img src="https://utfs.io/f/0nYClWA9oiImlL128zc9FYjNg7EMuOpWqBmyVvKfDIirCR0t" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
-		<img src="https://utfs.io/f/0nYClWA9oiImW48VBigrCBaJGy1hmXFT0Z8Kw2xobj3E5IRz" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
-		<img src="https://utfs.io/f/0nYClWA9oiImXvtfzql5MEl6hPZF1meD27Azu8SCsTQUWXqy" alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
+	<div class="mt-2 flex max-w-2xl flex-wrap gap-2">
+		{#each staticImages as src}
+			<img {src} alt="88x31 button" width="88" height="31" class="pixelated h-[31px] w-[88px]" />
+		{/each}
+		{#each nullptrRing as site}
+			<a href={site.url} target="_blank" rel="noopener noreferrer">
+				<img
+					src={site.image}
+					alt="Ring site button"
+					width="88"
+					height="31"
+					class="pixelated h-[31px] w-[88px]"
+				/>
+			</a>
+		{/each}
 	</div>
 </div>
 
