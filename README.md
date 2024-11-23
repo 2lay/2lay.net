@@ -1,6 +1,6 @@
 # 2lay.net
 
-sauce for my website powered by a Svelte and Sveltekit.
+sauce for my website powered by a Svelte, Sveltekit, TailwindCSS.
 
 ## Developing
 
