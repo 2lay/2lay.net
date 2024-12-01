@@ -138,17 +138,6 @@
 
 		<li>
 			<a
-				href="https://bsky.app/profile/2lay.net"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="block transition-colors hover:text-[#CE97A6]"
-			>
-				<span class="text-[#CE97A6]">></span> bluesky
-			</a>
-		</li>
-
-		<li>
-			<a
 				href="https://last.fm/user/twolay"
 				target="_blank"
 				rel="noopener noreferrer"
