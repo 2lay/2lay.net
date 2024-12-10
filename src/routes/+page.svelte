@@ -164,6 +164,19 @@
 			</a>
 		</li>
 	</ul>
+		<ul class="mt-2 list-none space-y-1 text-sm">
+		<li>
+			<a
+				href="https://github.com/2lay/fmstatus"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="block transition-colors hover:text-[#CE97A6]"
+			>
+				<span class="text-[#CE97A6]">></span> fmstatus
+				<p class="ml-4 text-xs text-gray-400">lightweight Last.fm API to show your currently playing track using Elysia</p>
+			</a>
+		</li>
+	</ul>
 </div>
 
 <div class="m-4 max-w-2xl border border-[#CE97A6] bg-[#101010] p-2 text-white">
