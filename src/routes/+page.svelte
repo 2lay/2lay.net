@@ -138,7 +138,7 @@
 
 		<li>
 			<a
-				href="https://last.fm/user/twolay"
+				href="https://last.fm/user/iwas15with100k"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="block transition-colors hover:text-[#CE97A6]"
