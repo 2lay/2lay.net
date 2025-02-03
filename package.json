@@ -5,8 +5,9 @@
     "@types/bun": "latest"
   },
   "scripts": {
-	"frontend:dev": "cd frontend && bun vite",
-	"frontend:build": "cd frontend && bun tsc -b && bun vite build", 
-	"frontend:preview": "cd frontend && bun vite preview"
+	"frontend:dev": "cd frontend && bun react-router dev",
+	"frontend:build": "cd frontend && bun react-router build", 
+	"frontend:start": "cd frontend && bun react-router-serve ./build/server/index.js",
+  "frontend:typecheck": "cd frontend && bun react-router typegen && tsc"
   }
 }
