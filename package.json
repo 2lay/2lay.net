@@ -8,8 +8,5 @@
 	"frontend:dev": "cd frontend && bun vite",
 	"frontend:build": "cd frontend && bun tsc -b && bun vite build", 
 	"frontend:preview": "cd frontend && bun vite preview"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
   }
 }
