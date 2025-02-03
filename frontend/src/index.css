@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
-
 body {
-  @apply bg-zinc-800;
+  @apply bg-zinc-900/97;
+}
+
+@theme {
+  --shadow-in: 0px 0px 0px 0px rgba(0,0,0,0.75);
+  --shadow-out: 3px 3px 0px 0px rgba(0,0,0,0.75);
+  --shadow-in-primary: 0px 0px 0px 0px rgba(255,105,180,0.75);
+  --shadow-out-primary: 6px 6px 0px 0px rgba(255,105,180,0.75);
 }
