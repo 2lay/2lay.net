@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-
+import Card from "~/_components/card";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -9,12 +9,12 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">
-        Hey there!
-      </h1>
-      <p className="text-lg text-gray-600">
-        I&apos;m Ellie
-      </p>
+      <Card>
+        <p className="text-2xl font-medium">
+          hey there!, i'm <span className="font-bold">ellie</span>
+        </p>
+        <p>this is my silly little website, blog and portfolio</p>
+      </Card>
     </div>
   );
 }
