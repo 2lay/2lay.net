@@ -132,7 +132,7 @@
 				rel="noopener noreferrer"
 				class="block transition-colors hover:text-[#CE97A6]"
 			>
-				<span class="text-[#CE97A6]">></span> twitter // falsely disabled, it'll be back soon
+				<span class="text-[#CE97A6]">></span> twitter
 			</a>
 		</li>
 
