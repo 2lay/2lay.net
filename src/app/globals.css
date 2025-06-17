@@ -11,3 +11,7 @@
   --color-pink-800: #523c42;
   --color-pink-900: #291e21;
 }
+
+.pixel {
+  image-rendering: pixelated;
+}

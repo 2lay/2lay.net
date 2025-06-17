@@ -78,7 +78,7 @@ export default async function Home() {
           <p className="mb-4">
             some badges and links to cool people, check them out!
           </p>
-          <div className="flex flex-col gap-1">
+          <div className="pixel flex flex-col gap-1">
             <div className="flex flex-wrap gap-2">
               <a href="https://2lay.net/8831.png">
                 <img src="https://2lay.net/8831.png" alt="github" width={88} height={31} />
@@ -91,6 +91,9 @@ export default async function Home() {
               </a>
               <a href="https://vea.st">
                 <img src="https://vea.st/button.png" alt="vea.st" width={88} height={31} />
+              </a>
+              <a href="https://imeesa.com">
+                <img src="https://imeesa.com/88x31/me.png" alt="imeesa" width={88} height={31} />
               </a>
               <a>
                 <img src="https://utfs.io/f/0nYClWA9oiIm4BmNmw90vTL2nk0aNJXQUA8lzOh63cMmIFH7" alt="miaow.ing" width={88} height={31} />

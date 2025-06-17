@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased bg-black ${jetBrainsMono.className}`}>
+      <body className={`antialiased bg-black overflow-x-hidden ${jetBrainsMono.className}`}>
         <Providers>{children}</Providers>
       </body>
     </html>
