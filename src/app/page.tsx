@@ -86,6 +86,9 @@ export default async function Home() {
               <a href="https://miaow.ing">
                 <img src="https://miaow.ing/images/88x31_miaowing.png" alt="miaowing" width={88} height={31} />
               </a>
+              <a href="https://anna.oa.ke">
+                <img src="https://anna.oa.ke/assets/88x31.gif" alt="anna.oa.ke" width={88} height={31} />
+              </a>
               <a href="https://vea.st">
                 <img src="https://vea.st/button.png" alt="vea.st" width={88} height={31} />
               </a>
@@ -101,6 +104,7 @@ export default async function Home() {
               <a>
                 <img src="https://utfs.io/f/0nYClWA9oiImW48VBigrCBaJGy1hmXFT0Z8Kw2xobj3E5IRz" alt="badge" width={88} height={31} />
               </a>
+              
 
             </div>
           </div>
