@@ -72,6 +72,7 @@ export default async function Home() {
                     </div>
                 </Card>
 
+                {/*
                 <Card color="00D492">
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-row gap-2 items-center mb-2">
@@ -111,7 +112,7 @@ export default async function Home() {
                         </div>
                     </div>
                 </Card>
-
+                */}
                 <Card>
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-row gap-2 items-center mb-2">
