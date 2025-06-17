@@ -6,7 +6,7 @@ interface LastFmTrack {
   album: { '#text': string }
   url: string
   image: Array<{ '#text': string, size: string }>
-  date?: { '#text': string }
+  date?: { '#text': string, uts: string }
   '@attr'?: { nowplaying: string }
 }
 
