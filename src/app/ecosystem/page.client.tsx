@@ -42,7 +42,7 @@ const servers = [
         localip: "192.168.61.1",
         tailscaleip: "100.100.61.1",
         motherboard: "ASUS TUF X570-PLUS",
-        memory: "Corsair Vengeance 4x16GB DDR4 3200MHz",
+        memory: "Kingston Fury Impact 2x16GB DDR4 3200MHz",
         storage: "1TB Samsung 970 EVO Plus M.2 SSD, 4TB IronWolf HDD (external)",
         location: "Sweden (home)",
         kvm: "NanoKVM Lite (Local: 192.168.61.2, Tailscale: 100.100.61.2)",
