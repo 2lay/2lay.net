@@ -96,7 +96,7 @@ const devices = [
         cpu: "AMD Ryzen 7 7800X3D",
         motherboard: "NZXT N7 B650E",
         memory: "G.SKILL Flare X5 DDR5 2x32GB 6200MHz",
-        storage: "Kingston A5000 512GB (boot), WD SN850X 1TB (data/games)",
+        storage: "Kingston A5000 512GB (boot), WD Black SN850X 1TB (data/games)",
         gpu: "ASUS TUF RTX 7900XTX",
         case: "Corsair 3000D",
         cooling: "DeepCool LT720 White AIO",
@@ -192,7 +192,7 @@ export default function InfraClient() {
                 <Card className="mb-4">
                     <h2 className="text-2xl font-semibold mb-2 text-pink-500"># ecosystem</h2>
                     <p className="mb-2">
-                        below is a list of my devices, servers and services that i run for private use and for public use. select a category below to see more information.
+                        welcome to my ecosystem, overview of the devices, servers, and services that i use on a daily basis. check categories below to see more information.
                     </p>
                     <div className="gap-2">
                         <p className={`cursor-pointer font-semibold group ${selectedCategory === "servers" ? "text-pink-500" : "text-white/50 hover:text-white/80"}`} onClick={() => setSelectedCategory("servers")}>
