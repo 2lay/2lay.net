@@ -19,7 +19,7 @@ const servers = [
         cpu: "AMD Ryzen 9 9950X",
         localip: "192.168.60.1",
         tailscaleip: "100.100.60.1",
-        motherboard: "ASUS TUF X650E",
+        motherboard: "ASUS TUF X670E",
         memory: "Corsair Vengeance 4x48GB DDR5 5600MHz",
         storage: "2x Samsung 990 Pro 4TB SSD (RAID 1), 5x16TB HGST HDD (RAID 5)",
         location: "Sweden (home)",
@@ -41,9 +41,8 @@ const servers = [
         cpu: "AMD Ryzen 5 3400GE",
         localip: "192.168.61.1",
         tailscaleip: "100.100.61.1",
-        motherboard: "ASUS TUF X570-PLUS",
         memory: "Kingston Fury Impact 2x16GB DDR4 3200MHz",
-        storage: "1TB Samsung 970 EVO Plus M.2 SSD, 4TB IronWolf HDD (external)",
+        storage: "1TB Samsung 970 EVO Plus M.2 SSD, Kingston A400 480GB, 4TB IronWolf HDD (external)",
         location: "Sweden (home)",
         kvm: "NanoKVM Lite (Local: 192.168.61.2, Tailscale: 100.100.61.2)",
         services: [
@@ -112,6 +111,14 @@ const devices = [
         storage: "128GB",
         localip: "192.168.30.3",
         tailscaleip: "100.100.30.3",
+    },
+    {
+        name: "xbox-360",
+        description: "My old Trinity Xbox 360 homebrewed with RGH3 using PicoFlasher, running Freestyle Dashboard.",
+        color: "#92C83E",
+        os: "Xbox 360 Dashboard, Kernel 17559",
+        storage: "Kingston A400 480GB",
+        localip: "192.168.30.4",
     },
 
 ]
@@ -352,6 +359,11 @@ export default function InfraClient() {
                     {devices.map((device) => (
                     <Card key={device.name} style={{ border: `1px solid ${device.color}` }}>
                         <h2 className="text-2xl font-semibold mb-2" style={{ color: device.color }}># {device.name}</h2>
+                        {device.description && (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> description: <span className="text-white">{device.description}</span>
+                            </p>
+                        )}
                         {device.device && (
                             <p className="text-white/80">
                                 <span style={{ color: device.color }}>{'>'}</span> device: <span className="text-white">{device.device}</span>
