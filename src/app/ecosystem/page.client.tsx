@@ -162,7 +162,7 @@ const services = [
     {
         name: "Termius",
         color: "#229EBB",
-        description: "FTP & SFTP client, using for connecting to servers on my phone."
+        description: "SSH & SFTP client, using for connecting to servers on my phone."
     },
     {
         name: "Filezilla & WinSCP",
