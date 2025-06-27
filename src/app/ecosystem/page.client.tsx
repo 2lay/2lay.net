@@ -78,7 +78,7 @@ const servers = [
 
 const devices = [
     {
-        name: "powerbook",
+        name: "mac",
         color: "#4a7eff",
         device: "Macbook Pro 14 (2024)",
         os: "macOS Sequoia",
@@ -93,15 +93,23 @@ const devices = [
         color: "#ff4a4a",
         os: "Windows 10 IoT Enterprise LTSC 2021",
         cpu: "AMD Ryzen 7 7800X3D",
-        motherboard: "NZXT N7 B650E",
+        motherboard: "NZXT N7 B650E White",
         memory: "G.SKILL Flare X5 DDR5 2x32GB 6200MHz",
         storage: "Kingston A5000 512GB (boot), WD Black SN850X 1TB (data/games)",
         gpu: "ASUS TUF RTX 7900XTX",
-        case: "Corsair 3000D",
+        case: "Corsair 3000D White",
         cooling: "DeepCool LT720 White AIO",
         psu: "Corsair HX1500i 1500W",
         localip: "192.168.30.2",
         tailscaleip: "100.100.30.2",
+        headphones: "Beyerdynamic DT 990 Pro 250ohm",
+        amplifier: "Sound BlasterX G6",
+        keyboard: "Akko 5075s",
+        keyboard_switch: "Gatreon Oil King",
+        mouse: "Logitech Superlight 2",
+        microphone: "HyperX Quadcast",
+        primary_monitor: "Asus TUF VG27AQML1A 27\" 1440p 260Hz",
+        secondary_monitor: "Asus MG278Q 27\" 1440p 144Hz",
     },
     {
         name: "phone",
@@ -184,6 +192,36 @@ const services = [
         color: "#EC269C",
         description: "One of the fastest and cheapest AI chat interfaces."
     },
+    {
+        name: "Filen",
+        color: "#FCFCFC",
+        description: "End to end encrypted file sharing. Using for sharing files and writing notes."
+    },
+    {
+        name: "Mullvad",
+        color: "#FED420",
+        description: "Logless VPN, using to access sites that aren't available in my country."
+    },
+    {
+        name: "Google Drive",
+        color: "#4285F4",
+        description: "Cloud storage service for file synchronization and sharing across my devices."
+    },
+    {
+        name: "Legcord & Equicord",
+        color: "#EFB9C5",
+        description: "LegCord is a Discord client, Equicord is a fork of Vencord."
+    },
+    {
+        name: "Bitwarden",
+        color: "#165DDC",
+        description: "Password manager, using for storing passwords and sensitive information."
+    },
+    {
+        name: "Adobe Suite",
+        color: "#EA0F00",
+        description: "Only using Photoshop and Premiere Pro."
+    }, 
 ]
 
 const getServiceTypeColor = (type: string) => {
@@ -434,7 +472,47 @@ export default function InfraClient() {
                                 <span style={{ color: device.color }}>{'>'}</span> psu: <span className="text-white">{device.psu}</span>
                             </p>
                         )}
-                    </Card>
+                        {device.headphones && (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> headphones: <span className="text-white">{device.headphones}</span>
+                            </p>
+                        )}
+                        {device.amplifier && (  
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> amplifier: <span className="text-white">{device.amplifier}</span>
+                            </p>
+                        )}
+                        {device.keyboard && (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> keyboard: <span className="text-white">{device.keyboard}</span>
+                            </p>
+                        )}
+                        {device.keyboard_switch && (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> keyboard switch: <span className="text-white">{device.keyboard_switch}</span>
+                            </p>
+                        )}
+                        {device.mouse && (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> mouse: <span className="text-white">{device.mouse}</span>
+                            </p>
+                        )}
+                        {device.microphone && (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> microphone: <span className="text-white">{device.microphone}</span>
+                            </p>
+                        )}
+                        {device.primary_monitor && (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> primary monitor: <span className="text-white">{device.primary_monitor}</span>
+                            </p>
+                        )}
+                        {device.secondary_monitor && (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> secondary monitor: <span className="text-white">{device.secondary_monitor}</span>
+                            </p>
+                        )}
+                        </Card>
                 ))}
                 </>
                 )}
