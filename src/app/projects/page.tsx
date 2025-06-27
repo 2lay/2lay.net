@@ -23,7 +23,7 @@ export default async function Home() {
             <div className="max-w-3xl w-full">
                 <Navbar />
 
-                <Card color="F4AA4D">
+                <Card color="#F4AA4D">
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-row gap-2 items-center mb-2">
                             <img src="https://github.com/tmwdotgg.png" alt="TMW.gg" width={50} height={50} className="border-[#F4AA4D] bg-[#F4AA4D]/20 border-1" />

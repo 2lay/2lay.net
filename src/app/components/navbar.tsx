@@ -28,6 +28,15 @@ export default function Navbar() {
                 >
                     Projects
                 </Link>
+                <Link 
+                    href="/ecosystem" 
+                    className={pathname === "/ecosystem" 
+                        ? "text-pink-500 underline decoration-pink-500 underline-offset-4" 
+                        : "text-white hover:text-pink-500"
+                    }
+                >
+                    Ecosystem
+                </Link>
             </div>
         </Card>
     )
