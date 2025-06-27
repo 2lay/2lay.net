@@ -95,6 +95,9 @@ export default async function Home() {
               <a href="https://imeesa.com">
                 <img src="https://imeesa.com/88x31/me.png" alt="imeesa" width={88} height={31} />
               </a>
+              <a href="https://sapphic.moe">
+                <img src="https://sapphic.moe/buttons/sapphic.png" alt="sapphic.moe" width={88} height={31} />
+              </a>
               <a>
                 <img src="https://utfs.io/f/0nYClWA9oiIm4BmNmw90vTL2nk0aNJXQUA8lzOh63cMmIFH7" alt="miaow.ing" width={88} height={31} />
               </a>
