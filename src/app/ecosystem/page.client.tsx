@@ -192,7 +192,10 @@ export default function InfraClient() {
                 <Card className="mb-4">
                     <h2 className="text-2xl font-semibold mb-2 text-pink-500"># ecosystem</h2>
                     <p className="mb-2">
-                        welcome to my ecosystem page, this is a overview of the devices, servers, and services that i use on a daily basis. check categories below to see more information.
+                        welcome to my ecosystem page, this is a overview of the devices, servers, and services that i use on a daily basis.
+                    </p>
+                    <p className="mb-2">
+                        select a category by clicking the buttons below to see more information.
                     </p>
                     <div className="gap-2">
                         <p className={`cursor-pointer font-semibold group ${selectedCategory === "servers" ? "text-pink-500" : "text-white/50 hover:text-white/80"}`} onClick={() => setSelectedCategory("servers")}>
