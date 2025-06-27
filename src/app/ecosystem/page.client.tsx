@@ -2,11 +2,30 @@
 import Card from "@/app/components/card";
 import Tooltip from "@/app/components/tooltip";
 import { useState } from "react";
-
+import { client } from "@/lib/client"
+import { useQuery } from "@tanstack/react-query"
 
 function Highlight(props: { children: React.ReactNode }) {
     return <span className="text-pink-500 font-semibold">{props.children}</span>
 }
+
+export default function InfraClient() {
+    const { data: tailscaleDevices } = useQuery({
+    queryKey: ['tailscale', 'devices'],
+    queryFn: async () => {
+        const response = await client.tailscale.devices.$get()
+        const result = await response.json()
+        return result
+    }
+})
+
+function isOnline(device: any) {
+    if (!device || !device.lastSeen) return false;
+    const lastSeenTime = new Date(device.lastSeen).getTime();
+    return lastSeenTime > Date.now() - 1000 * 60 * 60 * 24;
+}
+
+
 
 const servers = [
     {
@@ -87,6 +106,8 @@ const devices = [
         storage: "1TB",
         localip: "192.168.30.1",
         tailscaleip: "100.100.30.1",
+        online: isOnline(tailscaleDevices?.find((device: any) => device.name === "powerbook.tail36943f.ts.net")),
+
     },
     {
         name: "desktop",
@@ -110,6 +131,7 @@ const devices = [
         microphone: "HyperX Quadcast",
         primary_monitor: "Asus TUF VG27AQML1A 27\" 1440p 260Hz",
         secondary_monitor: "Asus MG278Q 27\" 1440p 144Hz",
+        online: isOnline(tailscaleDevices?.find((device: any) => device.name === "desktop.tail36943f.ts.net")),
     },
     {
         name: "phone",
@@ -119,6 +141,7 @@ const devices = [
         storage: "128GB",
         localip: "192.168.30.3",
         tailscaleip: "100.100.30.3",
+        online: isOnline(tailscaleDevices?.find((device: any) => device.name === "iphone.tail36943f.ts.net")),
     },
     {
         name: "xbox-360",
@@ -127,6 +150,7 @@ const devices = [
         os: "Xbox 360 Dashboard, Kernel 17559",
         storage: "Kingston A400 480GB",
         localip: "192.168.30.4",
+        online: isOnline(tailscaleDevices?.find((device: any) => device.name === "xbox-360.tail36943f.ts.net")),
     },
 
 ]
@@ -203,9 +227,9 @@ const services = [
         description: "Logless VPN, using to access sites that aren't available in my country."
     },
     {
-        name: "Google Drive",
-        color: "#4285F4",
-        description: "Cloud storage service for file synchronization and sharing across my devices."
+        name: "Purelymail",
+        color: "#580062",
+        description: "Email service, using for personal use."
     },
     {
         name: "Legcord & Equicord",
@@ -239,7 +263,6 @@ const getServiceTypeColor = (type: string) => {
     return colors[type] || "#D3D3D3";
 };
 
-export default function InfraClient() {
     const [selectedCategory, setSelectedCategory] = useState("servers");
 
     return (
@@ -415,6 +438,16 @@ export default function InfraClient() {
                         {device.device && (
                             <p className="text-white/80">
                                 <span style={{ color: device.color }}>{'>'}</span> device: <span className="text-white">{device.device}</span>
+                            </p>
+                        )}
+
+                        {device.online ? (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> online: <span className="text-green-400">{device.online ? "yes" : "no"}</span>
+                            </p>
+                            ) : (
+                            <p className="text-white/80">
+                                <span style={{ color: device.color }}>{'>'}</span> online: <span className="text-red-400">no</span>
                             </p>
                         )}
                         {device.localip && (

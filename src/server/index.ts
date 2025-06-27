@@ -1,5 +1,6 @@
 import { j } from "./jstack"
 import { lastfmRouter } from "./routers/lastfm-router"
+import { tailscaleRouter } from "./routers/tailscale-router"
 
 /**
  * This is your base API.
@@ -19,6 +20,7 @@ const api = j
  */
 const appRouter = j.mergeRouters(api, {
   lastfm: lastfmRouter,
+  tailscale: tailscaleRouter,
 })
 
 export type AppRouter = typeof appRouter
