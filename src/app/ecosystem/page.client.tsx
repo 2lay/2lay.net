@@ -174,6 +174,16 @@ const services = [
         color: "#FF6565",
         description: "Launcher for apps on macOS and Windows."
     },
+    {
+        name: "Tailscale",
+        color: "#1F1E1E",
+        description: "VPN for connecting to my devices and servers, using for accessing my services on the go."
+    },
+    {
+        name: "T3.chat",
+        color: "#EC269C",
+        description: "One of the fastest and cheapest AI chat interfaces."
+    },
 ]
 
 const getServiceTypeColor = (type: string) => {
