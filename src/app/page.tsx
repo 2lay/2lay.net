@@ -51,7 +51,7 @@ export default async function Home() {
             <Link href="https://github.com/2lay" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">github</span> <span className="text-white/50 group-hover:text-white/40">/2lay</span></p>
             </Link>
-            <Link href="https://x.com/2lay" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
+            <Link href="https://x.com/twolays" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">twitter</span> <span className="text-white/50 group-hover:text-white/40">/twolays</span></p>
             </Link>
             <Link href="https://last.fm/user/iwas15with100k" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
