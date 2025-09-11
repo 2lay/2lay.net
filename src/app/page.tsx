@@ -27,7 +27,7 @@ export default async function Home() {
         <Card>
           <div className="flex flex-row gap-2 items-center mb-2">
             <img src="https://github.com/2lay.png" alt="Ella" width={50} height={50} className="border-pink-500 bg-pink-500/20 border-1" />
-            <h2 className="text-2xl font-semibold">hi i'm <Highlight>ella</Highlight></h2>
+            <h2 className="text-2xl font-semibold">hi i'm <Highlight>2lay</Highlight></h2>
           </div>
           <div className="flex flex-col gap-4">
             <p>
