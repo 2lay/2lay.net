@@ -26,7 +26,7 @@ export default async function Home() {
 
         <Card>
           <div className="flex flex-row gap-2 items-center mb-2">
-            <img src="https://github.com/2lay.png" alt="Ella" width={50} height={50} className="border-pink-500 bg-pink-500/20 border-1" />
+            <img src="https://github.com/2lay.png" alt="2lay" width={50} height={50} className="border-pink-500 bg-pink-500/20 border-1" />
             <h2 className="text-2xl font-semibold">hi i'm <Highlight>2lay</Highlight></h2>
           </div>
           <div className="flex flex-col gap-4">
@@ -67,7 +67,7 @@ export default async function Home() {
               <p>{'> '} <span className="text-white group-hover:text-white/80">discord</span> <span className="text-white/50 group-hover:text-white/40">@2lay</span></p>
             </a>
             <a className="text-pink-500 hover:text-pink-500/80 font-semibold group">
-              <p>{'> '} <span className="text-white group-hover:text-white/80">mail</span> <span className="text-white/50 group-hover:text-white/40">ella<span className="text-xs text-white/30 mx-1">at</span>2lay<span className="text-xs text-white/30 mx-1">dot</span>net</span></p>
+              <p>{'> '} <span className="text-white group-hover:text-white/80">mail</span> <span className="text-white/50 group-hover:text-white/40">2lay<span className="text-xs text-white/30 mx-1">at</span>2lay<span className="text-xs text-white/30 mx-1">dot</span>net</span></p>
             </a>
           </div>
         </Card>
