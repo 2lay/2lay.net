@@ -6,7 +6,7 @@ import { client } from "@/lib/client"
 import { useQuery } from "@tanstack/react-query"
 
 function Highlight(props: { children: React.ReactNode }) {
-    return <span className="text-pink-500 font-semibold">{props.children}</span>
+    return <span className="text-cyan-500 font-semibold">{props.children}</span>
 }
 
 export default function InfraClient() {
@@ -268,7 +268,7 @@ const getServiceTypeColor = (type: string) => {
     return (
         <> 
                 <Card className="mb-4">
-                    <h2 className="text-2xl font-semibold mb-2 text-pink-500"># ecosystem</h2>
+                    <h2 className="text-2xl font-semibold mb-2 text-cyan-500"># ecosystem</h2>
                     <p className="mb-2">
                         welcome to my ecosystem page, this is a overview of the devices, servers, and services that i use on a daily basis.
                     </p>
@@ -276,13 +276,13 @@ const getServiceTypeColor = (type: string) => {
                         select a category by clicking the buttons below to see more information.
                     </p>
                     <div className="gap-2">
-                        <p className={`cursor-pointer font-semibold group ${selectedCategory === "servers" ? "text-pink-500" : "text-white/50 hover:text-white/80"}`} onClick={() => setSelectedCategory("servers")}>
+                        <p className={`cursor-pointer font-semibold group ${selectedCategory === "servers" ? "text-cyan-500" : "text-white/50 hover:text-white/80"}`} onClick={() => setSelectedCategory("servers")}>
                             {'> '} <span className={selectedCategory === "servers" ? "text-white" : "text-white/50 group-hover:text-white/80"}>servers</span>
                         </p>
-                        <p className={`cursor-pointer font-semibold group ${selectedCategory === "devices" ? "text-pink-500" : "text-white/50 hover:text-white/80"}`} onClick={() => setSelectedCategory("devices")}>
+                        <p className={`cursor-pointer font-semibold group ${selectedCategory === "devices" ? "text-cyan-500" : "text-white/50 hover:text-white/80"}`} onClick={() => setSelectedCategory("devices")}>
                             {'> '} <span className={selectedCategory === "devices" ? "text-white" : "text-white/50 group-hover:text-white/80"}>devices</span>
                         </p>
-                        <p className={`cursor-pointer font-semibold group ${selectedCategory === "services" ? "text-pink-500" : "text-white/50 hover:text-white/80"}`} onClick={() => setSelectedCategory("services")}>
+                        <p className={`cursor-pointer font-semibold group ${selectedCategory === "services" ? "text-cyan-500" : "text-white/50 hover:text-white/80"}`} onClick={() => setSelectedCategory("services")}>
                             {'> '} <span className={selectedCategory === "services" ? "text-white" : "text-white/50 group-hover:text-white/80"}>services</span>
                         </p>
                     </div>
@@ -290,7 +290,7 @@ const getServiceTypeColor = (type: string) => {
                 {selectedCategory === "servers" && (
                     <>
                     <Card>
-                        <h2 className="text-2xl font-semibold mb-2 text-pink-500"># servers</h2>
+                        <h2 className="text-2xl font-semibold mb-2 text-cyan-500"># servers</h2>
                         <p className="mb-2">
                             below is a list of my servers that i run and operate for private use and for public use.
                         </p>
@@ -422,7 +422,7 @@ const getServiceTypeColor = (type: string) => {
                 {selectedCategory === "devices" && (
                     <>
                     <Card>
-                        <h2 className="text-2xl font-semibold mb-2 text-pink-500"># devices</h2>
+                        <h2 className="text-2xl font-semibold mb-2 text-cyan-500"># devices</h2>
                         <p className="mb-2">
                             below is a list of my devices that i use on a daily basis.
                         </p>
@@ -552,7 +552,7 @@ const getServiceTypeColor = (type: string) => {
 
                 {selectedCategory === "services" && (
                     <Card className="">
-                        <h2 className="text-2xl font-semibold mb-2 text-pink-500"># services</h2>
+                        <h2 className="text-2xl font-semibold mb-2 text-cyan-500"># services</h2>
                         <p className="mb-4">
                             below is a list of services that i use on a daily basis.
                         </p>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 }
 function Highlight(props: { children: React.ReactNode }) {
-  return <span className="text-pink-500 font-semibold">{props.children}</span>
+  return <span className="text-cyan-500 font-semibold">{props.children}</span>
 }
 export default async function Home() {
 
@@ -26,7 +26,7 @@ export default async function Home() {
 
         <Card>
           <div className="flex flex-row gap-2 items-center mb-2">
-            <img src="https://github.com/2lay.png" alt="2lay" width={50} height={50} className="border-pink-500 bg-pink-500/20 border-1" />
+            <img src="https://github.com/2lay.png" alt="2lay" width={50} height={50} className="border-cyan-500 bg-cyan-500/20 border-1" />
             <h2 className="text-2xl font-semibold">hi i'm <Highlight>2lay</Highlight></h2>
           </div>
           <div className="flex flex-col gap-4">
@@ -37,36 +37,36 @@ export default async function Home() {
               i'm mainly interested in <Highlight>web development</Highlight> and a silly voxel game called <Highlight>minecraft</Highlight>.
             </p>
             <p>
-              my interests outside of programming are <span className="text-pink-500 font-semibold">music</span> and <span className="text-pink-500 font-semibold">gaming</span>. my favourite game is <span className="text-pink-500 font-semibold">modded minecraft</span>, i have been running a modded minecraft server network for a few years called <Link href="https://tmw.gg" className="text-pink-500 hover:text-pink-500/80 underline decoration-pink-500 underline-offset-4 font-semibold">tmw.gg</Link>. on the other hand my favourite artist is <Link href="https://youtu.be/JLfS_swCBbQ" className="text-pink-500 hover:text-pink-500/80 underline decoration-pink-500 underline-offset-4 font-semibold">glaive</Link>.
+              my interests outside of programming are <span className="text-cyan-500 font-semibold">music</span> and <span className="text-cyan-500 font-semibold">gaming</span>. my favourite game is <span className="text-cyan-500 font-semibold">modded minecraft</span>, i have been running a modded minecraft server network for a few years called <Link href="https://tmw.gg" className="text-cyan-500 hover:text-cyan-500/80 underline decoration-cyan-500 underline-offset-4 font-semibold">tmw.gg</Link>. on the other hand my favourite artist is <Link href="https://youtu.be/JLfS_swCBbQ" className="text-cyan-500 hover:text-cyan-500/80 underline decoration-cyan-500 underline-offset-4 font-semibold">glaive</Link>.
             </p>
           </div>
         </Card>
 
         <Card>
-          <h2 className="text-2xl font-semibold mb-2 text-pink-500"># find-me</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-cyan-500"># find-me</h2>
           <p className="mb-2">
             i'm active all over the place, but you can find me here:
           </p>
           <div className="flex flex-col gap-1">
-            <Link href="https://github.com/2lay" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
+            <Link href="https://github.com/2lay" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">github</span> <span className="text-white/50 group-hover:text-white/40">/2lay</span></p>
             </Link>
-            <Link href="https://x.com/twolays" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
+            <Link href="https://x.com/twolays" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">twitter</span> <span className="text-white/50 group-hover:text-white/40">/twolays</span></p>
             </Link>
-            <Link href="https://last.fm/user/iwas15with100k" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
+            <Link href="https://last.fm/user/iwas15with100k" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">last.fm</span> <span className="text-white/50 group-hover:text-white/40">/iwas15with100k</span></p>
             </Link>
-            <Link href="https://t.me/twolay" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
+            <Link href="https://t.me/twolay" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">telegram</span> <span className="text-white/50 group-hover:text-white/40">/twolay</span></p>
             </Link>
-            <Link href="https://www.youtube.com/@2lay" className="text-pink-500 hover:text-pink-500/80 font-semibold group">
+            <Link href="https://www.youtube.com/@2lay" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">youtube</span> <span className="text-white/50 group-hover:text-white/40">/@2lay</span></p>
             </Link>
-            <a className="text-pink-500 hover:text-pink-500/80 font-semibold group">
+            <a className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">discord</span> <span className="text-white/50 group-hover:text-white/40">@2lay</span></p>
             </a>
-            <a className="text-pink-500 hover:text-pink-500/80 font-semibold group">
+            <a className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">mail</span> <span className="text-white/50 group-hover:text-white/40">2lay<span className="text-xs text-white/30 mx-1">at</span>2lay<span className="text-xs text-white/30 mx-1">dot</span>net</span></p>
             </a>
           </div>
@@ -74,7 +74,7 @@ export default async function Home() {
         <Lastfm />
 
         <Card>
-          <h2 className="text-2xl font-semibold mb-2 text-pink-500"># friends-and-badges</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-cyan-500"># friends-and-badges</h2>
           <p className="mb-4">
             some badges and links to cool people, check them out!
           </p>

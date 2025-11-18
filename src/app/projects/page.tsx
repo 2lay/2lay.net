@@ -7,7 +7,7 @@ import { Metadata } from "next";
 const year = Math.floor((Date.now() - 1162847400000) / 1000 / 60 / 60 / 24 / 365);
 
 function Highlight(props: { children: React.ReactNode, color?: string }) {
-    return <span className={`text-${props.color || 'pink'}-300 font-semibold`}>{props.children}</span>
+    return <span className={`text-${props.color || 'cyan'}-300 font-semibold`}>{props.children}</span>
 }
 
 export const metadata: Metadata = {
@@ -116,23 +116,23 @@ export default async function Home() {
                 <Card>
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-row gap-2 items-center mb-2">
-                            <div className="w-[50px] h-[50px] border-pink-500 bg-pink-500/20 border-1 flex items-center justify-center">
-                                <span className="text-pink-500 text-xl">?</span>
+                            <div className="w-[50px] h-[50px] border-cyan-500 bg-cyan-500/20 border-1 flex items-center justify-center">
+                                <span className="text-cyan-500 text-xl">?</span>
                             </div>
                             <h2 className="text-2xl font-semibold"><Highlight>more projects</Highlight></h2>
                         </div>
 
                         <div className="flex flex-col gap-1 text-sm">
                             <p className="text-white/80">
-                                <span className="text-pink-500">{'>'}</span> status: <span className="text-yellow-400">in development</span>
+                                <span className="text-cyan-500">{'>'}</span> status: <span className="text-yellow-400">in development</span>
                             </p>
                             <p className="text-white/80">
-                                <span className="text-pink-500">{'>'}</span> note: <span className="text-white">working on more cool stuff</span>
+                                <span className="text-cyan-500">{'>'}</span> note: <span className="text-white">working on more cool stuff</span>
                             </p>
                         </div>
-                        <div className="mt-3 pt-2 border-t border-pink-500/20">
-                            <p className="text-pink-500 font-semibold text-sm">
-                                <span className="text-pink-500">$</span> <span className="text-white">echo</span> <span className="text-pink-500">"stay tuned!"</span>
+                        <div className="mt-3 pt-2 border-t border-cyan-500/20">
+                            <p className="text-cyan-500 font-semibold text-sm">
+                                <span className="text-cyan-500">$</span> <span className="text-white">echo</span> <span className="text-cyan-500">"stay tuned!"</span>
                             </p>
                         </div>
                     </div>

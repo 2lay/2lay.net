@@ -8,13 +8,13 @@ export default function Navbar() {
     
     return (
         <Card className="flex justify-between">
-            <h1><span className="text-pink-500 font-semibold">2lay</span>.net</h1>
+            <h1><span className="text-cyan-500 font-semibold">2lay</span>.net</h1>
             <div className="flex gap-2">
                 <Link 
                     href="/" 
                     className={pathname === "/" 
-                        ? "text-pink-500 underline decoration-pink-500 underline-offset-4" 
-                        : "text-white hover:text-pink-500"
+                        ? "text-cyan-500 underline decoration-cyan-500 underline-offset-4" 
+                        : "text-white hover:text-cyan-500"
                     }
                 >
                     Home
@@ -22,8 +22,8 @@ export default function Navbar() {
                 <Link 
                     href="/projects" 
                     className={pathname === "/projects" 
-                        ? "text-pink-500 underline decoration-pink-500 underline-offset-4" 
-                        : "text-white hover:text-pink-500"
+                        ? "text-cyan-500 underline decoration-cyan-500 underline-offset-4" 
+                        : "text-white hover:text-cyan-500"
                     }
                 >
                     Projects
@@ -31,8 +31,8 @@ export default function Navbar() {
                 <Link 
                     href="/ecosystem" 
                     className={pathname === "/ecosystem" 
-                        ? "text-pink-500 underline decoration-pink-500 underline-offset-4" 
-                        : "text-white hover:text-pink-500"
+                        ? "text-cyan-500 underline decoration-cyan-500 underline-offset-4" 
+                        : "text-white hover:text-cyan-500"
                     }
                 >
                     Ecosystem

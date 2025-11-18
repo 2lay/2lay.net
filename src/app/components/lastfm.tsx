@@ -16,28 +16,28 @@ export default function Lastfm() {
 
     return (
         <Card>
-            <h2 className="text-2xl font-semibold mb-2 text-pink-500"># last-played</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-cyan-500"># last-played</h2>
             <p className="mb-4">
                 i love music, here's my most recent track from last.fm:
             </p>
             <div className="flex flex-row gap-4 items-center">
                 {recentPlayed?.image?.[3]?.["#text"] ? (
-                    <img src={recentPlayed.image[3]["#text"]} alt="album cover" width={90} height={90} className="border-pink-500 border-1" />
+                    <img src={recentPlayed.image[3]["#text"]} alt="album cover" width={90} height={90} className="border-cyan-500 border-1" />
                 ) : (
-                    <div className="w-[90px] h-[90px] bg-pink-500/60 border-1 border-pink-500"></div>
+                    <div className="w-[90px] h-[90px] bg-cyan-500/60 border-1 border-cyan-500"></div>
                 )}
                 <div className="flex flex-col gap-1 text-sm flex-1">
                     <p className="text-white/80">
-                        <span className="text-pink-500">{'>'}</span> track: <span className="text-white">{recentPlayed?.name || "loading..."}</span>
+                        <span className="text-cyan-500">{'>'}</span> track: <span className="text-white">{recentPlayed?.name || "loading..."}</span>
                     </p>
                     <p className="text-white/80">
-                        <span className="text-pink-500">{'>'}</span> artist: <span className="text-white">{recentPlayed?.artist?.["#text"] || "loading..."}</span>
+                        <span className="text-cyan-500">{'>'}</span> artist: <span className="text-white">{recentPlayed?.artist?.["#text"] || "loading..."}</span>
                     </p>
                     <p className="text-white/80">
-                        <span className="text-pink-500">{'>'}</span> album: <span className="text-white">{recentPlayed?.album?.["#text"] || "loading..."}</span>
+                        <span className="text-cyan-500">{'>'}</span> album: <span className="text-white">{recentPlayed?.album?.["#text"] || "loading..."}</span>
                     </p>
                     <p className="text-white/80">
-                        <span className="text-pink-500">{'>'}</span> status: <span className="text-white">{recentPlayed ? (recentPlayed.date ? (() => {
+                        <span className="text-cyan-500">{'>'}</span> status: <span className="text-white">{recentPlayed ? (recentPlayed.date ? (() => {
                             const playedTime = parseInt(recentPlayed.date.uts) * 1000;
                             const now = Date.now();
                             const diffMs = now - playedTime;
@@ -53,9 +53,9 @@ export default function Lastfm() {
                     </p>
                 </div>
             </div>
-            <div className="mt-3 pt-2 border-t border-pink-500/20">
-                <Link href="https://last.fm/user/iwas15with100k" className="text-pink-500 hover:text-pink-500/80 font-semibold group text-sm">
-                    <span className="text-pink-500">$</span> <span className="text-white group-hover:text-white/80">curl</span> <span className="text-pink-500 group-hover:text-pink-500/80">last.fm/user/iwas15with100k</span>
+            <div className="mt-3 pt-2 border-t border-cyan-500/20">
+                <Link href="https://last.fm/user/iwas15with100k" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group text-sm">
+                    <span className="text-cyan-500">$</span> <span className="text-white group-hover:text-white/80">curl</span> <span className="text-cyan-500 group-hover:text-cyan-500/80">last.fm/user/iwas15with100k</span>
                 </Link>
             </div>
         </Card>
