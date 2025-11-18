@@ -51,14 +51,8 @@ export default async function Home() {
             <Link href="https://github.com/2lay" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">github</span> <span className="text-white/50 group-hover:text-white/40">/2lay</span></p>
             </Link>
-            <Link href="https://x.com/twolays" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
-              <p>{'> '} <span className="text-white group-hover:text-white/80">twitter</span> <span className="text-white/50 group-hover:text-white/40">/twolays</span></p>
-            </Link>
             <Link href="https://last.fm/user/iwas15with100k" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">last.fm</span> <span className="text-white/50 group-hover:text-white/40">/iwas15with100k</span></p>
-            </Link>
-            <Link href="https://t.me/twolay" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
-              <p>{'> '} <span className="text-white group-hover:text-white/80">telegram</span> <span className="text-white/50 group-hover:text-white/40">/twolay</span></p>
             </Link>
             <Link href="https://www.youtube.com/@2lay" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
               <p>{'> '} <span className="text-white group-hover:text-white/80">youtube</span> <span className="text-white/50 group-hover:text-white/40">/@2lay</span></p>
