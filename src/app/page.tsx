@@ -67,7 +67,7 @@ export default async function Home() {
               <p>{'> '} <span className="text-white group-hover:text-white/80">discord</span> <span className="text-white/50 group-hover:text-white/40">@2lay</span></p>
             </a>
             <a className="text-cyan-500 hover:text-cyan-500/80 font-semibold group">
-              <p>{'> '} <span className="text-white group-hover:text-white/80">mail</span> <span className="text-white/50 group-hover:text-white/40">2lay<span className="text-xs text-white/30 mx-1">at</span>2lay<span className="text-xs text-white/30 mx-1">dot</span>net</span></p>
+              <p>{'> '} <span className="text-white group-hover:text-white/80">mail</span> <span className="text-white/50 group-hover:text-white/40">me<span className="text-xs text-white/30 mx-1">at</span>2lay<span className="text-xs text-white/30 mx-1">dot</span>net</span></p>
             </a>
           </div>
         </Card>
