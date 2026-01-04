@@ -17,7 +17,7 @@ export default function Lastfm() {
     return (
         <Card>
             <div className="flex items-center gap-2 mb-2 justify-between">
-                <h2 className="text-2xl font-semibold text-violet-500">music!</h2>
+                <h2 className="text-2xl font-semibold text-violet-500">music</h2>
                 <p className="text-white/20 text-sm italic mx-3">from last.fm</p>
             </div>
 
