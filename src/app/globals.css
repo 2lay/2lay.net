@@ -11,15 +11,65 @@
 	opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.2s;
+	animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+	animation-duration: 1.0s;
 }
 
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
+		filter: blur(5px);
+		margin-top: 10%;
 	}
 	100% {
 		opacity: 1;
+		filter: blur(0px);
+		margin-top: 0%;
+
 	}
 }
+
+.load-particles {
+	opacity: 1;
+	animation-name: particlesgg;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+}
+
+@keyframes particlesgg {
+	0% {
+		opacity: 0;
+		filter: blur(5px);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0px);
+
+	}
+}
+
+
+.typing-text {
+	overflow: hidden;
+	white-space: nowrap;
+	opacity: 0;
+	animation: fadeIn 0.2s ease-in 0.2s forwards, typing 3s steps(40, end) 0.2s forwards;
+}
+
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+.card-blur {
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}	 
+
+

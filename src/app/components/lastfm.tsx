@@ -18,7 +18,9 @@ export default function Lastfm() {
         <Card>
             <div className="flex items-center gap-2 mb-2 justify-between">
                 <h2 className="text-2xl font-semibold text-violet-500">music</h2>
-                <p className="text-white/20 text-sm italic mx-3">from last.fm</p>
+                <Link href="https://last.fm/user/iwas15with100k" target="_blank" className="cursor-pointer">
+                    <p className="text-white/20 text-sm italic mx-3 hover:text-white/40 transition-colors">from last.fm</p>
+                </Link>
             </div>
 
             <div className="flex gap-4 items-start">

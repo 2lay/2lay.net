@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Providers } from "./components/providers"
 import { Inter } from "next/font/google"
+import Particles from "./components/particles"
 
 import "./globals.css"
 
@@ -21,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased bg-[#0F0D14] overflow-x-hidden ${inter.className}`}>
-        <Providers>{children}</Providers>
+        <Providers >{children}</Providers>
+        <Particles className="load-particles"/>
       </body>
     </html>
   )

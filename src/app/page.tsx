@@ -18,15 +18,15 @@ export default async function Home() {
 
 
   return (
-    <main className="bg-[#0f0d14] text-white min-h-screen w-screen flex justify-center">
+    <main className="load text-white min-h-screen w-screen flex justify-center">
 
       <div className="max-w-2xl w-full">
 
 
         <Card>
-          <div className="flex flex-row gap-2 items-center mb-2">
+          <div className="flex flex-row gap-2 items-center mb-2 ">
             <img src="https://github.com/2lay.png" alt="2lay" width={50} height={50} className="border-violet-500 bg-violet-500/20 border-1 rounded-sm" />
-            <h2 className="text-2xl font-semibold">hi i'm <Highlight>2lay</Highlight></h2>
+            <h2 className="text-2xl font-semibold typing-text">hi i'm <Highlight>2lay</Highlight></h2>
           </div>
           <div className="flex flex-col">
             <p className="mb-1">
@@ -49,7 +49,7 @@ export default async function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-3">
-            <Link href="https://github.com/2lay">
+            <Link href="https://github.com/2lay" target="_blank">
               <button className="cursor-pointer">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -64,7 +64,7 @@ export default async function Home() {
                 </div>
               </button>
             </Link>
-            <Link href="https://last.fm/user/iwas15with100k">
+            <Link href="https://last.fm/user/iwas15with100k" target="_blank">
               <button className="cursor-pointer">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -79,7 +79,7 @@ export default async function Home() {
                 </div>
               </button>
             </Link>
-            <Link href="https://www.youtube.com/@2lay">
+            <Link href="https://www.youtube.com/@2lay" target="_blank">
               <button className="cursor-pointer">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -94,6 +94,7 @@ export default async function Home() {
                 </div>
               </button>
             </Link>
+            <Link href="http://discordapp.com/users/356867455303548929" target="_blank">
             <button className="cursor-pointer">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -107,6 +108,7 @@ export default async function Home() {
                 </div>
               </div>
             </button>
+          </Link>
           </div>
         </Card>
         <Lastfm />
@@ -117,7 +119,7 @@ export default async function Home() {
             <div className="pixel flex flex-col gap-1">
               <div className="flex flex-wrap gap-2">
                 <a href="https://2lay.net/8831.png">
-                  <img src="https://2lay.net/8831.png" alt="github" width="88" height="31" />
+                  <img src="/8831.png" alt="github" width="88" height="31" />
                 </a>
                 <a href="https://miaow.ing">
                   <img src="https://miaow.ing/images/88x31_miaowing.png" alt="miaowing" width="88" height="31" />
