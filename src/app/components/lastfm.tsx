@@ -17,21 +17,21 @@ export default function Lastfm() {
     return (
         <Card>
             <div className="flex items-center gap-2 mb-2 justify-between">
-                <h2 className="text-2xl font-semibold text-violet-500">now playing</h2>
+                <h2 className="text-2xl font-semibold text-violet-500">music</h2>
                 <p className="text-white/20 text-sm italic mx-3">from last.fm</p>
             </div>
 
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-4 items-center">
                 {recentPlayed?.image?.[3]?.["#text"] ? (
                     <img
                         src={recentPlayed.image[3]["#text"]}
                         alt="album cover"
-                        width={80}
-                        height={80}
+                        width={96}
+                        height={96}
                         className="rounded-sm border border-violet-500/20"
                     />
                 ) : (
-                    <div className="w-[80px] h-[80px] bg-violet-500/10 rounded-sm border border-violet-500/20"></div>
+                    <div className="w-[96px] h-[96px] bg-violet-500/10 rounded-sm border border-violet-500/20"></div>
                 )}
 
                 <div className="flex-1 space-y-2">
