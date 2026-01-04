@@ -16,47 +16,58 @@ export default function Lastfm() {
 
     return (
         <Card>
-            <h2 className="text-2xl font-semibold mb-2 text-cyan-500"># last-played</h2>
-            <p className="mb-4">
-                i love music, here's my most recent track from last.fm:
-            </p>
-            <div className="flex flex-row gap-4 items-center">
-                {recentPlayed?.image?.[3]?.["#text"] ? (
-                    <img src={recentPlayed.image[3]["#text"]} alt="album cover" width={90} height={90} className="border-cyan-500 border-1" />
-                ) : (
-                    <div className="w-[90px] h-[90px] bg-cyan-500/60 border-1 border-cyan-500"></div>
-                )}
-                <div className="flex flex-col gap-1 text-sm flex-1">
-                    <p className="text-white/80">
-                        <span className="text-cyan-500">{'>'}</span> track: <span className="text-white">{recentPlayed?.name || "loading..."}</span>
-                    </p>
-                    <p className="text-white/80">
-                        <span className="text-cyan-500">{'>'}</span> artist: <span className="text-white">{recentPlayed?.artist?.["#text"] || "loading..."}</span>
-                    </p>
-                    <p className="text-white/80">
-                        <span className="text-cyan-500">{'>'}</span> album: <span className="text-white">{recentPlayed?.album?.["#text"] || "loading..."}</span>
-                    </p>
-                    <p className="text-white/80">
-                        <span className="text-cyan-500">{'>'}</span> status: <span className="text-white">{recentPlayed ? (recentPlayed.date ? (() => {
-                            const playedTime = parseInt(recentPlayed.date.uts) * 1000;
-                            const now = Date.now();
-                            const diffMs = now - playedTime;
-                            const diffMinutes = Math.floor(diffMs / (1000 * 60));
-                            const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
-                            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
-                            if (diffDays > 0) return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
-                            if (diffHours > 0) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
-                            if (diffMinutes > 0) return `${diffMinutes} minute${diffMinutes > 1 ? 's' : ''} ago`;
-                            return 'just now';
-                        })() : "playing now") : "loading..."}</span>
-                    </p>
-                </div>
+            <div className="flex items-center gap-2 mb-2 justify-between">
+                <h2 className="text-2xl font-semibold text-violet-500">now playing</h2>
+                <p className="text-white/20 text-sm italic mx-3">from last.fm</p>
             </div>
-            <div className="mt-3 pt-2 border-t border-cyan-500/20">
-                <Link href="https://last.fm/user/iwas15with100k" className="text-cyan-500 hover:text-cyan-500/80 font-semibold group text-sm">
-                    <span className="text-cyan-500">$</span> <span className="text-white group-hover:text-white/80">curl</span> <span className="text-cyan-500 group-hover:text-cyan-500/80">last.fm/user/iwas15with100k</span>
-                </Link>
+
+            <div className="flex gap-4 items-start">
+                {recentPlayed?.image?.[3]?.["#text"] ? (
+                    <img
+                        src={recentPlayed.image[3]["#text"]}
+                        alt="album cover"
+                        width={80}
+                        height={80}
+                        className="rounded-sm border border-violet-500/20"
+                    />
+                ) : (
+                    <div className="w-[80px] h-[80px] bg-violet-500/10 rounded-sm border border-violet-500/20"></div>
+                )}
+
+                <div className="flex-1 space-y-2">
+                    <div>
+                        <h3 className="text-white font-medium text-base">
+                            {recentPlayed?.name || "loading..."}
+                        </h3>
+                        <p className="text-white/60 text-sm">
+                            {recentPlayed?.artist?.["#text"] || "loading..."}
+                        </p>
+                    </div>
+
+                    {recentPlayed?.album?.["#text"] && (
+                        <p className="text-white/40 text-xs">
+                            {recentPlayed.album["#text"]}
+                        </p>
+                    )}
+
+                    <div className="text-xs">
+                        <span className="text-white/50">
+                            {recentPlayed ? (recentPlayed.date ? (() => {
+                                const playedTime = parseInt(recentPlayed.date.uts) * 1000;
+                                const now = Date.now();
+                                const diffMs = now - playedTime;
+                                const diffMinutes = Math.floor(diffMs / (1000 * 60));
+                                const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+                                const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+                                if (diffDays > 0) return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+                                if (diffHours > 0) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+                                if (diffMinutes > 0) return `${diffMinutes} minute${diffMinutes > 1 ? 's' : ''} ago`;
+                                return 'just now';
+                            })() : "playing now") : "loading..."}
+                        </span>
+                    </div>
+                </div>
             </div>
         </Card>
     )

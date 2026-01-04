@@ -1,8 +1,22 @@
 import { cn } from "@/lib/utils"
 
-export default function Card({ children, className, color, style }: { children: React.ReactNode, className?: string, color?: string, style?: React.CSSProperties }) {
+interface CardProps {
+  children: React.ReactNode
+  className?: string
+}
+
+export default function Card({ children, className }: CardProps) {
   return (
-    <div className={cn(`bg-neutral-900/80 ${color ? `border-[${color}]` : 'border-cyan-500'} border-1 m-4 p-2`, className)} style={style}>
+    <div 
+      className={cn(
+        'rounded-md my-4',
+        'border border-violet-500/20 hover:border-violet-500/40 transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)]',
+        'bg-neutral-900/20 hover:bg-neutral-900/40',
+        'load',
+        ' p-2',
+        className
+      )}
+    >
       {children}
     </div>
   )
