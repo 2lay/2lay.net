@@ -111,6 +111,44 @@ export default async function Home() {
         </Card>
         <Lastfm />
 
+        <Card>
+            <h2 className="text-2xl font-semibold text-violet-500">friends & badges</h2>
+            <p className="mb-2">some badges and links to cool people, check them out!</p>
+            <div className="pixel flex flex-col gap-1">
+              <div className="flex flex-wrap gap-2">
+                <a href="https://2lay.net/8831.png">
+                  <img src="https://2lay.net/8831.png" alt="github" width="88" height="31" />
+                </a>
+                <a href="https://miaow.ing">
+                  <img src="https://miaow.ing/images/88x31_miaowing.png" alt="miaowing" width="88" height="31" />
+                </a>
+                <a href="https://anna.oa.ke">
+                  <img src="https://anna.oa.ke/assets/88x31.gif" alt="anna.oa.ke" width="88" height="31" />
+                </a>
+                <a href="https://vea.st">
+                  <img src="https://vea.st/button.png" alt="vea.st" width="88" height="31" />
+                </a>
+                <a href="https://imeesa.com">
+                  <img src="https://imeesa.com/88x31/me.png" alt="imeesa" width="88" height="31" />
+                </a>
+                <a href="https://sapphic.moe">
+                  <img src="https://sapphic.moe/buttons/sapphic.png" alt="sapphic.moe" width="88" height="31" />
+                </a>
+                <a>
+                  <img src="https://utfs.io/f/0nYClWA9oiIm4BmNmw90vTL2nk0aNJXQUA8lzOh63cMmIFH7" alt="miaow.ing" width="88" height="31" />
+                </a>
+                <a>
+                  <img src="https://utfs.io/f/0nYClWA9oiImw3Dtk9j8dUwm7QrzLqoZWaBDS3kVsvRCxl0I" alt="badge" width="88" height="31" />
+                </a>
+                <a>
+                  <img src="https://utfs.io/f/0nYClWA9oiImlL128zc9FYjNg7EMuOpWqBmyVvKfDIirCR0t" alt="badge" width="88" height="31" />
+                </a>
+                <a>
+                  <img src="https://utfs.io/f/0nYClWA9oiImW48VBigrCBaJGy1hmXFT0Z8Kw2xobj3E5IRz" alt="badge" width="88" height="31" />
+                </a>
+              </div>
+            </div>
+        </Card>
         <Footer />
 
       </div>
