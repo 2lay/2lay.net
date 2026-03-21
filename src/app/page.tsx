@@ -109,6 +109,21 @@ export default async function Home() {
               </div>
             </button>
           </Link>
+            <Link href="https://x.com/twolays" target="_blank">
+              <button className="cursor-pointer">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded bg-violet-500/20 flex items-center justify-center">
+                      <span className="text-violet-400 text-sm font-bold">tw</span>
+                    </div>
+                    <div className="text-left">
+                      <span className="text-white/90 font-medium">twitter</span>
+                      <span className="text-white/50 text-sm ml-2">twolays</span>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </Link>
           </div>
         </Card>
         <Lastfm />
